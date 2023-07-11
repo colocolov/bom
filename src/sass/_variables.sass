@@ -1,0 +1,25 @@
+$bgc: #FFFFFF
+$bgc-dark: #E9E9E9
+$white: #FFFFFF
+$black: #000000
+$text: rgba(0, 0, 0, 0.95)
+// добавлять и удалять
+$blue: #01304C
+$red: #D35343
+$grad-red: linear-gradient(180deg, #D35343 0%, #D86F62 100%)
+
+// переменные по умолчанию
+$containerPadding: 15
+$contentWidth: 1280
+$containerWidth: $contentWidth + $containerPadding * 2
+
+:root
+  --widthscrollbar: 17px
+
+%body
+  font-family: 'Helvetica', sans-serif
+  @include font(400, 16, 18)
+
+%head
+  font-family: 'Helvetica', sans-serif
+  @include font(700, 36, 36)
