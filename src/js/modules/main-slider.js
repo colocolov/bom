@@ -1,7 +1,7 @@
 import _vars from "../_vars.js";
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Autoplay, EffectFade } from "swiper";
 
-Swiper.use([Pagination, Navigation]);
+Swiper.use([Autoplay, EffectFade]);
 
 // слайдер на главной
 new Swiper(_vars.heroSliderEl, {
