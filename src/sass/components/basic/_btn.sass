@@ -8,14 +8,14 @@
 .btn
   align-self: center // если кнпка находится во flex-контейнере и нужно выровнять ее по середине
   display: inline-block
-  background: $bgc
-  border-radius: 20px
-  // border: 2px solid $green
-  padding: 10px 32px
+  background: $red
+  // border-radius: 20px
+  border: 2px solid transparent
+  padding: 18px 32px
   color: $white
-  @include font(700, 16, 2)
+  @include font(700, 18, 20)
   text-align: center
-  text-transform: uppercase
+  // text-transform: uppercase
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out
   &:focus
     outline: none
@@ -24,10 +24,14 @@
   &:active
     // background: $red-tab
     // color: $white
-  @media (max-width: 992px)
+  @media (min-width: 992px)
     &:hover
       background-color: transparent
-      color: $white
+      color: $red
+      border: 2px solid $red
+
+  &--about
+    margin-left: auto
 
 
 // стрелки слайдера

@@ -5,6 +5,7 @@ import vars from "./_vars.js";
 import "./modules/nav.js";
 import "./modules/search.js";
 import "./modules/main-slider.js";
+import "./modules/timeline.js";
 
 //import * as navMenu from "./modules/nav.js";
 //import * as navMenu from "./modules/accordeon.js";

@@ -1,0 +1,83 @@
+.about
+  padding-top: 60px
+  padding-bottom: 30px
+  &__container
+    display: flex
+    flex-direction: column
+
+  &__head
+    margin-bottom: 87px
+
+  &__descr
+    display: flex
+    gap: 20px
+    flex-wrap: wrap
+    max-width: 67%
+    margin-left: auto
+    margin-bottom: 186px
+    p
+      flex: 1 1 32%
+
+  &__timeline
+    margin-bottom: 99px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: $black
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: -4px
+      width: 12px
+      height: 15px
+      background: url(../images/icons/sprite.svg#arrow-time) center no-repeat
+
+.timeline
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-right: 112px
+    padding-left: 81px
+  &__item
+    position: relative
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    cursor: pointer
+    transition: visibility 0.5s ease-in, overflow 0.5s ease-in
+    &:nth-child(odd)
+      background: $grad-red
+      span
+        top: -41px
+      p
+        bottom: -65px
+    &:nth-child(even)
+      background: $grad-blue
+      span
+        bottom: -41px
+      p
+        top: -65px
+    span
+      position: absolute
+      font-size: 36px
+      font-weight: 700
+      left: 60px
+    p
+      // overflow: hidden
+      visibility: hidden
+      position: absolute
+      left: 0
+      width: 254px
+    &._active
+      p
+        // overflow: visible
+        visibility: visible

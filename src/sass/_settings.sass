@@ -56,6 +56,23 @@ input
 
 .heading
   @extend %head
+  color: $white
+  &--full
+    background-color: $blue
+    padding-bottom: 7px
+    padding-left: 30px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      right: 30px
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      background-color: $white
+      transform: translateY(-50%)
+
 
 .unvisible
   position: absolute
