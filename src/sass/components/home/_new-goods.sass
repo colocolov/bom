@@ -1,0 +1,100 @@
+.new-goods
+  padding-top: 60px
+  padding-bottom: 80px
+
+  &__container
+    display: flex
+    flex-direction: column
+    & .btn
+      margin-left: auto
+
+  &__head
+    margin-bottom: 65px
+
+  &__product
+    margin-bottom: 70px
+    width: 100%
+    // display: flex
+
+  &__navigation
+    margin-top: 65px
+    justify-content: center
+    column-gap: 70px
+    & div
+      width: 30px
+      height: 30px
+      background-color: $red
+      border-radius: 50%
+      text-align: center
+    & svg
+      width: 18px
+
+  &--prev
+
+
+.product
+  &__items
+    display: flex
+    // flex-wrap: wrap
+    margin: 0 -10px
+    // row-gap: 20px
+    // width: 100%
+
+  &__item
+    padding: 0 10px
+    flex: 1 1 25%
+    max-width: 305px
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $white
+    // height: 100%
+    padding: 20px
+    transition: box-shadow 0.5s ease-in
+    &:hover
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25)
+
+  &__img
+    padding-bottom: 59%
+    margin-bottom: 7px
+    width: 100%
+    span
+      width: 50px
+      height: 50px
+      background-color: $red
+      color: $white
+      display: block
+      z-index: 5
+      position: relative
+      text-transform: uppercase
+      display: flex
+      align-items: center
+      justify-content: center
+      font-weight: 700
+
+  &__body
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    padding: 0 8px
+
+  &__head
+    margin-bottom: 15px
+    text-align: center
+    color: $black
+
+  &__info
+    display: flex
+    align-items: center
+    justify-content: center
+    column-gap: 30px
+
+  &__price
+
+  &__cart
+    background: url("../images/icons/sprite.svg#cart") center no-repeat
+    width: 30px
+    height: 30px
+    cursor: pointer
