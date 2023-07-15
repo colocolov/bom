@@ -7,6 +7,7 @@ import "./modules/search.js";
 import "./modules/main-slider.js";
 import "./modules/new-goods.js";
 import "./modules/timeline.js";
+import "./modules/rootImg.js";
 
 //import * as navMenu from "./modules/nav.js";
 //import * as navMenu from "./modules/accordeon.js";

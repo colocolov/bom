@@ -979,11 +979,14 @@ input {
 
 .heading {
   color: #FFFFFF;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 .heading--full {
   background-color: #01304C;
-  padding-bottom: 7px;
   padding-left: 30px;
+  padding-bottom: 7px;
   position: relative;
   text-transform: lowercase;
 }
@@ -997,6 +1000,13 @@ input {
   border-radius: 50%;
   background-color: #FFFFFF;
   transform: translateY(-50%);
+}
+.heading--light {
+  background-color: #FFFFFF;
+  color: #01304C;
+}
+.heading--light::before {
+  background-color: #01304C;
 }
 
 .unvisible {
@@ -1284,6 +1294,9 @@ input {
   }
 }
 .btn--about {
+  margin-left: auto;
+}
+.btn--projects {
   margin-left: auto;
 }
 
@@ -1587,6 +1600,58 @@ input {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+:root {
+  --projectBgImg: url("../images/bg/projects.jpg");
+}
+
+.projects {
+  position: relative;
+  padding-top: 54px;
+  padding-bottom: 50px;
+  background: #FFFFFF var(--projectBgImg) center/cover no-repeat;
+}
+.projects::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.projects__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 800px;
+}
+.projects__info {
+  width: 66.171875%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+}
+.projects__title {
+  margin-bottom: 40px;
+  font-size: 36px;
+  height: 50px;
+}
+.projects__text {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.projects__text p {
+  flex: 1 1 47%;
 }
 
 .footer {

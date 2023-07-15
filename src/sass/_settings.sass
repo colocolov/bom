@@ -57,10 +57,13 @@ input
 .heading
   @extend %head
   color: $white
+  height: 60px // заменить на адаптив
+  display: flex
+  align-items: center
   &--full
     background-color: $blue
-    padding-bottom: 7px
     padding-left: 30px
+    padding-bottom: 7px
     position: relative
     text-transform: lowercase
     &::before
@@ -73,6 +76,11 @@ input
       border-radius: 50%
       background-color: $white
       transform: translateY(-50%)
+  &--light
+    background-color: $white
+    color: $blue
+    &::before
+      background-color: $blue
 
 
 .unvisible
