@@ -1,5 +1,31 @@
 .footer
-  background-color: #3e3e3e
-  padding: 60px 0
-  color: $white
+  background-color: $white
+  padding: 60px 0 67px 0
 
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  // .footer__link
+  &__link
+    color: $black
+
+  &__adres
+    padding-left: 40px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: -6px
+      left: 0
+      width: 30px
+      height: 30px
+      background-image: url("@img/icons/sprite.svg#map")
+      background-repeat: no-repeat
+
+  // .footer__social
+  &__social
+
+  // .footer__icon
+  &__icon

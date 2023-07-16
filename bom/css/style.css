@@ -1,5 +1,5 @@
 /**
- * Swiper 9.3.1
+ * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 10, 2023
+ * Released on: June 13, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,6 +177,14 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1655,7 +1663,28 @@ input {
 }
 
 .footer {
-  background-color: #3e3e3e;
-  padding: 60px 0;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  padding: 60px 0 67px 0;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__link {
+  color: #000000;
+}
+.footer__adres {
+  padding-left: 40px;
+  position: relative;
+}
+.footer__adres::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/icons/sprite.svg#map");
+  background-repeat: no-repeat;
 }
