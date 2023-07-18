@@ -32,8 +32,15 @@
 
   &--about
     margin-left: auto
+    @include mediaPhone
+      margin-left: 0
+      margin-right: auto
+
   &--projects
     margin-left: auto
+    @include mediaPhone
+      margin-left: 0
+      margin-right: auto
 
 
 // стрелки слайдера
@@ -50,13 +57,15 @@
       // transform: rotate(90deg)
       @media (any-hover: hover)
         &:hover
-          transform: translateX(-5px) rotate(180deg)
+          // transform: translateX(-5px) rotate(180deg)
+          transform: scale(1.1) rotate(180deg)
     &-svg
       width: 100%
       height: 100%
     &-next
       @media (any-hover: hover)
         &:hover
-          transform: translateX(5px)
+          // transform: translateX(5px)
+          transform: scale(1.1)
     &:focus
       outline: none

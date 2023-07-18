@@ -1,21 +1,22 @@
 import _vars from "../_vars.js";
 import Swiper, { Pagination, Navigation, Autoplay } from "swiper";
 
-Swiper.use([Pagination, Autoplay]);
+Swiper.use([Navigation, Autoplay]);
+// console.log(_vars.newGoodsEl);
 
 // слайдер на главной
-new Swiper(_vars.newGoodsEl, {
+new Swiper(".new-goods__product", {
   loop: true,
-  // autoplay: {
-  //   //пауза между прокруткой
-  //   delay: 3000,
-  //   //закончить на последнем слайде
-  //   // stopOnLastSlide: false,
-  //   //отключить после ручного переключения
-  //   // disableOnInteraction: false,
-  // },
-  //скорость переключения слайдов
-  // speed: 800,
+  autoplay: {
+    //пауза между прокруткой
+    delay: 5000,
+    //закончить на последнем слайде
+    // stopOnLastSlide: false,
+    //отключить после ручного переключения
+    // disableOnInteraction: false,
+  },
+  // скорость переключения слайдов
+  speed: 1000,
   navigation: {
     nextEl: ".new-goods--next",
     prevEl: ".new-goods--prev",
@@ -30,18 +31,28 @@ new Swiper(_vars.newGoodsEl, {
   //   crossFade: true,
   // },
   // показ кол-ва слайдов (работает, когда откл effect: "fade")
-  slidesPerView: 4,
+  slidesPerView: 1.5,
+  // loopedSlides: 4,
   // расстояние между слайдами
-  spaceBetween: 1,
+  spaceBetween: 20,
 
   // адаптив
-  // breakpoints: {
-  //   // when window width is >= 320px
-  //   480: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  // },
+  breakpoints: {
+    // when window width is >= 320px
+    
+    480: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 3.2,
+    },
+    1152: {
+      slidesPerView: 4,
+    },
+  },
 
   //отложенная загрузка:
   //отключаем презагрузку картинок

@@ -36,6 +36,10 @@
     align-self: end
     display: flex
     flex-direction: column
+    @include mediaDesk
+      width: 82.714844% // 847/1024
+    @include mediaPhone
+      width: 100%
 
   // .projects__title
   &__title
@@ -49,5 +53,10 @@
     display: flex
     gap: 20px
     flex-wrap: wrap
+    @include mediaPhone
+      flex-wrap: nowrap
+      flex-direction: column
     p
       flex: 1 1 47%
+      @include mediaPhone
+        flex-basis: 100%

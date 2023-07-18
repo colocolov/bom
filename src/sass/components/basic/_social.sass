@@ -1,0 +1,27 @@
+.social
+  display: flex
+  align-items: center
+  column-gap: 30px
+
+  li
+    // width: 30px
+    height: 30px
+  a
+    display: flex
+    align-items: center
+    color: $blue
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $red
+        svg
+          stroke: $red
+          transform: scale(1.02)
+  &__icon
+    margin-right: 10px
+  svg
+    width: 30px
+    height: 30px
+    stroke: $black
+    stroke-width: 1.7px
+    transition: stroke 0.3s ease-in, transform 0.3s ease-in

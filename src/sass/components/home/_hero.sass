@@ -53,9 +53,15 @@
     width: 100%
     text-transform: uppercase
     font-size: 50px
+    display: flex
+    flex-direction: column
+    align-items: start
+    @include mediaDesk
+      margin-left: 50px
     span
-      display: block
+      // display: block
       &:nth-child(even)
         // margin-left: auto
         // margin-right: 0
-        text-align: right
+        align-self: end
+        // text-align: right

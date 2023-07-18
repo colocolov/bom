@@ -15,8 +15,18 @@
     max-width: 67%
     margin-left: auto
     margin-bottom: 186px
+    @include mediaDesk
+      max-width: 82.324219% // 843/1024
+    @include mediaPhone
+      max-width: none
+      width: 100%
+      flex-wrap: nowrap
+      flex-direction: column
+      margin-bottom: 40px
     p
       flex: 1 1 32%
+      @include mediaPhone
+        flex-basis: 100%
 
   &__timeline
     margin-bottom: 99px

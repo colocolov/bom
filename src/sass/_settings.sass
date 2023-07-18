@@ -57,7 +57,7 @@ input
 .heading
   @extend %head
   color: $white
-  height: 60px // заменить на адаптив
+  min-height: 60px // заменить на адаптив
   display: flex
   align-items: center
   &--full
@@ -81,6 +81,10 @@ input
     color: $blue
     &::before
       background-color: $blue
+  @include mediaPhone
+    margin-left: -20px
+    margin-right: -20px
+    padding-left: 19px
 
 
 .unvisible

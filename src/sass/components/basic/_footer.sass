@@ -6,14 +6,29 @@
     display: flex
     align-items: center
     justify-content: space-between
+    column-gap: 30px
+    @include mediaTablet
+      flex-wrap: wrap
+      gap: 30px
+      & > *
+        flex: 1 1 47%
+        @include mediaPhoneMid
+          flex-basis: 100%
+          gap: 40px
+
 
   // .footer__link
   &__link
     color: $black
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $red
 
   &__adres
     padding-left: 40px
     position: relative
+    font-style: normal
     &::before
       content: ''
       position: absolute
@@ -26,6 +41,9 @@
 
   // .footer__social
   &__social
+    // width: 163px
+    // justify-content: space-between
 
   // .footer__icon
   &__icon
+    width: 120px
