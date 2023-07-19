@@ -1,0 +1,74 @@
+.about-info
+  padding-top: 65px
+  padding-bottom: 20px
+
+  // .about-info__container
+  &__container
+
+  // .about-info__head
+  &__head
+
+  // .about-info__descr
+  &__descr
+    margin-bottom: 107px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+  // .about-info__note
+  &__note
+    max-width: 305px
+    background-color: $white
+    padding: 20px
+    grid-column: 1 / 2
+
+  // .about-info__quote
+  &__quote
+    background-color: $bgc-dark
+    padding: 10px
+    padding-bottom: 20px
+    text-align: center
+    font-style: italic
+
+  // .about-info__text
+  &__text
+    grid-column: 2 / 4
+    p
+      &:not(:last-child)
+        margin-bottom: 54px
+
+  // .about-info__slider
+  &__slider
+    width: 100%
+    height: 420px
+
+  // .about-info__slider-wrap
+  &-wrap
+
+  // .about-info__slide
+  &__slide
+    width: 754px
+    height: 100%
+
+  // .about-info__img
+  &__img
+    padding-bottom: 55.702918% // 420/754
+
+  // .about-info__banner
+  &__banner
+    background-color: $white
+    padding: 14px 20px
+    margin-bottom: 79px
+
+  // .about-info__image
+  &__image
+    padding-bottom: 28.387097% // 352/1240
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba($black, 0.2)
+      z-index: 2
+
