@@ -24,9 +24,13 @@
     flex-direction: column
     justify-content: space-between
     height: 800px
+    @include mediaPhoneMid
+      height: auto
 
   // .projects__head
   &__head
+    @include mediaPhoneMid
+      margin-bottom: 40px
 
   // .projects__info
   &__info
@@ -45,7 +49,8 @@
   &__title
     margin-bottom: 40px
     font-size: 36px
-    height: 50px
+    min-height: 50px
+
 
   // .projects__text
   &__text

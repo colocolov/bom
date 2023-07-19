@@ -1,5 +1,5 @@
 /**
- * Swiper 9.4.1
+ * Swiper 9.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: June 13, 2023
+ * Released on: May 10, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,14 +177,6 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-  scroll-snap-type: none;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -991,9 +983,15 @@ input {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 36px;
+  }
+}
 .heading--full {
   background-color: #01304C;
   padding-left: 30px;
+  padding-right: 60px;
   padding-bottom: 7px;
   position: relative;
   text-transform: lowercase;
@@ -1052,6 +1050,11 @@ input {
   padding-right: 15px;
   background-color: #FFFFFF;
 }
+@media screen and (max-width: 576px) {
+  .header__container {
+    column-gap: 20px;
+  }
+}
 .header__logo {
   display: flex;
   align-items: center;
@@ -1078,7 +1081,7 @@ input {
 }
 @media screen and (max-width: 768px) {
   .header__search {
-    display: none;
+    order: 2;
   }
 }
 .header__search-btn {
@@ -1126,7 +1129,10 @@ input {
 }
 @media screen and (max-width: 768px) {
   .header__cart {
-    display: none;
+    order: 3;
+  }
+  .header__cart svg {
+    fill: #FFFFFF;
   }
 }
 .header__cart svg {
@@ -1155,11 +1161,20 @@ input {
 
 @media screen and (max-width: 768px) {
   .menu-languages {
-    display: none;
+    align-self: end;
+    order: 1;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 .menu-languages__item {
   color: #01304C;
+}
+@media screen and (max-width: 768px) {
+  .menu-languages__item {
+    color: #FFFFFF;
+    font-size: 24px;
+  }
 }
 .menu-languages a {
   color: inherit;
@@ -1176,11 +1191,17 @@ input {
   right: -100%;
   width: 100%;
   height: 100%;
-  padding: 150px 30px 50px 70px;
+  padding: 110px 30px 50px 70px;
   background-color: #01304C;
   overflow: auto;
   transition: right 0.5s ease 0s;
   z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .menu__body {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .menu__body::before {
   content: "";
@@ -1201,6 +1222,11 @@ input {
 .menu__list {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .menu__list {
+    order: 4;
+  }
 }
 @media (max-width: 768px) {
   .menu__list {
@@ -1247,6 +1273,21 @@ input {
   .menu__item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+}
+.menu__phone {
+  display: none;
+  width: 0;
+  height: 0;
+}
+@media screen and (max-width: 768px) {
+  .menu__phone {
+    color: #FFFFFF;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    margin-right: auto;
+    order: 5;
   }
 }
 .menu__icon {
@@ -1552,6 +1593,12 @@ input {
     margin-left: 50px;
   }
 }
+@media screen and (max-width: 768px) {
+  .hero__head {
+    font-size: 36px;
+    margin-left: 0;
+  }
+}
 .hero__head span:nth-child(even) {
   align-self: end;
 }
@@ -1566,6 +1613,11 @@ input {
 }
 .about__head {
   margin-bottom: 87px;
+}
+@media screen and (max-width: 576px) {
+  .about__head {
+    margin-bottom: 30px;
+  }
 }
 .about__descr {
   display: flex;
@@ -1599,6 +1651,11 @@ input {
 }
 .about__timeline {
   margin-bottom: 99px;
+}
+@media screen and (max-width: 576px) {
+  .about__timeline {
+    margin-bottom: 40px;
+  }
 }
 
 .timeline {
@@ -1697,6 +1754,11 @@ input {
     top: 31px;
     left: 70px;
     width: 350px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .timeline__item:nth-child(odd) p {
+    width: 185px;
   }
 }
 @media (any-hover: hover) {
@@ -1834,6 +1896,16 @@ input {
   justify-content: space-between;
   height: 800px;
 }
+@media screen and (max-width: 576px) {
+  .projects__container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .projects__head {
+    margin-bottom: 40px;
+  }
+}
 .projects__info {
   width: 66.171875%;
   padding: 20px;
@@ -1855,7 +1927,7 @@ input {
 .projects__title {
   margin-bottom: 40px;
   font-size: 36px;
-  height: 50px;
+  min-height: 50px;
 }
 .projects__text {
   margin-bottom: 40px;

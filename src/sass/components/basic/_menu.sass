@@ -9,11 +9,15 @@
     right: -100%
     width: 100%
     height: 100%
-    padding: 150px 30px 50px 70px
+    padding: 110px 30px 50px 70px
     background-color: $blue
     overflow: auto
     transition: right 0.5s ease 0s
     z-index: 5
+    @include mediaPhone
+      display: flex
+      flex-direction: column
+
     // подложка под верхнее меню, если оно имеет фон
     &::before
       content: ''
@@ -34,6 +38,8 @@
     display: flex
     flex-direction: column
     // flex-wrap: wrap
+    @include mediaPhone
+      order: 4
     @media (max-width: 768px)
       flex-direction: column
       align-items: flex-start
@@ -74,6 +80,18 @@
       &:not(:last-child)
         margin-right: 0
         margin-bottom: 10px
+
+  &__phone
+    display: none
+    width: 0
+    height: 0
+    @include mediaPhone
+      color: $white
+      width: auto
+      height: auto
+      font-size: 20px
+      margin-right: auto
+      order: 5
 
   &__icon
     display: block
