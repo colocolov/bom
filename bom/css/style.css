@@ -1048,8 +1048,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: #FFFFFF;
 }
 .header__logo {
@@ -1805,6 +1805,7 @@ input {
 .new-goods__navigation svg {
   width: 18px;
 }
+
 :root {
   --projectBgImg: url("../images/bg/projects.jpg");
 }
@@ -1876,6 +1877,38 @@ input {
   .projects__text p {
     flex-basis: 100%;
   }
+}
+
+.page__about {
+  background-color: #E9E9E9;
+}
+
+.about-hero {
+  margin-top: 10px;
+}
+.about-hero__container {
+  background-color: #FFFFFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.about-hero__head {
+  padding-left: 15px;
+  padding-right: 0;
+  margin-bottom: 70px;
+}
+.about-hero__text {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.about-hero__text p {
+  grid-column: 2/4;
+  max-width: 570px;
+}
+.about-hero__img {
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-bottom: 30.327869%;
 }
 
 .footer {
