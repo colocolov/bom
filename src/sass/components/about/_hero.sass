@@ -10,8 +10,9 @@
 
   &__head
     padding-left: 15px
-    padding-right: 0
-    margin-bottom: 70px
+    // padding-right: 0
+    @include adaptiveValue('margin-bottom', 70, 47)
+    // margin-bottom: 70px
 
   // .about-hero__text
   &__text
@@ -21,10 +22,14 @@
     p
       grid-column: 2/4
       max-width: 570px
-
+      @include mediaPhone
+        grid-column: span 3
 
   // .about-hero__img
   &__img
     // margin-right: 15px
     // margin-left: 15px
     padding-bottom: 30.327869% // 370/1220
+    @include mediaPhone
+      padding-bottom: 53.327869% // 370/1220
+

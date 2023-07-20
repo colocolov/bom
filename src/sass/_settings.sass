@@ -60,8 +60,10 @@ input
   min-height: 60px // заменить на адаптив
   display: flex
   align-items: center
-  @include mediaPhone
-    font-size: 36px
+
+  @include adaptiveValue('font-size', 50, 36)
+  // @include mediaPhone
+    // font-size: 36px
   &--full
     background-color: $blue
     padding-left: 30px
@@ -79,6 +81,8 @@ input
       border-radius: 50%
       background-color: $white
       transform: translateY(-50%)
+      @include mediaPhoneMid
+        right: 15px
   &--light
     background-color: $white
     color: $blue

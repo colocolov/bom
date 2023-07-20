@@ -1,7 +1,7 @@
 import _vars from "../_vars.js";
-import Swiper, { Autoplay, EffectFade } from "swiper";
+import Swiper, { Autoplay, EffectFade, Parallax } from "swiper";
 
-Swiper.use([Autoplay, EffectFade]);
+Swiper.use([Autoplay, Parallax]);
 
 // слайдер на главной
 new Swiper(_vars.heroSliderEl, {
@@ -17,11 +17,12 @@ new Swiper(_vars.heroSliderEl, {
   //скорость переключения слайдов
   speed: 800,
 
+  parallax: true,
   //эффект перехода слайда (только если показ по 1-му слайду)
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
   // показ кол-ва слайдов (работает, когда откл effect: "fade")
   // slidesPerView: 3.6,
   // расстояние между слайдами

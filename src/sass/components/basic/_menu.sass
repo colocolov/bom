@@ -17,6 +17,9 @@
     @include mediaPhone
       display: flex
       flex-direction: column
+    @include mediaPhoneMid
+      padding-left: 30px
+
 
     // подложка под верхнее меню, если оно имеет фон
     &::before
@@ -26,7 +29,7 @@
       right: -100%
       width: 100%
       height: 74px
-      // background-color: $text
+      background-color: $blue
       transition: right 0.5s ease 0s
       z-index: 2
     &._active
@@ -52,6 +55,14 @@
     color: $white
     text-transform: uppercase
     transition: color 0.3s ease
+
+    &.current-menu-item a
+      color: $red
+    @media (any-hover: hover)
+      &:hover
+        a
+          color: $red
+
     &:not(:last-child)
       margin-bottom: 20px
 

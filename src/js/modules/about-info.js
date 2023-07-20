@@ -18,7 +18,7 @@ new Swiper(".about-info__slider", {
     // disableOnInteraction: false,
   },
   // скорость переключения слайдов
-  speed: 1000,
+  speed: 800,
   // navigation: {
   //   nextEl: ".new-goods--next",
   //   prevEl: ".new-goods--prev",
@@ -33,27 +33,19 @@ new Swiper(".about-info__slider", {
   //   crossFade: true,
   // },
   // показ кол-ва слайдов (работает, когда откл effect: "fade")
-  slidesPerView: 2,
+  slidesPerView: 1,
+  spaceBetween: 10,
   // loopedSlides: 4,
   // расстояние между слайдами
-  spaceBetween: 20,
   centeredSlides: true,
-
+  
   // адаптив
   breakpoints: {
     // when window width is >= 320px
     
-    480: {
+    576: {
       slidesPerView: 2,
-    },
-    992: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 3.2,
-    },
-    1152: {
-      slidesPerView: 2,
+      spaceBetween: 20,
     },
   },
 

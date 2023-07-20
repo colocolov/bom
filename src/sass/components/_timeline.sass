@@ -66,9 +66,7 @@
         @include mediaTablet
           top: 31px
           left: 70px
-          width: 350px
-        @include mediaPhoneMid
-          width: 185px
+
       @media (any-hover: hover)
         &:hover
           color: $red
@@ -84,7 +82,6 @@
         @include mediaTablet
           top: 31px
           left: 70px
-          width: 350px
       @media (any-hover: hover)
         &:hover
           color: $red
@@ -105,6 +102,10 @@
       transition: color 0.3s ease-in
       @include mediaDesk
         width: 218px
+      @include mediaTablet
+        width: 350px
+      @include mediaPhoneMid
+        width: 185px
     &._active
       p
         // overflow: visible

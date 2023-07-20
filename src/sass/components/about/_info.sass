@@ -1,18 +1,26 @@
 .about-info
-  padding-top: 65px
+  @include adaptiveValue('padding-top', 65, 20)
+  // padding-top: 65px
   padding-bottom: 20px
 
   // .about-info__container
   &__container
+    @include mediaPhone
+      display: flex
+      flex-direction: column
 
   // .about-info__head
   &__head
 
   // .about-info__descr
   &__descr
-    margin-bottom: 107px
     display: grid
     grid-template-columns: repeat(3, 1fr)
+    column-gap: 20px
+    @include adaptiveValue('margin-bottom', 107, 40)
+    @include mediaPhoneMid
+      display: flex
+      flex-direction: column-reverse
 
   // .about-info__note
   &__note
@@ -20,6 +28,8 @@
     background-color: $white
     padding: 20px
     grid-column: 1 / 2
+    @include mediaPhoneMid
+      margin: 0 auto
 
   // .about-info__quote
   &__quote
@@ -32,14 +42,19 @@
   // .about-info__text
   &__text
     grid-column: 2 / 4
+    @include mediaPhoneMid
+      margin-bottom: 20px
     p
       &:not(:last-child)
-        margin-bottom: 54px
+        @include adaptiveValue('margin-bottom', 54, 20)
 
   // .about-info__slider
   &__slider
     width: 100%
     height: 420px
+    @include mediaPhone
+      height: auto
+      margin-bottom: 40px
 
   // .about-info__slider-wrap
   &-wrap
@@ -52,12 +67,17 @@
   // .about-info__img
   &__img
     padding-bottom: 55.702918% // 420/754
+    @include mediaPhoneMid
+      padding-bottom: 71%
+
 
   // .about-info__banner
   &__banner
     background-color: $white
     padding: 14px 20px
     margin-bottom: 79px
+    @include mediaPhone
+      order: 2
 
   // .about-info__image
   &__image
@@ -71,4 +91,7 @@
       height: 100%
       background: rgba($black, 0.2)
       z-index: 2
-
+    @include mediaPhone
+      padding-bottom: 38%
+    @include mediaPhoneMid
+      padding-bottom: 65%

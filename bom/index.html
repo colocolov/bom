@@ -32,7 +32,7 @@
           <input type="text" class="header__search-input">
           <button class="header__search-btn"></button>
         </form><!-- /.header__search -->
-        <a data-da=".menu__body,768,3" href="#" class="header__cart">
+        <a href="#" class="header__cart">
           <svg class="" aria-hidden="true">
             <use xlink:href="images/icons/sprite.svg#cart"></use>
           </svg>
@@ -51,7 +51,7 @@
         <div class="header__menu menu">
           <nav class="menu__body" title="Main navigation">
             <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="./">Главная</a></li>
+              <li class="menu__item current-menu-item"><a class="menu__link" href="./">Главная</a></li>
               <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Магазин</a></li>
               <li class="menu__item"><a class="menu__link" href="#">Мой кабинет</a></li>
@@ -73,7 +73,7 @@
     <main class="page__main">
       <section class="hero">
 
-  <div class="hero__clip">
+  <!-- <div class="hero__clip">
     <video
            src="files/video/book.mp4"
            playsinline
@@ -87,12 +87,41 @@
       <span>Слово Твое</span>
       <span>есть истина</span>
     </h2>
-  </div>
+  </div> -->
   <!-- /.hero__container -->
 
 
   <!-- SLIDER -->
-  
+  <div class="swiper hero__slider">
+  <div class="swiper-wrapper hero__slider-wrap">
+
+    <div class="swiper-slide hero__slide">
+      <div class="hero__slide-img _ibg">
+        <img src="images/bg/hero.jpg" loading="lazy" width="" height="" alt="">
+      </div>
+      <div class="hero__container-slide">
+        <h2 class="heading hero__head">
+          <span data-swiper-parallax-opacity="0" data-swiper-parallax="150%">Слово Твое</span>
+          <span data-swiper-parallax="-100%" data-swiper-parallax-duration="600">есть истина</span>
+          <span data-swiper-parallax="100%">Слово Твое</span>
+        </h2>
+      </div><!-- /.hero__container -->
+    </div><!-- /.slide -->
+
+    <div class="swiper-slide hero__slide">
+      <div class="hero__slide-img _ibg">
+        <img src="images/bg/projects.jpg" loading="lazy" width="" height="" alt="">
+      </div>
+      <div class="hero__container-slide">
+        <h2 class="heading hero__head">
+          <span data-swiper-parallax-opacity="0" data-swiper-parallax="150%">Слово Твое</span>
+          <span data-swiper-parallax="-100%" data-swiper-parallax-duration="600">есть истина</span>
+        </h2>
+      </div><!-- /.hero__container -->
+    </div><!-- /.slide -->
+
+  </div><!-- /.swiper-wrapper -->
+</div><!-- /.swipper -->
   <!-- SLIDER -->
 
 </section><!-- /.hero -->
