@@ -38,6 +38,11 @@
       height: 30px
       background-image: url("@img/icons/sprite.svg#map")
       background-repeat: no-repeat
+      transition: background-image 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover::before
+        background-image: url("@img/icons/sprite.svg#map-red")
+
 
   // .footer__social
   &__social

@@ -33,7 +33,7 @@ new Swiper(".about-info__slider", {
   //   crossFade: true,
   // },
   // показ кол-ва слайдов (работает, когда откл effect: "fade")
-  slidesPerView: 1.5,
+  slidesPerView: 2,
   // loopedSlides: 4,
   // расстояние между слайдами
   spaceBetween: 20,

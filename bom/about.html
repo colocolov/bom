@@ -22,64 +22,72 @@
   <div class="wrapper">
     <header class="header">
   <div class="header__container">
-    <a href="./" class="header__logo">
-      <img src="images/logo.svg" loading="lazy" width="60" height="60" alt="Logo Societatea Biblică din Moldova">
-      <span>Societatea Biblică din Moldova</span>
-    </a>
-    <div class="header__nav">
-      <form class="header__search" method="get">
-        <input type="text" class="header__search-input">
-        <button class="header__search-btn"></button>
-      </form><!-- /.header__search -->
-      <a href="#" class="header__cart">
-        <svg class="" aria-hidden="true">
-          <use xlink:href="images/icons/sprite.svg#cart"></use>
-        </svg>
-      </a><!-- /.header__cart -->
-      <ul class="header__list menu-languages">
-        <li class="menu-languages__item wpml-ls-current-language">
-          <a href="#">Ru</a>
-        </li>
-        <li class="menu-languages__item">
-          <a href="#">Ro</a>
-        </li>
-        <li class="menu-languages__item">
-          <a href="#">En</a>
-        </li>
-      </ul><!-- /.menu-languages -->
-      <div class="header__menu menu">
-        <nav class="menu__body" title="Main navigation">
-          <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="./">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Contacts</a></li>
-          </ul>
-        </nav>
-        <button type="button" aria-label="Open Menu" aria-expanded="false" class="menu__icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div><!-- /.header__menu -->
-    </div><!-- /.header__nav -->
+    <div class="header__wrap">
+      <a href="./" class="header__logo">
+        <img src="images/logo.svg" loading="lazy" width="60" height="60" alt="Logo Societatea Biblică din Moldova">
+        <span>Societatea Biblică din Moldova</span>
+      </a>
+      <div class="header__nav">
+        <form data-da=".menu__body,768,2" class="header__search" method="get">
+          <input type="text" class="header__search-input">
+          <button class="header__search-btn"></button>
+        </form><!-- /.header__search -->
+        <a data-da=".menu__body,768,3" href="#" class="header__cart">
+          <svg class="" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#cart"></use>
+          </svg>
+        </a><!-- /.header__cart -->
+        <ul data-da=".menu__body,768,1" class="header__list menu-languages">
+          <li class="menu-languages__item wpml-ls-current-language">
+            <a href="#">Ru</a>
+          </li>
+          <li class="menu-languages__item">
+            <a href="#">Ro</a>
+          </li>
+          <li class="menu-languages__item">
+            <a href="#">En</a>
+          </li>
+        </ul><!-- /.menu-languages -->
+        <div class="header__menu menu">
+          <nav class="menu__body" title="Main navigation">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="./">Главная</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Магазин</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Мой кабинет</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+            </ul>
+            <a href="tel:+37378771178" class="menu__phone">+373 78 77 11 78</a><!-- /.menu__phone -->
+          </nav>
+          <button type="button" aria-label="Open Menu" aria-expanded="false" class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div><!-- /.header__menu -->
+      </div><!-- /.header__nav -->
+    </div>
   </div><!-- /.container -->
 </header><!-- /.header -->
 
     <main class="page__main">
       <section class="about-hero">
   <div class="about-hero__container">
-    <h2 class="heading heading--full heading--light about-hero__head">О нас</h2>
+    <div class="about-hero__wrap">
+      <h1 class="heading heading--full heading--light about-hero__head">О нас</h1>
 
-    <div class="about-hero__text">
-      <p>
-        Библейское Общество Республики Молдова — это общественная некоммерческая, неполитическая организация, целью
-        создания которой является служение духовным нуждам населения страны.
-      </p>
-    </div><!-- /.about-hero__text -->
+      <div class="about-hero__text">
+        <p>
+          Библейское Общество Республики Молдова — это общественная некоммерческая, неполитическая организация, целью
+          создания которой является служение духовным нуждам населения страны.
+        </p>
+      </div><!-- /.about-hero__text -->
 
-    <div class="about-hero__img _ibg">
-      <img src="images/about/01.jpg" loading="lazy" width="1220" height="370" alt="">
-    </div><!-- /.about-hero__img -->
+      <div class="about-hero__img _ibg">
+        <img src="images/about/01.jpg" loading="lazy" width="1220" height="370" alt="">
+      </div><!-- /.about-hero__img -->
 
+    </div>
   </div><!-- /.about-hero__container -->
 </section><!-- /.about-hero -->
       <section class="about-info">
@@ -124,11 +132,6 @@
 
         <div class="swiper-slide about-info__slide">
           <div class="about-info__img _ibg">
-            <img src="images/about/02.jpg" loading="lazy" width="" height="" alt="">
-          </div>
-        </div><!-- /.slide -->
-        <div class="swiper-slide about-info__slide">
-          <div class="about-info__img _ibg">
             <img src="images/about/03.jpg" loading="lazy" width="" height="" alt="">
           </div>
         </div><!-- /.slide -->
@@ -144,7 +147,7 @@
         </div><!-- /.slide -->
         <div class="swiper-slide about-info__slide">
           <div class="about-info__img _ibg">
-            <img src="images/about/06.jpg" loading="lazy" width="" height="" alt="">
+            <img src="images/about/02.jpg" loading="lazy" width="" height="" alt="">
           </div>
         </div><!-- /.slide -->
 
@@ -187,13 +190,67 @@
 
   </div><!-- /.about-info__container -->
 </section><!-- /.about-info -->
-      
+      <section class="about-mission">
+  <div class="about-mission__container">
+
+    <div class="about-mission__wrap">
+      <h2 class="heading heading--full heading--light about-mission__head">наша миссия</h2>
+
+      <div class="about-mission__descr">
+
+        <div class="about-mission__image">
+          <div class="about-mission__img _ibg">
+            <img src="images/about/08.jpg" loading="lazy" width="343" height="337" alt="">
+          </div>
+        </div>
+        <!-- /..about-mission__image -->
+
+        <div class="about-mission__info">
+
+          <p class="about-mission__item">
+            Сделать Священные Писания доступными каждому желающему
+            <span>На понятном языке и такими средствами коммуникации, которые отвечают потребностям человека</span>
+            <span>В переводах, которые верны тексту Священного Писания (как оно известно нам на языках оригинала), и
+              которые передают благовестие Библии</span>
+          </p>
+          <p class="about-mission__item">Активно популяризировать духовно-нравственное богатство Библии и вовлекать
+            общественность в процесс
+            возрождения и
+            развития духовности народа</p>
+          <p class="about-mission__item">
+            Помочь людям воспринять Слово Божие
+            <span>
+              Предоставлять справочную, научную, историческую, культурную и учебную литературу, относящуюся к Библии
+              без догматических/вероучительных комментариев: словари, справочники, энциклопедии и т.д.
+            </span>
+            <span>
+              Разрабатывать программы, способствующие взаимодействию с библейским текстом
+            </span>
+          </p>
+
+          <p class="about-mission__item">Оказывать помощь нуждающимся слоям населения посредством благотворительных
+            проектов</p>
+          <p class="about-mission__item">Участвовать в процессе перевода Священного Писания на местные языки</p>
+
+        </div>
+        <!-- /.about-mission__info -->
+
+      </div>
+      <!-- /.about-mission__wrap -->
+
+      <a href="#" class="btn-reset btn btn--about-mission">связаться с нами</a>
+
+    </div><!-- /.about-mission__wrap -->
+  </div><!-- /.about-mission__container -->
+</section><!-- /.about-mission -->
     </main>
 
     <footer class="footer">
   <div class="container footer__container">
     <a href="tel:+37378771178" class="footer__link">Tel: (+373) 78 77 11 78</a>
-    <address class="footer__adres">Ек. Теодорою, 33A, Кишинёв, Молдова</address>
+    <a href="https://goo.gl/maps/g3dUo9XaAEkSiEa49" target="_blank" class="footer__link">
+      <address class="footer__adres">Ек. Теодорою, 33A, Кишинёв, Молдова</address>
+    </a>
     <ul class="footer__social social">
       <li class="social__item">
         <a class="social__link" href="">
