@@ -1046,8 +1046,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 576px) {
@@ -1421,6 +1421,13 @@ input {
     margin-left: 0;
     margin-right: auto;
   }
+}
+.btn--about-info {
+  border-radius: 3px;
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 20px;
+  font-style: normal;
 }
 
 .navigation {
@@ -1867,6 +1874,7 @@ input {
 .new-goods__navigation svg {
   width: 18px;
 }
+
 :root {
   --projectBgImg: url("../images/bg/projects.jpg");
 }
@@ -1948,6 +1956,97 @@ input {
   .projects__text p {
     flex-basis: 100%;
   }
+}
+
+.page__about {
+  background-color: #E9E9E9;
+}
+
+.about-hero {
+  margin-top: 10px;
+  padding-bottom: 40px;
+}
+.about-hero__container {
+  background-color: #FFFFFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.about-hero__head {
+  padding-left: 15px;
+  padding-right: 0;
+  margin-bottom: 70px;
+}
+.about-hero__text {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.about-hero__text p {
+  grid-column: 2/4;
+  max-width: 570px;
+}
+.about-hero__img {
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-bottom: 30.327869%;
+}
+
+.about-info {
+  padding-top: 65px;
+  padding-bottom: 20px;
+}
+.about-info__descr {
+  margin-bottom: 107px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.about-info__note {
+  max-width: 305px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  grid-column: 1/2;
+}
+.about-info__quote {
+  background-color: #E9E9E9;
+  padding: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+}
+.about-info__text {
+  grid-column: 2/4;
+}
+.about-info__text p:not(:last-child) {
+  margin-bottom: 54px;
+}
+.about-info__slider {
+  width: 100%;
+  height: 420px;
+}
+.about-info__slide {
+  width: 754px;
+  height: 100%;
+}
+.about-info__img {
+  padding-bottom: 55.702918%;
+}
+.about-info__banner {
+  background-color: #FFFFFF;
+  padding: 14px 20px;
+  margin-bottom: 79px;
+}
+.about-info__image {
+  padding-bottom: 28.387097%;
+}
+.about-info__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
 .footer {

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title":"О нас" })
+
+<body class="page__body page__about">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="page__main">
+      @include('html/about/_hero.html')
+      @include('html/about/_info.html')
+      <!-- @include('html/about/_info.html') -->
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>
