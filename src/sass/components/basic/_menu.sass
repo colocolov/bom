@@ -10,7 +10,7 @@
     width: 100%
     height: 100%
     padding: 110px 30px 50px 70px
-    background-color: $blue
+    background-color: $grey
     overflow: auto
     transition: right 0.5s ease 0s
     z-index: 5
@@ -29,7 +29,7 @@
       right: -100%
       width: 100%
       height: 74px
-      background-color: $blue
+      background-color: $grey
       transition: right 0.5s ease 0s
       z-index: 2
     &._active
@@ -52,7 +52,7 @@
     @include fx-all
     flex-wrap: wrap
     @include font(700, 28, 42)
-    color: $white
+    color: $blue
     text-transform: uppercase
     transition: color 0.3s ease
 
@@ -138,8 +138,21 @@
         transition: transform .3s ease-in-out, top .3s ease-in-out, background-color .5s ease-out
         width: 75% // 30/40
     &._active
+      background-color: $red
+      border-radius: 50%
+      width: 50px
+      height: 50px
+      background-position: 0 10px
+      @media (any-hover: hover)
+        &:hover
+          span
+            &:first-child
+              transform: rotate(135deg)
+            &:last-child
+              transform: rotate(-135deg)
       span
         transform: scale(0)
+        right: 6px
         background-color: $white
         transition: transform 0.3s ease-in-out, background-color .5s ease-out
         &:first-child
