@@ -1043,6 +1043,16 @@ input {
 .heading--light::before {
   background-color: #01304C;
 }
+.heading--catalog {
+  background-color: unset;
+  transform: translateY(-100px);
+  padding-left: 0;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.heading--catalog::before {
+  right: 0;
+}
 @media screen and (max-width: 768px) {
   .heading {
     margin-left: -20px;
@@ -1636,6 +1646,42 @@ input {
 @media (any-hover: hover) {
   .product__cart:hover {
     transform: scale(1.02);
+  }
+}
+
+.breadcrumbs {
+  margin-top: 60px;
+  margin-bottom: 22px;
+}
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.breadcrumbs__item {
+  color: rgba(0, 0, 0, 0.5);
+}
+.breadcrumbs__item a {
+  position: relative;
+  color: inherit;
+  transition: color 0.3s ease-in;
+}
+.breadcrumbs__item a::before {
+  content: " / ";
+  position: absolute;
+  top: 2px;
+  right: -11px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.breadcrumbs__item span {
+  color: #000000;
+}
+.breadcrumbs__item:not(:last-child) {
+  margin-right: 20px;
+}
+@media (any-hover: hover) {
+  .breadcrumbs__item:hover a {
+    color: #000000;
   }
 }
 
