@@ -1,5 +1,5 @@
 /**
- * Swiper 9.4.1
+ * Swiper 9.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: June 13, 2023
+ * Released on: May 10, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,14 +177,6 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-  scroll-snap-type: none;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1014,6 +1006,12 @@ input {
   position: relative;
   text-transform: lowercase;
 }
+@media screen and (max-width: 768px) {
+  .heading--full {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
 .heading--full::before {
   content: "";
   position: absolute;
@@ -1520,6 +1518,12 @@ input {
 .btn--about-mission {
   margin-left: auto;
 }
+@media screen and (max-width: 768px) {
+  .btn--about-mission {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
 
 .navigation {
   display: flex;
@@ -1696,6 +1700,7 @@ input {
   .hero__head {
     font-size: 36px;
     margin-left: 0;
+    margin-right: 0;
   }
 }
 .hero__head span:nth-child(even) {

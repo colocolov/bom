@@ -1,4 +1,4 @@
-import * as extSass from "sass";
+import extSass from "sass";
 import gulpSass from "gulp-sass";
 import rename from "gulp-rename";
 
