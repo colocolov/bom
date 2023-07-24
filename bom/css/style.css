@@ -1469,6 +1469,10 @@ input {
   transition: stroke 0.3s ease-in, transform 0.3s ease-in;
 }
 
+.page__catalog .new-goods {
+  background-color: #E3E3E3;
+}
+
 .btn-reset {
   padding: 0;
   border: none;
@@ -2410,17 +2414,17 @@ input {
   height: 600px;
   position: relative;
 }
-.catalog-hero__slide {
+.catalog-hero__wrap {
   height: 600px;
 }
-.catalog-hero__slide-img {
+.catalog-hero__img {
   height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
-.catalog-hero__slide-img img {
+.catalog-hero__img img {
   object-fit: cover;
 }
 .catalog-data {
@@ -2481,10 +2485,6 @@ input {
 }
 .catalog-data__img {
   padding-bottom: 44.081633%;
-}
-
-.page__catalog .new-goods {
-  background-color: #E3E3E3;
 }
 
 .footer {

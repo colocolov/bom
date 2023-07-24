@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-@include('html/head.html', { "title":"Каталог" })
+@include('html/head.html', { "title": "Каталог" })
 
 <body class="page__body">
   <div class="wrapper">
     @include('html/header.html')
 
     <main class="page__catalog">
-      @include('html/catalog/_hero.html')
+      @include('html/components/_hero.html', { "name": "Каталог" })
       @include('html/components/_breadcrumbs.html')
       @include('html/catalog/_catalog.html')
       @include('html/index/_new-goods.html')

@@ -1,0 +1,24 @@
+<!-- https://www.npmjs.com/package/gulp-file-include -->
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title": "Последние поступления" })
+
+<body class="page__body">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="page__last">
+      @include('html/components/_hero.html', { "name": "Последние поступления" })
+
+      <div class="page__shop">
+        @include('html/shop/_sidebar.html')
+        @include('html/shop/_shop.html')
+      </div>
+
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>
