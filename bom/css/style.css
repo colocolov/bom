@@ -1,5 +1,5 @@
 /**
- * Swiper 9.4.1
+ * Swiper 9.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: June 13, 2023
+ * Released on: May 10, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,14 +177,6 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-  scroll-snap-type: none;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1650,8 +1642,9 @@ input {
 }
 
 .breadcrumbs {
-  margin-top: 60px;
-  margin-bottom: 22px;
+  padding-top: 60px;
+  padding-bottom: 12px;
+  background-color: #F7F6F5;
 }
 .breadcrumbs__list {
   display: flex;
@@ -2410,6 +2403,88 @@ input {
   height: 4px;
   border-radius: 50%;
   background-color: #000000;
+}
+
+.catalog-hero {
+  margin-top: -120px;
+  height: 600px;
+  position: relative;
+}
+.catalog-hero__slide {
+  height: 600px;
+}
+.catalog-hero__slide-img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.catalog-hero__slide-img img {
+  object-fit: cover;
+}
+.catalog-data {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  background-color: #F7F6F5;
+}
+.catalog-data__items {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  margin: 0 -10px;
+}
+@media screen and (max-width: 768px) {
+  .catalog-data__items {
+    justify-content: center;
+  }
+}
+.catalog-data__item {
+  padding: 10px;
+  flex: 1 1 25%;
+  min-width: 305px;
+  min-height: 305px;
+  max-width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .catalog-data__item {
+    max-width: none;
+    width: 77.608142%;
+    flex: unset;
+  }
+}
+.catalog-data__body {
+  background-color: #FFFFFF;
+  padding: 20px;
+  padding-bottom: 90px;
+  height: 100%;
+  transition: box-shadow 0.5s ease-in;
+}
+@media (any-hover: hover) {
+  .catalog-data__body:hover {
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+.catalog-data__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #E3E3E3;
+  padding: 10px;
+}
+.catalog-data__head {
+  line-height: 0.75;
+  color: #01304C;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.catalog-data__img {
+  padding-bottom: 44.081633%;
+}
+
+.page__catalog .new-goods {
+  background-color: #E3E3E3;
 }
 
 .footer {

@@ -7,10 +7,10 @@
   <meta name="theme-color" content="#111111" />
   <!-- подключение стилей -->
   <!-- <link rel="stylesheet" href="css/adv.css" /> -->
-  <link rel="stylesheet" href="css/style.min.css?v=1.2" />
+  <link rel="stylesheet" href="css/style.min.css?v=1.2.2" />
   <!-- подключение скриптов -->
   <!-- <script defer src="js/vendor/swiper-bundle.min.js"></script> -->
-  <script defer src="js/main.min.js?v=1.2"></script>
+  <script defer src="js/main.min.js?v=1.2.2"></script>
   <!-- подключение favicon -->
   <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -70,72 +70,88 @@
   </div><!-- /.container -->
 </header><!-- /.header -->
 
-    <main class="page__main">
-      <section class="hero">
+    <main class="page__catalog">
+      <section class="catalog-hero">
 
-  <!-- <div class="hero__clip">
-    <video
-           src="files/video/book.mp4"
-           playsinline
-           muted
-           autoplay
-           loop
-           class="hero__video"></video>
-  </div>
-  <div class="hero__container-video">
-    <h2 class="heading hero__head">
-      <span>Слово Твое</span>
-      <span>есть истина</span>
-    </h2>
-  </div> -->
-  <!-- /.hero__container -->
+  <div class="catalog-hero__slide">
+    <div class="catalog-hero__slide-img _ibg">
+      <img src="images/bg/hero.jpg" loading="lazy" width="" height="" alt="">
+    </div>
+  </div><!-- /.slide -->
 
-
-  <!-- SLIDER -->
-  <div class="hero__slider">
-    <div class="hero__slider-wrap">
-
-      <div class="hero__slide">
-        <div class="hero__slide-img _ibg">
-          <img src="images/bg/hero.jpg" loading="lazy" width="" height="" alt="">
-        </div>
-        <div class="hero__container-slide">
-          <h2 class="heading hero__head">
-            <span data-swiper-parallax-opacity="0" data-swiper-parallax="150%">Слово Твое</span>
-            <span data-swiper-parallax="-100%" data-swiper-parallax-duration="600">есть истина</span>
-            <span data-swiper-parallax="100%">Слово Твое</span>
-          </h2>
-        </div><!-- /.hero__container -->
-      </div><!-- /.slide -->
-
-
-    </div><!-- /.swiper-wrapper -->
-  </div><!-- /.swipper -->
-  <!-- SLIDER -->
-  <div class="hero__container">
-
-    <h1 class="heading heading--full heading--catalog catalog__head">Каталог</h1>
+  <div class="catalog-hero__container">
+    <h1 class="heading heading--full heading--catalog catalog-hero__head">Каталог</h1>
   </div>
 
 </section><!-- /.hero -->
-      <div class="breadcrumbs breadcrumbs__container">
-  <ul class="breadcrumbs__list">
-    <li class="breadcrumbs__item">
-      <a href="#">Главная</a>
-    </li>
-    <li class="breadcrumbs__item">
-      <a href="#">Каталог</a>
-    </li>
-    <li class="breadcrumbs__item">
-      <span>Библии</span>
-    </li>
-  </ul>
+      <div class="breadcrumbs">
+  <div class="breadcrumbs__container">
+
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="#">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#">Каталог</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span>Библии</span>
+      </li>
+    </ul>
+  </div>
 </div>
-      <section class="catalog">
-  <div class="catalog__container">
-    <div class="catalog__wrap">
-      В разработке
-    </div>
+<!-- /.breadcrumbs -->
+      <section class="catalog-data">
+  <div class="catalog-data__container">
+
+    <div class="catalog-data__items">
+
+      <a href="#" class="catalog-data__item">
+        <div class="catalog-data__body">
+          <div class="catalog-data__block">
+            <h2 class="catalog-data__head">библии</h2>
+            <div class="catalog-data__img _ibg">
+              <img src="images/category/01.jpg" loading="lazy" width="" height="" alt="">
+            </div>
+          </div><!-- /.catalog-data__block -->
+        </div><!-- /.catalog-data__body -->
+      </a><!-- /.catalog-data__item -->
+
+      <a href="#" class="catalog-data__item">
+        <div class="catalog-data__body">
+          <div class="catalog-data__block">
+            <h2 class="catalog-data__head">христианские книги</h2>
+            <div class="catalog-data__img _ibg">
+              <img src="images/category/02.jpg" loading="lazy" width="" height="" alt="">
+            </div>
+          </div><!-- /.catalog-data__block -->
+        </div><!-- /.catalog-data__body -->
+      </a><!-- /.catalog-data__item -->
+
+      <a href="#" class="catalog-data__item">
+        <div class="catalog-data__body">
+          <div class="catalog-data__block">
+            <h2 class="catalog-data__head">для детей</h2>
+            <div class="catalog-data__img _ibg">
+              <img src="images/category/03.jpg" loading="lazy" width="" height="" alt="">
+            </div>
+          </div><!-- /.catalog-data__block -->
+        </div><!-- /.catalog-data__body -->
+      </a><!-- /.catalog-data__item -->
+
+      <a href="#" class="catalog-data__item">
+        <div class="catalog-data__body">
+          <div class="catalog-data__block">
+            <h2 class="catalog-data__head">сувениры</h2>
+            <div class="catalog-data__img _ibg">
+              <img src="images/category/04.jpg" loading="lazy" width="" height="" alt="">
+            </div>
+          </div><!-- /.catalog-data__block -->
+        </div><!-- /.catalog-data__body -->
+      </a><!-- /.catalog-data__item -->
+
+    </div><!-- /.catalog-data__items -->
+
   </div><!-- /.catalog__container -->
 </section><!-- /.catalog -->
       <section class="new-goods">

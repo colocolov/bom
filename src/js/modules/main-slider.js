@@ -1,57 +1,60 @@
 import _vars from "../_vars.js";
 import Swiper, { Autoplay, EffectFade, Parallax } from "swiper";
 
-Swiper.use([Autoplay, Parallax]);
+if (_vars.heroSliderEl) {
 
-// слайдер на главной
-new Swiper(_vars.heroSliderEl, {
-  // loop: true,
-  autoplay: {
-    delay: 3000,
-  },
-  speed: 800,
+  Swiper.use([Autoplay, Parallax]);
 
-  parallax: true,
-  //эффект перехода слайда (только если показ по 1-му слайду)
-  // effect: "fade",
-  // fadeEffect: {
-  //   crossFade: true,
-  // },
-  // показ кол-ва слайдов (работает, когда откл effect: "fade")
-  // slidesPerView: 3.6,
-  // расстояние между слайдами
-  // spaceBetween: 40,
+  // слайдер на главной
+  new Swiper(_vars.heroSliderEl, {
+    // loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    speed: 800,
 
-  // адаптив
-  // breakpoints: {
-  //   // when window width is >= 320px
-  //   480: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  // },
+    parallax: true,
+    //эффект перехода слайда (только если показ по 1-му слайду)
+    // effect: "fade",
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
+    // показ кол-ва слайдов (работает, когда откл effect: "fade")
+    // slidesPerView: 3.6,
+    // расстояние между слайдами
+    // spaceBetween: 40,
 
-  //отложенная загрузка:
-  //отключаем презагрузку картинок
-  preloadImages: false,
-  lazy: {
-    loadOnTransitionStart: false,
-    loadPrevNext: false,
-  },
-  // переключение при клике на слайд
-  slideToClickedSlide: true,
-  // отключение прокрутки при наведении мыши
-  // on: {
-  //   init() {
-  //     this.el.addEventListener("mouseenter", () => {
-  //       this.autoplay.stop();
-  //     });
+    // адаптив
+    // breakpoints: {
+    //   // when window width is >= 320px
+    //   480: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 20,
+    //   },
+    // },
 
-  //     this.el.addEventListener("mouseleave", () => {
-  //       this.autoplay.start();
-  //     });
-  //   },
-  // },
-  //
-});
-//----- END
+    //отложенная загрузка:
+    //отключаем презагрузку картинок
+    preloadImages: false,
+    lazy: {
+      loadOnTransitionStart: false,
+      loadPrevNext: false,
+    },
+    // переключение при клике на слайд
+    slideToClickedSlide: true,
+    // отключение прокрутки при наведении мыши
+    // on: {
+    //   init() {
+    //     this.el.addEventListener("mouseenter", () => {
+    //       this.autoplay.stop();
+    //     });
+
+    //     this.el.addEventListener("mouseleave", () => {
+    //       this.autoplay.start();
+    //     });
+    //   },
+    // },
+    //
+  });
+  //----- END
+}

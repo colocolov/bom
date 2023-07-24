@@ -1,0 +1,68 @@
+.catalog-data
+  padding-top: 10px
+  padding-bottom: 50px
+  background-color: $bgc
+
+  // .catalog-data__container
+  &__container
+
+  // .catalog-data__items
+  &__items
+    display: flex
+    flex-wrap: wrap
+    row-gap: 15px
+    margin: 0 -10px
+    @include mediaPhone
+      justify-content: center
+
+  // .catalog-data__item
+  &__item
+    padding: 10px
+    flex: 1 1 25%
+    min-width: 305px
+    min-height: 305px
+    max-width: 50%
+    @include mediaPhone
+      max-width: none
+      width: 77.608142% // 305/393
+      flex: unset
+
+  // .catalog-data__wrap
+  &__body
+    background-color: $white
+    // border: 2px solid $black
+    padding: 20px
+    padding-bottom: 90px
+    height: 100%
+    transition: box-shadow 0.5s ease-in
+    @media (any-hover: hover)
+      &:hover
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25)
+
+
+  // .catalog-data__body
+  &__block
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+    // align-items: center
+    background-color: $grey
+    padding: 10px
+    // height: 194px
+
+  // .catalog-data__head
+  &__head
+    line-height: 0.75
+    color: $blue
+    font-size: 36px
+    margin-bottom: 10px
+
+  // .catalog-data__img
+  &__img
+    padding-bottom: 44.081633% // 108/245
+
+
+.page__catalog
+  & .new-goods
+    background-color: $grey

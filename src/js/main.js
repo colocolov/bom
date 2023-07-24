@@ -5,11 +5,11 @@ import vars from "./_vars.js";
 import "./modules/dinam-adap.js";
 import "./modules/nav.js";
 import "./modules/search.js";
+import "./modules/new-goods.js";
 
 //главная
 import "./modules/main-slider.js";
 import "./modules/timeline.js";
-import "./modules/new-goods.js";
 import "./modules/rootImg.js";
 
 // О НАС
