@@ -1,5 +1,5 @@
 /**
- * Swiper 9.3.1
+ * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 10, 2023
+ * Released on: June 13, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,6 +177,14 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1046,6 +1054,11 @@ input {
   right: 0;
 }
 @media screen and (max-width: 768px) {
+  .heading--catalog::before {
+    right: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
   .heading {
     margin-left: -20px;
     margin-right: -20px;
@@ -1182,6 +1195,7 @@ input {
   }
   .header__search-input:focus {
     width: 100%;
+    border: 2px solid #D35343;
   }
   .header__search-input + .header__search-btn {
     right: 5px;
@@ -1238,7 +1252,6 @@ input {
 }
 @media screen and (max-width: 768px) {
   .menu-languages__item {
-    color: #FFFFFF;
     font-size: 24px;
   }
 }
@@ -1348,7 +1361,7 @@ input {
     margin-bottom: 40px;
     font-weight: 800;
     font-size: 32px;
-    color: #FFFFFF;
+    color: #01304C;
   }
   .menu__item:not(:last-child) {
     margin-right: 0;
@@ -1469,8 +1482,14 @@ input {
   transition: stroke 0.3s ease-in, transform 0.3s ease-in;
 }
 
+.page__catalog .breadcrumbs {
+  margin-top: 40px;
+}
 .page__catalog .new-goods {
   background-color: #E3E3E3;
+}
+.page__shop {
+  padding-top: 40px;
 }
 
 .btn-reset {
@@ -1574,11 +1593,12 @@ input {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
+  row-gap: 70px;
 }
 .product__item {
   padding: 0 10px;
-  flex: 1 1 25%;
-  max-width: 305px;
+  flex: 1 1 33%;
+  max-width: 325px;
 }
 @media screen and (max-width: 992px) {
   .product__item {
@@ -1593,8 +1613,10 @@ input {
   padding: 20px;
   transition: box-shadow 0.5s ease-in;
 }
-.product__wrap:hover {
-  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+@media (any-hover: hover) {
+  .product__wrap:hover {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  }
 }
 .product__img {
   padding-bottom: 59%;
@@ -1625,6 +1647,12 @@ input {
   margin-bottom: 15px;
   text-align: center;
   color: #000000;
+  transition: color 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .product__head:hover {
+    color: #D35343;
+  }
 }
 .product__info {
   display: flex;
@@ -1646,7 +1674,7 @@ input {
 }
 
 .breadcrumbs {
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: 12px;
   background-color: #F7F6F5;
 }
@@ -1680,6 +1708,58 @@ input {
   .breadcrumbs__item:hover a {
     color: #000000;
   }
+}
+
+.navigation {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.page-numbers {
+  transition: color 0.3s ease-in;
+}
+.page-numbers:not(:last-child) {
+  margin-right: 20px;
+}
+@media (any-hover: hover) {
+  .page-numbers:hover {
+    color: #D35343;
+  }
+}
+
+.current {
+  color: #D35343;
+}
+
+.next {
+  position: relative;
+  background-color: #D35343;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  transition: box-shadow 0.5s ease-in;
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  .next:hover {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+.next::before {
+  content: "";
+  position: absolute;
+  background: url("../images/icons/sprite.svg#arrcircle") center/cover no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
 }
 
 .hero {
@@ -2485,6 +2565,46 @@ input {
 }
 .catalog-data__img {
   padding-bottom: 44.081633%;
+}
+
+.shop {
+  grid-column: 3 span;
+}
+.shop .product {
+  margin-bottom: 73px;
+}
+.shop__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+.shop__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 84px;
+}
+
+.filter {
+  background-color: #E3E3E3;
+  padding: 15px 10px;
+  grid-column: 1 span;
+}
+.filter__select {
+  background-color: #01304C;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 0;
+}
+.filter__select option {
+  padding: 5px;
+  border-radius: 0;
+}
+@media (any-hover: hover) {
+  .filter__select option:hover {
+    background-color: #fff;
+  }
 }
 
 .footer {

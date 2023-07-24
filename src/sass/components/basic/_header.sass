@@ -104,6 +104,7 @@
         padding: 7px 30px 7px 20px
         &:focus
           width: 100%
+          border: 2px solid $red
         & + .header__search-btn
           right: 5px
           background: url(../images/icons/sprite.svg#search) center no-repeat
@@ -150,7 +151,7 @@
   &__item
     color: $blue
     @include mediaPhone
-      color: $white
+      // color: $white
       font-size: 24px
   & a
     color: inherit

@@ -3,14 +3,16 @@
     display: flex
     flex-wrap: wrap
     margin: 0 -10px
-    // row-gap: 20px
+    row-gap: 70px /// !!!!
     // width: 100%
     // transition-timing-function: linear
 
   &__item
     padding: 0 10px
-    flex: 1 1 25%
-    max-width: 305px
+    // flex: 1 1 25% //!!!!!
+    flex: 1 1 33%
+    // max-width: 305px //!!!!!
+    max-width: 325px
     @include mediaTablet
       max-width: none
 
@@ -22,8 +24,9 @@
     // height: 100%
     padding: 20px
     transition: box-shadow 0.5s ease-in
-    &:hover
-      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25)
+    @media (any-hover: hover)
+      &:hover
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2)
 
   &__img
     padding-bottom: 59%
@@ -53,6 +56,10 @@
     margin-bottom: 15px
     text-align: center
     color: $black
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $red
 
   &__info
     display: flex

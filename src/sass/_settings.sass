@@ -99,6 +99,8 @@ input
     text-transform: uppercase
     &::before
       right: 0
+      @include mediaPhone
+        right: 15px
   @include mediaPhone
     margin-left: -20px
     margin-right: -20px

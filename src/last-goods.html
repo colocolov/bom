@@ -11,8 +11,10 @@
       @include('html/components/_hero.html', { "name": "Последние поступления" })
 
       <div class="page__shop">
-        @include('html/shop/_sidebar.html')
-        @include('html/shop/_shop.html')
+        <div class="shop__container">
+          @include('html/shop/_sidebar.html')
+          @include('html/shop/_shop.html')
+        </div>
       </div>
 
     </main>
