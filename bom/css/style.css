@@ -1,5 +1,5 @@
 /**
- * Swiper 9.4.1
+ * Swiper 9.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: June 13, 2023
+ * Released on: May 10, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,14 +177,6 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-  scroll-snap-type: none;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1488,6 +1480,9 @@ input {
 .page__catalog .new-goods {
   background-color: #E3E3E3;
 }
+.page__side {
+  grid-column: 1 span;
+}
 .page__shop {
   padding-top: 40px;
 }
@@ -1743,12 +1738,12 @@ input {
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  transition: box-shadow 0.5s ease-in;
+  transition: transform 0.5s ease-in-out;
   cursor: pointer;
 }
 @media (any-hover: hover) {
   .next:hover {
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1);
   }
 }
 .next::before {
@@ -2567,6 +2562,55 @@ input {
   padding-bottom: 44.081633%;
 }
 
+.checkbox {
+  position: relative;
+}
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.checkbox__input:checked + .checkbox__text:before {
+  background: #D35343;
+}
+.checkbox__text {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.95);
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+  cursor: pointer;
+}
+.checkbox__text::before {
+  content: "";
+  align-self: flex-start;
+  margin-right: 10px;
+  flex: 0 0 20px;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #D35343;
+  border-radius: 50%;
+}
+.checkbox a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+@media screen and (max-width: 992px) {
+  .checkbox a:hover {
+    text-decoration: none;
+  }
+}
+.checkbox.error .checkbox__text:before {
+  border: 1px solid #ee1212;
+}
+
 .shop {
   grid-column: 3 span;
 }
@@ -2589,7 +2633,7 @@ input {
 .filter {
   background-color: #E3E3E3;
   padding: 15px 10px;
-  grid-column: 1 span;
+  height: 100%;
 }
 .filter__select {
   background-color: #01304C;
@@ -2605,6 +2649,32 @@ input {
   .filter__select option:hover {
     background-color: #fff;
   }
+}
+.filter__title {
+  background-color: #01304C;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+.filter__section:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.section-filter {
+  padding-left: 10px;
+}
+.section-filter__title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #01304C;
+  margin-bottom: 20px;
+}
+.section-filter__body {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.section-filter__checkbox:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .footer {

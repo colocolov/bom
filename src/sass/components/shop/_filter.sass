@@ -1,7 +1,8 @@
 .filter
   background-color: $grey
   padding: 15px 10px
-  grid-column: 1 span
+  height: 100%
+
 
   &__select
     background-color: $blue
@@ -15,4 +16,40 @@
       @media (any-hover: hover)
         &:hover
           background-color: #fff
+
+
+  // .filter__title
+  &__title
+    background-color: $blue
+    padding: 5px 10px
+    color: $white
+    margin-bottom: 40px
+  // .filter__body
+  &__body
+
+  // .filter__section
+  &__section
+    &:not(:last-child)
+      margin-bottom: 100px
+
+
+.section-filter
+  padding-left: 10px
+  // .section-filter__title
+  &__title
+    padding-bottom: 5px
+    border-bottom: 1px solid $blue
+    margin-bottom: 20px
+
+  // .section-filter__body
+  &__body
+    display: flex
+    flex-direction: column
+    padding-left: 10px
+
+  // .section-filter__checkbox
+  &__checkbox
+    &:not(:last-child)
+      margin-bottom: 20px
+
 
