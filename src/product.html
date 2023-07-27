@@ -1,0 +1,108 @@
+<!-- https://www.npmjs.com/package/gulp-file-include -->
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title": "Карточка товара" })
+
+<body class="page__product">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="page__last">
+      @include('html/components/_breadcrumbs.html')
+
+      <section class="product">
+        <div class="product__container">
+
+          <div class="product__gallery">
+            <ul class="product__images">
+              <li class="product__pic">
+                <img src="@img/product/01.jpg" loading="lazy" width="373" height="270" alt="">
+              </li>
+            </ul>
+          </div>
+          <!-- /.product__gallery -->
+
+          <div class="product__data">
+            <div class="product__exist">в наличии</div>
+            <h1 class="heading product__head product__head--small">Толкование книг Нового Завета:Римлянам 9-16 главы
+            </h1>
+            <div class="product__block">
+              <!-- <div class="product__left"> -->
+              <div class="product__price">150 lei</div>
+
+              <!-- </div>
+              <div class="product__right"> -->
+              <div class="product__atr">
+                <ul class="product__list">
+                  <li class="product__element product__element--atr">
+                    <div class="product__cat">Артикул:</div>
+                    <div class="product__title">nou 112</div>
+                  </li>
+                  <li class="product__element product__element--atr">
+                    <div class="product__cat">Категория:</div>
+                    <div class="product__title">Библия</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="product__quant">
+                <input type="text" value="1">
+              </div>
+              <a href="#" class="btn-reset btn btn--cart"></a>
+            </div>
+            <!-- </div> -->
+          </div>
+          <!-- /.product__data -->
+
+          <div class="product__info">
+            <h2 class="heading product__header">Характеристика</h2>
+            <ul class="product__itm">
+              <li class="product__element">
+                <div class="product__cat">Автор</div>
+                <div class="product__title">Виктор Рягузов</div>
+              </li>
+              <li class="product__element">
+                <div class="product__cat">Категории</div>
+                <div class="product__title">Комментарии </div>
+              </li>
+              <li class="product__element">
+                <div class="product__cat">Язык</div>
+                <div class="product__title">Русский</div>
+              </li>
+            </ul>
+          </div>
+          <!-- /.product__info -->
+
+          <div class="product__descr">
+            <h2 class="heading product__header">Описание</h2>
+            <div class="product__text">
+              <p>Издание представляет собой толкование одной из книг Нового Завета, Послания Иакова. Автор рассматривает
+                этические
+                проблемы, которые были неразрывно связаны с жизнью людей на протяжении многих веков и продолжили с
+                особенной
+                трагичностью заявлять о себе в XXI веке.</p>
+              <p>За всю историю цивилизации на вопрос о смысле страданий были даны тысячи
+                ответов-гаданий, ответов-предположений. Однако действительно правдивый ответ содержится в Книге, на
+                которую давным-давно
+                указал русский критик В. Г. Белинский: «Есть книга, в которой все сказано, все решено, после которой ни
+                в чем нет
+                сомнения, книга бессмертная, святая, книга вечной истины, вечной жизни — Евангелие».</p>
+              <p>Такого же мнения о Писании
+                придерживалась академик Н. П. Бехтерева: «Читайте Евангелие. В Новом Завете удивительная мудрость.
+                Только сначала надо
+                читать, чтобы знать, а потом читать и раздумывать».</p>
+            </div>
+          </div>
+          <!-- /.product__descr -->
+
+        </div>
+      </section>
+
+      @include('html/index/_new-goods.html')
+
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>
