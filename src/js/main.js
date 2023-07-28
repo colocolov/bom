@@ -7,13 +7,16 @@ import "./modules/nav.js";
 import "./modules/search.js";
 import "./modules/new-goods.js";
 
-//главная
+// главная
 import "./modules/main-slider.js";
 import "./modules/timeline.js";
 import "./modules/rootImg.js";
 
 // О НАС
 import "./modules/about-info.js";
+
+// ТОВАР
+import "./modules/quantity.js";
 
 //import * as navMenu from "./modules/nav.js";
 //import * as navMenu from "./modules/accordeon.js";

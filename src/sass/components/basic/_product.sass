@@ -124,6 +124,20 @@
   &__exist
     align-self: flex-end
     margin-bottom: 20px
+    padding-right: 33px
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      top: -3px
+      right: 0
+      width: 25px
+      height: 25px
+      border-radius: 50%
+      background: $blue url("../images/icons/sprite.svg#done") center / 17px no-repeat
+    &--no
+      &::after
+        background: $red url("../images/icons/sprite.svg#close") center / 17px no-repeat
 
   // .product__header
   &__header
@@ -146,8 +160,8 @@
     flex-direction: column
     row-gap: 20px
 
-  // .product__price
-  &__price
+  // .product__cost
+  &__cost
     border: 2px solid $blue
     padding: 20px 40px
     display: flex
@@ -159,7 +173,13 @@
 
   // .product__quant
   &__quant
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 50px
 
+  &__btn-cart
+    height: 50px
 
   // .product__right
   &__right
@@ -171,7 +191,7 @@
   // .product__atr
   &__atr
     border: 2px solid $blue
-    padding: 20px
+    padding: 40px 20px
 
 
   // .product__itm

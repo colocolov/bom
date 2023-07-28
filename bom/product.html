@@ -93,21 +93,32 @@
         <div class="product__container">
 
           <div class="product__gallery">
-            <ul class="product__images">
+            <div class="woocomerce-product-gallery">
+              <div class="flex-viewport _ibg">
+                <img src="images/product/01.jpg" loading="lazy" width="" height="" alt="">
+              </div>
+            </div>
+            <ol class="flex-control-thumbs product__images">
               <li class="product__pic">
                 <img src="images/product/01.jpg" loading="lazy" width="373" height="270" alt="">
               </li>
-            </ul>
+              <li class="product__pic">
+                <img src="images/product/01.jpg" loading="lazy" width="373" height="270" alt="">
+              </li>
+              <li class="product__pic">
+                <img src="images/product/01.jpg" loading="lazy" width="373" height="270" alt="">
+              </li>
+            </ol>
           </div>
           <!-- /.product__gallery -->
 
           <div class="product__data">
-            <div class="product__exist">в наличии</div>
+            <div class="product__exist product__exist--no">нет в наличии</div>
             <h1 class="heading product__head product__head--small">Толкование книг Нового Завета:Римлянам 9-16 главы
             </h1>
             <div class="product__block">
               <!-- <div class="product__left"> -->
-              <div class="product__price">150 lei</div>
+              <div class="product__cost">150 lei</div>
 
               <!-- </div>
               <div class="product__right"> -->
@@ -124,9 +135,17 @@
                 </ul>
               </div>
               <div class="product__quant">
-                <input type="text" value="1">
+                <div class="product__quantity quantity">
+                  <div class="quantity__btn quantity__btn_minus"></div>
+                  <div class="quantity__input">
+                    <input autocomplete="off" type="text" value="1" name="">
+                  </div>
+                  <div class="quantity__btn quantity__btn_plus"></div>
+                </div>
               </div>
-              <a href="#" class="btn-reset btn btn--cart"></a>
+              <div class="product__btn-cart">
+                <a href="#" class="btn-reset btn btn--cart"></a>
+              </div>
             </div>
             <!-- </div> -->
           </div>

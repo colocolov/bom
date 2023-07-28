@@ -1,0 +1,38 @@
+.quantity
+  width: 200px
+  height: 50px
+  display: flex
+  align-items: center
+
+  &__btn
+    flex: 0 0 30px
+    position: relative
+    cursor: pointer
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background: $red url("../images/icons/sprite.svg#arrcircle") center / 17px no-repeat
+    transition: transform 0.3s ease
+    &_plus
+      @media (any-hover: hover)
+        &:hover
+          transform: scale(1.05)
+    &_minus
+      transform: rotate(-180deg)
+      @media (any-hover: hover)
+        &:hover
+          transform: scale(1.05) rotate(-180deg)
+
+  &__input
+    flex: 1 1 auto
+    padding: 0 20px
+    input
+      border: 2px solid $blue
+      height: 100%
+      color: $black
+      font-size: 12px
+      width: 100%
+      text-align: center
+      font-size: 36px
+      font-weight: 700
+      color: $blue

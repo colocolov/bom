@@ -1561,6 +1561,8 @@ input {
 }
 .btn--cart {
   background: #D35343 url("../images/icons/sprite.svg#cart-white") center/30px no-repeat;
+  width: 100%;
+  height: 100%;
 }
 @media (any-hover: hover) {
   .btn--cart:hover {
@@ -1709,6 +1711,21 @@ input {
 .product__exist {
   align-self: flex-end;
   margin-bottom: 20px;
+  padding-right: 33px;
+  position: relative;
+}
+.product__exist::after {
+  position: absolute;
+  content: "";
+  top: -3px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #01304C url("../images/icons/sprite.svg#done") center/17px no-repeat;
+}
+.product__exist--no::after {
+  background: #D35343 url("../images/icons/sprite.svg#close") center/17px no-repeat;
 }
 .product__header {
   margin-bottom: 20px;
@@ -1728,7 +1745,7 @@ input {
   flex-direction: column;
   row-gap: 20px;
 }
-.product__price {
+.product__cost {
   border: 2px solid #01304C;
   padding: 20px 40px;
   display: flex;
@@ -1738,6 +1755,15 @@ input {
   font-weight: 700;
   font-size: 36px;
 }
+.product__quant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.product__btn-cart {
+  height: 50px;
+}
 .product__right {
   flex: 1 1 48%;
   display: flex;
@@ -1746,7 +1772,7 @@ input {
 }
 .product__atr {
   border: 2px solid #01304C;
-  padding: 20px;
+  padding: 40px 20px;
 }
 .product__element {
   display: flex;
@@ -2719,6 +2745,51 @@ input {
 }
 .checkbox.error .checkbox__text:before {
   border: 1px solid #ee1212;
+}
+
+.quantity {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.quantity__btn {
+  flex: 0 0 30px;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #D35343 url("../images/icons/sprite.svg#arrcircle") center/17px no-repeat;
+  transition: transform 0.3s ease;
+}
+@media (any-hover: hover) {
+  .quantity__btn_plus:hover {
+    transform: scale(1.05);
+  }
+}
+.quantity__btn_minus {
+  transform: rotate(-180deg);
+}
+@media (any-hover: hover) {
+  .quantity__btn_minus:hover {
+    transform: scale(1.05) rotate(-180deg);
+  }
+}
+.quantity__input {
+  flex: 1 1 auto;
+  padding: 0 20px;
+}
+.quantity__input input {
+  border: 2px solid #01304C;
+  height: 100%;
+  color: #000000;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #01304C;
 }
 
 .shop {
