@@ -17,6 +17,7 @@ import "./modules/about-info.js";
 
 // ТОВАР
 import "./modules/quantity.js";
+import "./modules/produsctSlider.js";
 
 //import * as navMenu from "./modules/nav.js";
 //import * as navMenu from "./modules/accordeon.js";

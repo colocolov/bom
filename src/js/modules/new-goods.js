@@ -2,7 +2,6 @@ import _vars from "../_vars.js";
 import Swiper, { Navigation, Autoplay } from "swiper";
 
 Swiper.use([Navigation, Autoplay]);
-// console.log(_vars.newGoodsEl);
 
 if (_vars.newGoodsEl) {
 
@@ -11,7 +10,6 @@ if (_vars.newGoodsEl) {
     autoplay: {
       delay: 5000,
     },
-    // скорость переключения слайдов
     speed: 1000,
     navigation: {
       nextEl: ".new-goods--next",
@@ -45,6 +43,4 @@ if (_vars.newGoodsEl) {
       loadPrevNext: false,
     },
   });
-  //----- END
-  
 }
