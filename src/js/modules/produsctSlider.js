@@ -21,7 +21,7 @@ if (_vars.productEl) {
     observer: true,
     observeParents: true,
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 20,
     // autoplay: {
       //   delay: 5000,
       // },

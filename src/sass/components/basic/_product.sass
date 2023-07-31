@@ -5,6 +5,7 @@
     flex-wrap: wrap
     margin: 0 -10px
     row-gap: 70px /// !!!!
+    height: 380px
     // width: 100%
     // transition-timing-function: linear
 
@@ -14,6 +15,7 @@
     flex: 1 1 33%
     // max-width: 305px //!!!!!
     max-width: 325px
+    height: 340px
     @include mediaTablet
       max-width: none
 
@@ -22,7 +24,8 @@
     flex-direction: column
     align-items: center
     background-color: $white
-    // height: 100%
+    // max-height: 310px
+    height: 100%
     padding: 20px
     transition: box-shadow 0.5s ease-in
     @media (any-hover: hover)
@@ -63,10 +66,13 @@
     text-align: center
     color: $black
     transition: color 0.3s ease-in
+    padding-right: 10px
+    flex: 1 1 auto
     &--small
       font-size: 16px
       margin-bottom: 15px
       min-height: auto
+      text-align: left
 
   &__footer
     display: flex
@@ -94,13 +100,23 @@
   // .product__container
   &__container
     display: grid
-    grid-template: repeat(2, minmax(414px, 1fr)) / repeat(3, 1fr)
+    grid-template: min-content 1fr / repeat(3, 1fr)
     gap: 50px 20px
     // flex-wrap: wrap
+    @include mediaTablet
+      grid-template: repeat(4, max-content) / 1fr
+      gap: 20px 0px
 
   // .product__gallery
   &__gallery
     background-color: $white
+    width: 413px
+    @include mediaTablet
+      grid-column: span 1
+      width: 100%
+      padding-bottom: 45px
+      // width: auto
+      // flex: 1 1 100%
 
 
   // .product__images
@@ -118,6 +134,13 @@
     flex-direction: column
     align-items: start
     padding: 65px 151px 20px 138px
+    // flex: 1 1 auto
+    @media ( max-width: 1200px )
+      padding: 50px 61px 30px
+    @include mediaTablet
+      grid-column: span 2
+    @media ( max-width: 480px )
+      padding: 20px
 
   // .product__exist
   &__exist
@@ -144,6 +167,9 @@
     color: $blue
     font-size: 36px
     min-height: auto
+    padding-right: 10px
+    @media ( max-width: 480px )
+      font-size: 32px
 
   // .product__block
   &__block
@@ -151,13 +177,9 @@
     grid-template: repeat(2, 1fr) / repeat(2, 1fr)
     gap: 20px
     width: 100%
-
-  // .product__left
-  &__left
-    flex: 1 1 48%
-    display: flex
-    flex-direction: column
-    row-gap: 20px
+    @include mediaPhoneMid
+      grid-template: repeat(4, max-content) / 1fr
+      row-gap: 30px
 
   // .product__cost
   &__cost
@@ -169,6 +191,8 @@
     color: $blue
     font-weight: 700
     font-size: 36px
+    @include mediaPhoneMid
+      grid-row: 1
 
   // .product__quant
   &__quant
@@ -176,16 +200,11 @@
     align-items: center
     justify-content: center
     height: 50px
+    @include mediaPhoneMid
+      grid-row: 2
 
   &__btn-cart
     height: 50px
-
-  // .product__right
-  &__right
-    flex: 1 1 48%
-    display: flex
-    flex-direction: column
-    row-gap: 20px
 
   // .product__atr
   &__atr
@@ -201,7 +220,7 @@
   // .product__element
   &__element
     display: flex
-    align-items: center
+    align-items: flex-start
     column-gap: 20px
     &:not(:last-child)
       margin-bottom: 30px
@@ -226,6 +245,12 @@
   &__info
     background-color: $white
     padding: 20px
+    // width: 413px
+    @include mediaTablet
+      padding-bottom: 50px
+      // width: auto
+      // flex: 1 1 30%
+
 
 
   // .product__descr
@@ -233,6 +258,14 @@
     background-color: $white
     grid-column: span 2
     padding: 20px
+    // flex: 1 1 55%
+    // max-width: 847px
+    // width: 100%
+    padding-bottom: 80px
+    @include mediaTablet
+      padding-bottom: 50px
+      // width: auto
+      // flex: 1 1 60%
 
 
   // .product__text
@@ -242,21 +275,35 @@
 
 .image-product
   min-width: 0
+  overflow: hidden
   // .image-product__mainslider
   &__mainslider
-    width: 100%
-    max-width: 413px
+    // width: 373px
+    // box-sizing: border-box
+    overflow: hidden
+    margin-bottom: 10px
+    @media ( max-width: 992px )
+      width: 100%
+
+
 
   // .image-product__mainslide
   &__mainslide
-    padding: 20px
-    height: 270px
+    height: 290px
+    // margin: 20px
+    // padding: 20px
     // display: flex
     // align-items: center
     // justify-content: center
     position: relative
-    width: 100%
-    max-width: 373px
+    // max-width: 80%
+    // width: 373px
+    overflow: hidden
+    // min-width: 0
+    @media ( max-width: 992px )
+      // width: 100% !important
+      height: 50%
+      box-sizing: border-box !important
 
   // .image-product__sale
   &__sale
@@ -278,8 +325,11 @@
 
   // .image-product__image
   &__image
-    padding-bottom: 72.386059% // 270/373
+    padding-bottom: 65.375303% // 270/413
     // height: 300px
+    margin: 20px
+    @include mediaTablet
+      margin-bottom: 0
 
   // .image-product__subslider
   &__subslider
@@ -301,6 +351,9 @@
     height: 70px
     width: 70px
     // padding: 0 6px
+    @include mediaTablet
+      height: auto
+
 
 
   // .image-product__img
