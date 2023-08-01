@@ -5,7 +5,7 @@
     flex-wrap: wrap
     margin: 0 -10px
     row-gap: 70px /// !!!!
-    height: 380px
+
     // width: 100%
     // transition-timing-function: linear
 
@@ -15,9 +15,15 @@
     flex: 1 1 33%
     // max-width: 305px //!!!!!
     max-width: 325px
-    height: 340px
+    height: 355px
     @include mediaTablet
       max-width: none
+      // height: 57.894737% // 550/950
+      height: auto
+      flex-basis: 47%
+    @include mediaPhone
+      flex-basis: 100%
+
 
   &__wrap
     display: flex
@@ -26,15 +32,19 @@
     background-color: $white
     // max-height: 310px
     height: 100%
+    // margin: 20px
     padding: 20px
     transition: box-shadow 0.5s ease-in
+    box-sizing: border-box
     @media (any-hover: hover)
       &:hover
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2)
 
   &__cover
-    padding-bottom: 59%
+    // margin-top: 20px
+    // padding: 0 20px
     margin-bottom: 7px
+    padding-bottom: 59%
     width: 100%
     span
       width: 50px
