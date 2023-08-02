@@ -101,6 +101,15 @@ input
       right: 0
       @include mediaPhone
         right: 15px
+  &--nobg
+    background-color: transparent
+    text-transform: uppercase
+    padding-left: 0
+    font-size: 36px
+    &::before
+      background-color: $blue
+      right: 0
+
   @include mediaPhone
     margin-left: -20px
     margin-right: -20px

@@ -1050,6 +1050,16 @@ input {
     right: 15px;
   }
 }
+.heading--nobg {
+  background-color: transparent;
+  text-transform: uppercase;
+  padding-left: 0;
+  font-size: 36px;
+}
+.heading--nobg::before {
+  background-color: #01304C;
+  right: 0;
+}
 @media screen and (max-width: 768px) {
   .heading {
     margin-left: -20px;
@@ -1493,6 +1503,15 @@ input {
   background-color: #E9E9E9;
   margin-bottom: 80px;
 }
+.page__product .new-goods {
+  background-color: #F7F6F5;
+}
+.page__cart {
+  background-color: #E3E3E3;
+}
+.page__cart .new-goods {
+  background-color: #F7F6F5;
+}
 
 .btn-reset {
   padding: 0;
@@ -1568,6 +1587,11 @@ input {
   .btn--cart:hover {
     background: #FFFFFF url("../images/icons/sprite.svg#cart") center/30px no-repeat;
   }
+}
+.btn--delete {
+  background: url("../images/icons/sprite.svg#delete") center/23px no-repeat;
+  width: 23px;
+  height: 23px;
 }
 
 .navigation {
@@ -1709,6 +1733,7 @@ input {
   display: grid;
   grid-template: min-content 1fr/repeat(3, 1fr);
   gap: 50px 20px;
+  padding-bottom: 80px;
 }
 @media screen and (max-width: 992px) {
   .product__container {
@@ -2322,7 +2347,7 @@ input {
 
 .new-goods {
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 .new-goods__container {
   display: flex;
@@ -3000,6 +3025,66 @@ input {
 }
 .section-filter__checkbox:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.cart {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.cart__head {
+  color: #01304C;
+}
+.cart__content {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-top: 71px;
+}
+.item-order {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #000000;
+}
+.item-order__content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 20px;
+}
+.item-order__body {
+  display: flex;
+  align-items: flex-start;
+  grid-column: span 3;
+  height: 100%;
+}
+.item-order__img {
+  margin-right: 20px;
+  height: 70px;
+  width: 70px;
+  padding-bottom: 11%;
+  flex: 0 0 70px;
+}
+.item-order__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.item-order__title {
+  font-size: 16px;
+  color: #01304C;
+  margin-bottom: 20px;
+}
+.item-order__price {
+  grid-column: span 1;
+  text-align: center;
+}
+.item-order__quantity {
+  grid-column: span 1;
+}
+.item-order__total {
+  grid-column: span 1;
+  text-align: center;
 }
 
 .footer {

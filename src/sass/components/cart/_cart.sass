@@ -1,0 +1,73 @@
+.cart
+  padding-top: 50px
+  padding-bottom: 80px
+
+  &__head
+    color: $blue
+
+  // .cart__content
+  &__content
+    background-color: $white
+    padding: 20px
+    margin-top: 71px
+
+  // .cart__items
+  &__items
+
+  // .cart__item
+  &__item
+
+
+.item-order
+  display: flex
+  align-items: center
+  padding: 20px 0
+  border-bottom: 1px solid $black
+
+  // .item-order__content
+  &__content
+    display: grid
+    align-items: center
+    grid-template-columns: repeat(6, 1fr)
+    column-gap: 20px
+
+  // .item-order__body
+  &__body
+    display: flex
+    align-items: flex-start
+    grid-column: span 3
+    height: 100%
+
+  // .item-order__img
+  &__img
+    margin-right: 20px
+    height: 70px
+    width: 70px
+    padding-bottom: 11%
+    flex: 0 0 70px
+
+  &__name
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+
+  // .item-order__title
+  &__title
+    font-size: 16px
+    color: $blue
+    margin-bottom: 20px
+
+  // .item-order__price
+  &__price
+    grid-column: span 1
+    text-align: center
+
+  // .item-order__quantity
+  &__quantity
+    grid-column: span 1
+
+  // .item-order__total
+  &__total
+    grid-column: span 1
+    text-align: center
