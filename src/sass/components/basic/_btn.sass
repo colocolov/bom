@@ -67,7 +67,19 @@
     background: url("../images/icons/sprite.svg#delete") center / 23px no-repeat
     width: 23px
     height: 23px
+    transition: background 0.5s ease-in-out
+    @media (any-hover: hover)
+      &:hover
+        background: url("../images/icons/sprite.svg#delete-red") center / 23px no-repeat
 
+  &--continue
+    @include mediaPhone
+      margin-bottom: 40px
+
+  &--order
+    align-self: flex-end
+    @include mediaPhoneSm
+      align-self: flex-start
 
 // стрелки слайдера
 .navigation

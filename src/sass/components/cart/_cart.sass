@@ -10,14 +10,59 @@
     background-color: $white
     padding: 20px
     margin-top: 71px
+    margin-bottom: 40px
 
   // .cart__items
   &__items
+    margin-bottom: 20px
 
   // .cart__item
   &__item
 
+  &__btns
+    display: flex
+    align-items: center
+    justify-content: space-between
 
+  &__total
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+
+    &-wrap
+      background-color: $white
+      padding: 20px
+      grid-column: span 3 / 7
+      display: flex
+      flex-direction: column
+      @include mediaPhone
+        grid-column: span 5 / 7
+      @include mediaPhoneSm
+        grid-column: span 6
+
+    &-sum
+      display: flex
+      align-items: center
+      justify-content: space-between
+      font-size: 36px
+      margin-bottom: 40px
+      @include mediaPhoneSm
+        flex-wrap: wrap
+        line-height: 1.5
+
+
+  // .cart__sum-text
+  &__sum-text
+    @include mediaPhoneSm
+      margin-right: 10px
+
+
+  // .cart__sum
+  &__sum
+
+
+
+
+//--------------- /.item-order ----------------------
 .item-order
   display: flex
   align-items: center
@@ -30,6 +75,14 @@
     align-items: center
     grid-template-columns: repeat(6, 1fr)
     column-gap: 20px
+    @include mediaTablet
+      grid-template: repeat(2, max-content) / repeat(3, 1fr)
+    @include mediaPhone
+      grid-template-rows: repeat(3, max-content)
+    &--bgc
+      width: 100%
+      @include mediaPhone
+        display: none
 
   // .item-order__body
   &__body
@@ -37,13 +90,27 @@
     align-items: flex-start
     grid-column: span 3
     height: 100%
+    @include mediaTablet
+      grid-column: span 3
+      margin-bottom: 30px
+      height: auto
 
-  // .item-order__img
+  &__bgc
+    display: flex
+    background-color: $blue
+    color: $white
+    width: 100%
+    height: 28px
+    padding-left: 7px
+    text-align-last: left
+    align-items: center
+
+    // .item-order__img
   &__img
     margin-right: 20px
     height: 70px
     width: 70px
-    padding-bottom: 11%
+    // padding-bottom: 11%
     flex: 0 0 70px
 
   &__name
@@ -57,6 +124,10 @@
     font-size: 16px
     color: $blue
     margin-bottom: 20px
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $red
 
   // .item-order__price
   &__price
@@ -66,8 +137,23 @@
   // .item-order__quantity
   &__quantity
     grid-column: span 1
+    & .quantity
+      width: 100%
+      & input
+        font-size: 32px
+    @media (max-width: 1024px)
+      & .quantity__input
+        padding: 0 10px
+    @include mediaPhone
+      grid-column: span 2
+      margin-bottom: 30px
+
 
   // .item-order__total
   &__total
     grid-column: span 1
     text-align: center
+    @include mediaPhone
+      grid-column: span 3
+      font-weight: 700
+      font-size: 18px

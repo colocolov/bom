@@ -17,8 +17,17 @@
             <div class="cart__items">
 
               <div class="cart__item item-order">
-                <div class="item-order__content">
+                <div class="item-order__content item-order__content--bgc">
+                  <div class="item-order__body item-order__bgc">Товар</div><!-- /.item-order__body -->
+                  <div class="item-order__price item-order__bgc">Цена</div><!-- /.item-order__price -->
+                  <div class="item-order__quantity item-order__bgc">Количество</div><!-- /.item-order__quantity -->
+                  <div class="item-order__total item-order__bgc">Всего</div><!-- /.item-order__total -->
+                </div>
+              </div>
+              <!-- /.item-order -->
 
+              <div class="cart__item item-order">
+                <div class="item-order__content">
                   <div class="item-order__body">
                     <a href="product.html" class="item-order__img _ibg">
                       <img src="@img/product/07.jpg" loading="lazy" width="70" height="70" alt="book">
@@ -28,12 +37,8 @@
                         главы</a>
                       <button class="btn-reset btn--delete"></button>
                     </div>
-                  </div>
-                  <!-- /.item-order__body -->
-
-                  <div class="item-order__price">300 lei</div>
-                  <!-- /.item-order__price -->
-
+                  </div><!-- /.item-order__body -->
+                  <div class="item-order__price">300 lei</div><!-- /.item-order__price -->
                   <div class="item-order__quantity">
                     <div class="quantity">
                       <div class="quantity__btn quantity__btn_minus"></div>
@@ -42,18 +47,13 @@
                       </div>
                       <div class="quantity__btn quantity__btn_plus"></div>
                     </div>
-                  </div>
-                  <!-- /.item-order__quantity -->
-
-                  <div class="item-order__total">300 lei</div>
-                  <!-- /.item-order__total -->
+                  </div><!-- /.item-order__quantity -->
+                  <div class="item-order__total">300 lei</div><!-- /.item-order__total -->
                 </div>
               </div>
               <!-- /.item-order -->
-
               <div class="cart__item item-order">
                 <div class="item-order__content">
-
                   <div class="item-order__body">
                     <a href="product.html" class="item-order__img _ibg">
                       <img src="@img/product/05.jpg" loading="lazy" width="70" height="70" alt="book">
@@ -62,12 +62,8 @@
                       <a href="product.html" class="item-order__title">Истории Священного Писания</a>
                       <button class="btn-reset btn--delete"></button>
                     </div>
-                  </div>
-                  <!-- /.item-order__body -->
-
-                  <div class="item-order__price">110 lei</div>
-                  <!-- /.item-order__price -->
-
+                  </div><!-- /.item-order__body -->
+                  <div class="item-order__price">110 lei</div><!-- /.item-order__price -->
                   <div class="item-order__quantity">
                     <div class="quantity">
                       <div class="quantity__btn quantity__btn_minus"></div>
@@ -76,18 +72,13 @@
                       </div>
                       <div class="quantity__btn quantity__btn_plus"></div>
                     </div>
-                  </div>
-                  <!-- /.item-order__quantity -->
-
-                  <div class="item-order__total">110 lei</div>
-                  <!-- /.item-order__total -->
+                  </div><!-- /.item-order__quantity -->
+                  <div class="item-order__total">110 lei</div><!-- /.item-order__total -->
                 </div>
               </div>
               <!-- /.item-order -->
-
               <div class="cart__item item-order">
                 <div class="item-order__content">
-
                   <div class="item-order__body">
                     <a href="product.html" class="item-order__img _ibg">
                       <img src="@img/product/03.jpg" loading="lazy" width="70" height="70" alt="book">
@@ -96,12 +87,8 @@
                       <a href="product.html" class="item-order__title">Детская Библия</a>
                       <button class="btn-reset btn--delete"></button>
                     </div>
-                  </div>
-                  <!-- /.item-order__body -->
-
-                  <div class="item-order__price">60 lei</div>
-                  <!-- /.item-order__price -->
-
+                  </div><!-- /.item-order__body -->
+                  <div class="item-order__price">60 lei</div><!-- /.item-order__price -->
                   <div class="item-order__quantity">
                     <div class="quantity">
                       <div class="quantity__btn quantity__btn_minus"></div>
@@ -110,17 +97,35 @@
                       </div>
                       <div class="quantity__btn quantity__btn_plus"></div>
                     </div>
-                  </div>
-                  <!-- /.item-order__quantity -->
-
-                  <div class="item-order__total">60 lei</div>
-                  <!-- /.item-order__total -->
+                  </div><!-- /.item-order__quantity -->
+                  <div class="item-order__total">60 lei</div><!-- /.item-order__total -->
                 </div>
               </div>
               <!-- /.item-order -->
 
             </div>
+            <!-- /.cart__items -->
+            <div class="cart__btns">
+              <a href="#" class="btn-reset btn btn--continue" data-da=".cart__container,768,2">продолжить покупку</a>
+              <button href="#" class="btn-reset btn btn--update">обновить корзину</button>
+            </div>
+            <!-- /.cart__btns -->
           </div>
+          <!-- /.cart__content -->
+
+          <div class="cart__total">
+            <div class="cart__total-wrap">
+              <div class="cart__total-sum">
+                <div class="cart__sum-text">ПОДЫТОГ:</div>
+                <div class="cart__sum">470 lei</div>
+              </div>
+              <a href="#" class="btn-reset btn btn--order">оформить заказ</a>
+            </div>
+          </div>
+          <!-- /.cart__total -->
+
+
+
 
         </div><!-- /.cart__container -->
       </div><!-- /.cart -->

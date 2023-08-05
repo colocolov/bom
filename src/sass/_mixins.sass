@@ -63,6 +63,10 @@
   @media screen and (max-width: $phone-mid)
     @content
 
+@mixin mediaPhoneSm
+  @media screen and (max-width: $phone-small)
+    @content
+
 //REM
 @function rem($px)
   $result: math.div($px, 16) + rem

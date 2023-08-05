@@ -966,7 +966,6 @@ input {
 }
 ._ibg img {
   position: absolute;
-  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
@@ -1023,9 +1022,9 @@ input {
   background-color: #FFFFFF;
   transform: translateY(-50%);
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .heading--full::before {
-    right: 15px;
+    right: 18px;
   }
 }
 .heading--light {
@@ -1059,6 +1058,11 @@ input {
 .heading--nobg::before {
   background-color: #01304C;
   right: 0;
+}
+@media screen and (max-width: 768px) {
+  .heading--nobg::before {
+    right: 18px;
+  }
 }
 @media screen and (max-width: 768px) {
   .heading {
@@ -1592,6 +1596,25 @@ input {
   background: url("../images/icons/sprite.svg#delete") center/23px no-repeat;
   width: 23px;
   height: 23px;
+  transition: background 0.5s ease-in-out;
+}
+@media (any-hover: hover) {
+  .btn--delete:hover {
+    background: url("../images/icons/sprite.svg#delete-red") center/23px no-repeat;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn--continue {
+    margin-bottom: 40px;
+  }
+}
+.btn--order {
+  align-self: flex-end;
+}
+@media screen and (max-width: 480px) {
+  .btn--order {
+    align-self: flex-start;
+  }
 }
 
 .navigation {
@@ -3038,6 +3061,54 @@ input {
   background-color: #FFFFFF;
   padding: 20px;
   margin-top: 71px;
+  margin-bottom: 40px;
+}
+.cart__items {
+  margin-bottom: 20px;
+}
+.cart__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart__total {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.cart__total-wrap {
+  background-color: #FFFFFF;
+  padding: 20px;
+  grid-column: span 3/7;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .cart__total-wrap {
+    grid-column: span 5/7;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cart__total-wrap {
+    grid-column: span 6;
+  }
+}
+.cart__total-sum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .cart__total-sum {
+    flex-wrap: wrap;
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cart__sum-text {
+    margin-right: 10px;
+  }
 }
 .item-order {
   display: flex;
@@ -3051,17 +3122,51 @@ input {
   grid-template-columns: repeat(6, 1fr);
   column-gap: 20px;
 }
+@media screen and (max-width: 992px) {
+  .item-order__content {
+    grid-template: repeat(2, max-content)/repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .item-order__content {
+    grid-template-rows: repeat(3, max-content);
+  }
+}
+.item-order__content--bgc {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .item-order__content--bgc {
+    display: none;
+  }
+}
 .item-order__body {
   display: flex;
   align-items: flex-start;
   grid-column: span 3;
   height: 100%;
 }
+@media screen and (max-width: 992px) {
+  .item-order__body {
+    grid-column: span 3;
+    margin-bottom: 30px;
+    height: auto;
+  }
+}
+.item-order__bgc {
+  display: flex;
+  background-color: #01304C;
+  color: #FFFFFF;
+  width: 100%;
+  height: 28px;
+  padding-left: 7px;
+  text-align-last: left;
+  align-items: center;
+}
 .item-order__img {
   margin-right: 20px;
   height: 70px;
   width: 70px;
-  padding-bottom: 11%;
   flex: 0 0 70px;
 }
 .item-order__name {
@@ -3074,6 +3179,12 @@ input {
   font-size: 16px;
   color: #01304C;
   margin-bottom: 20px;
+  transition: color 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .item-order__title:hover {
+    color: #D35343;
+  }
 }
 .item-order__price {
   grid-column: span 1;
@@ -3082,9 +3193,33 @@ input {
 .item-order__quantity {
   grid-column: span 1;
 }
+.item-order__quantity .quantity {
+  width: 100%;
+}
+.item-order__quantity .quantity input {
+  font-size: 32px;
+}
+@media (max-width: 1024px) {
+  .item-order__quantity .quantity__input {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .item-order__quantity {
+    grid-column: span 2;
+    margin-bottom: 30px;
+  }
+}
 .item-order__total {
   grid-column: span 1;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .item-order__total {
+    grid-column: span 3;
+    font-weight: 700;
+    font-size: 18px;
+  }
 }
 
 .footer {
