@@ -1,0 +1,51 @@
+<!-- https://www.npmjs.com/package/gulp-file-include -->
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title": "Оформление заказа" })
+
+<body class="page__cart">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="page__checkout">
+      <!-- @include('html/components/_breadcrumbs.html') -->
+      <div class="checkout">
+        <div class="checkout__container">
+          <h1 class="heading heading--full heading--nobg checkout__head">Оформление заказа</h1>
+
+          <div class="checkout__content">
+            <form class="checkout__form form-checkout">
+
+              <div class="form-checkout__left">
+                <div class="form-checkout__line">
+                  <div class="form-checkout__label"></div>
+                  <div class="form-checkout__input">
+                    <input type="text">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+              </div>
+              <!-- /.form-checkout__left -->
+
+              <div class="form-checkout__right">
+
+                <button type="submit" class="btn-reset btn btn--submit">оформить заказ</button>
+              </div>
+              <!-- /.form-checkout__right -->
+            </form>
+          </div>
+          <!-- /.checkout__content -->
+
+
+        </div><!-- /.checkout__container -->
+      </div><!-- /.checkout -->
+
+      @include('html/index/_new-goods.html')
+
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>

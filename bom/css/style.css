@@ -1,5 +1,5 @@
 /**
- * Swiper 9.3.1
+ * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 10, 2023
+ * Released on: June 13, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,6 +177,14 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -966,6 +974,7 @@ input {
 }
 ._ibg img {
   position: absolute;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
@@ -1932,6 +1941,7 @@ input {
   height: 290px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 @media (max-width: 992px) {
   .image-product__mainslide {
@@ -1968,6 +1978,7 @@ input {
   margin-left: 20px;
   margin-right: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
 .image-product__preview {
   list-style: none;
@@ -2982,6 +2993,10 @@ input {
   font-size: 36px;
   font-weight: 700;
   color: #01304C;
+  transition: border 0.5s ease-in;
+}
+.quantity__input input:focus {
+  border: 2px solid #D35343;
 }
 
 .shop {
@@ -3220,6 +3235,17 @@ input {
     font-weight: 700;
     font-size: 18px;
   }
+}
+
+.checkout {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.checkout__head {
+  color: #01304C;
+}
+.checkout__content {
+  margin-top: 75px;
 }
 
 .footer {
