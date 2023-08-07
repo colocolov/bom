@@ -18,16 +18,135 @@
 
               <div class="form-checkout__left">
                 <div class="form-checkout__line">
-                  <div class="form-checkout__label"></div>
+                  <div class="form-checkout__label">Имя</div>
                   <div class="form-checkout__input">
-                    <input type="text">
+                    <input type="text" name="name" class="input" placeholder="Имя">
                   </div>
                 </div>
                 <!-- /.form-checkout__line -->
+                <div class="form-checkout__line">
+                  <div class="form-checkout__label">Фамилия</div>
+                  <div class="form-checkout__input">
+                    <input type="text" name="surname" class="input" placeholder="Фамилия">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+                <div class="form-checkout__line form-checkout__line--full">
+                  <div class="form-checkout__label">Адрес</div>
+                  <div class="form-checkout__input">
+                    <input type="text" name="address" class="input" placeholder="Адрес">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+
+                <div class="form-checkout__line">
+                  <div class="form-checkout__label">Район</div>
+                  <div class="form-checkout__input">
+                    <input type="text" name="district" class="input" placeholder="Район">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+                <div class="form-checkout__line">
+                  <div class="form-checkout__label">Город</div>
+                  <div class="form-checkout__input">
+                    <input type="text" name="city" class="input" placeholder="Город">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+                <div class="form-checkout__line">
+                  <div class="form-checkout__label">Почтовый индекс</div>
+                  <div class="form-checkout__input">
+                    <input type="text" name="index" class="input" placeholder="Почтовый индекс">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+                <div class="form-checkout__line">
+                  <div class="form-checkout__label">Телефон</div>
+                  <div class="form-checkout__input">
+                    <input type="tel" name="tel" class="input" placeholder="Телефон">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+                <div class="form-checkout__line">
+                  <div class="form-checkout__label">E-mail</div>
+                  <div class="form-checkout__input">
+                    <input type="email" name="email" class="input" placeholder="E-mail">
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+
+                <div class="form-checkout__line form-checkout__line--full">
+                  <div class="form-checkout__input">
+                    <textarea name="message" id="" placeholder="Примечание"></textarea>
+                  </div>
+                </div>
+                <!-- /.form-checkout__line -->
+
+
               </div>
               <!-- /.form-checkout__left -->
 
               <div class="form-checkout__right">
+                <div class="form-checkout__order">
+                  <h3 class="heading form-checkout__head">Заказ</h3>
+                  <div class="form-checkout__items">
+
+                    <div class="form-checkout__item">
+                      <div class="form-checkout__img">
+                        <img src="@img/product/07.jpg" loading="lazy" width="70" height="70" alt="">
+                      </div>
+                      <div class="form-checkout__quantity">1x</div>
+                      <div class="form-checkout__price">1000 lei</div>
+                    </div>
+                    <!-- /.form-checkout__item -->
+                    <div class="form-checkout__item">
+                      <div class="form-checkout__img">
+                        <img src="@img/product/03.jpg" loading="lazy" width="70" height="70" alt="">
+                      </div>
+                      <div class="form-checkout__quantity">2x</div>
+                      <div class="form-checkout__price">800 lei</div>
+                    </div>
+                    <!-- /.form-checkout__item -->
+
+                    <div class="form-checkout__subtotal">
+                      <div class="form-checkout__text">Итого</div>
+                      <div class="form-checkout__total">2550 lei</div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- /.form-checkout__order -->
+
+                <div class="form-checkout__delivery">
+                  <h3 class="heading form-checkout__head">Доставка</h3>
+                  <div class="form-checkout__items">
+
+                    <label class="form-checkout__checkbox checkbox">
+                      <input data-error="Ошибка" class="checkbox__input" type="radio" value="1" id="Chisinau"
+                             name="Chisinau">
+                      <span class="checkbox__text">Доставка по Кишинёву:</span>
+                      <label class="form-checkout__descr" for="">Стоимость доставки 50 лей.Доставка заказов на сумму от
+                        1500 лей по Кишиневу
+                        осуществляется бесплатно.</label>
+                    </label>
+
+                    <label class="form-checkout__checkbox checkbox">
+                      <input data-error="Ошибка" class="checkbox__input" type="radio" value="2" id="Moldova"
+                             name="Moldova">
+                      <span class="checkbox__text">Доставка по Молдове:</span>
+                      <label class="form-checkout__descr" for="">Стоимость доставки от 50 лей.</label>
+                    </label>
+
+
+                    <div class="form-checkout__notice">
+                      <p><strong>ВНИМАНИЕ!</strong> В случае возврата товара покупатель оплачивает стоимость доставки!
+                      </p>
+                      <p>Наш менеджер согласует с вами дату и время доставки, прежде чем доставлять товар.</p>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- /.form-checkout__delivery -->
 
                 <button type="submit" class="btn-reset btn btn--submit">оформить заказ</button>
               </div>

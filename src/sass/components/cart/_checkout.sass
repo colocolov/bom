@@ -7,3 +7,183 @@
 
   &__content
     margin-top: 75px
+
+  // .checkout__form
+  &__form
+
+
+
+.form-checkout
+  display: grid
+  grid-template: max-content / repeat(3, 1fr)
+  column-gap: 20px
+
+  // .form-checkout__left
+  &__left
+    background-color: $white
+    padding: 20px
+    grid-column: span 2
+    display: flex
+    // margin: 0 -20px
+    flex-wrap: wrap
+    column-gap: 20px
+    height: max-content
+    @include mediaTablet
+      grid-column: span 3
+      margin-bottom: 40px
+
+  // .form-checkout__line
+  &__line
+    display: flex
+    flex: 0 1 48.6%
+    // @include adaptiveValue('flex-basis', 48.7, 46)
+    align-items: center
+    padding: 20px 15px 0 0
+    margin-bottom: 20px
+    &--full
+      flex-basis: 100%
+
+  // .form-checkout__label
+  &__label
+    display: none
+
+  // .form-checkout__input
+  &__input
+    flex: 1 1 auto
+    input
+      background-color: $white
+      padding-left: 2px
+      padding-bottom: 3px
+      width: 100%
+      border-bottom: 1px solid $blue
+      outline: none
+      transition: border 0.3s ease
+      &:focus
+        border-bottom: 1px solid $red
+      &::placeholder
+        color: rgba($black, 0.5)
+    textarea
+      width: 100%
+      background-color: $white
+      border: 1px solid $blue
+      resize: none
+      outline: none
+      transition: border 0.3s ease
+      padding: 10px
+      height: 200px
+      &:focus
+        border: 1px solid $red
+      &::placeholder
+        transition: color 0.3s ease
+        transform: translateY(160px)
+
+  &__right
+    @include mediaTablet
+      grid-column: span 3
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      column-gap: 20px
+
+
+  &__order
+    background-color: $white
+    padding: 20px
+    margin-bottom: 40px
+    @include mediaTablet
+      grid-column: span 2
+      height: max-content
+    @include mediaPhone
+      grid-column: span 3
+
+  &__head
+    font-size: 16px
+    color: $blue
+    margin-bottom: 40px
+    min-height: auto
+
+
+  // .form-checkout__items
+  &__items
+    display: flex
+    flex-direction: column
+
+  // .form-checkout__item
+  &__item
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      margin-bottom: 40px
+
+  // .form-checkout__img
+  &__img
+    margin-right: 20px
+    width: 70px
+    height: 70px
+    img
+      object-fit: cover
+      max-width: 100%
+      height: 100%
+
+  // .form-checkout__quntity
+  &__quantity
+    margin-right: 20px
+
+  // .form-checkout__price
+  &__price
+    flex: 1 1 auto
+    text-align: right
+
+  &__subtotal
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 20px
+    border-top: 1px solid $blue
+
+  // .form-checkout__text
+  &__text
+
+  // .form-checkout__total
+  &__total
+
+
+  //
+  &__delivery
+    background-color: $white
+    padding: 20px
+    margin-bottom: 40px
+    @include mediaPhone
+      grid-column: span 3
+
+  // .form-checkout__head
+  &__head
+
+  // .form-checkout__items
+  &__items
+
+  // .form-checkout__checkbox
+  &__checkbox
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  // .form-checkout__name
+  &__name
+    display: flex
+
+  &__descr
+    display: block
+    font-size: 14px
+    color: rgba($black, 0.5)
+
+  &__notice
+    margin-top: 30px
+    p
+      &:not(:last-child)
+        margin-bottom: 10px
+
+
+
+
+
+
+
