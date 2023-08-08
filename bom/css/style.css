@@ -1,5 +1,5 @@
 /**
- * Swiper 9.3.1
+ * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 10, 2023
+ * Released on: June 13, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,6 +177,14 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -3444,6 +3452,12 @@ input {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .contact__data {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
 .contact__data-link {
   color: #01304C;
   transition: color 0.3s ease-in;
@@ -3461,7 +3475,13 @@ input {
 }
 @media screen and (max-width: 992px) {
   .contact__data-link:not(:last-child) {
-    margin-right: 60px;
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__data-link:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 20px;
   }
 }
 .contact__data-adres {
@@ -3472,10 +3492,11 @@ input {
 .contact__data-adres::before {
   content: "";
   position: absolute;
-  top: -6px;
+  top: 50%;
   left: 0;
   width: 30px;
   height: 30px;
+  transform: translateY(-50%);
   background-image: url("../images/icons/sprite.svg#map");
   background-repeat: no-repeat;
   transition: background-image 0.3s ease-in;
@@ -3487,6 +3508,12 @@ input {
 }
 .contact__social {
   margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .contact__social {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
 .contact__form {
   background-color: #FFFFFF;
@@ -3513,6 +3540,22 @@ input {
 .contact__message textarea::placeholder {
   transition: color 0.3s ease;
   transform: translateY(380px);
+}
+@media screen and (max-width: 768px) {
+  .contact__message textarea {
+    height: 320px;
+  }
+  .contact__message textarea::placeholder {
+    transform: translateY(260px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact__message textarea {
+    height: 280px;
+  }
+  .contact__message textarea::placeholder {
+    transform: translateY(220px);
+  }
 }
 .contact__send {
   position: absolute;
@@ -3575,10 +3618,11 @@ input {
 .footer__adres::before {
   content: "";
   position: absolute;
-  top: -6px;
+  top: 50%;
   left: 0;
   width: 30px;
   height: 30px;
+  transform: translateY(-50%);
   background-image: url("../images/icons/sprite.svg#map");
   background-repeat: no-repeat;
   transition: background-image 0.3s ease-in;

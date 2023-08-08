@@ -20,7 +20,9 @@
     margin-bottom: 40px
     display: flex
     align-items: center
-    // justify-content: space-between
+    @include mediaPhone
+      flex-wrap: wrap
+      justify-content: flex-start
 
 
     &-link
@@ -35,7 +37,11 @@
           color: $red
       @include mediaTablet
         &:not(:last-child)
-          margin-right: 60px
+          margin-right: 40px
+      @include mediaPhone
+        &:not(:last-child)
+          margin-right: 30px
+          margin-bottom: 20px
 
 
     &-adres
@@ -45,10 +51,11 @@
       &::before
         content: ''
         position: absolute
-        top: -6px
+        top: 50%
         left: 0
         width: 30px
         height: 30px
+        transform: translateY(-50%)
         background-image: url("@img/icons/sprite.svg#map")
         background-repeat: no-repeat
         transition: background-image 0.3s ease-in
@@ -59,6 +66,9 @@
   &__social
     // align-self: flex-end
     margin-left: auto
+    @include mediaPhone
+      margin-right: auto
+      margin-left: 0
 
   // .contact__form
   &__form
@@ -87,6 +97,15 @@
       &::placeholder
         transition: color 0.3s ease
         transform: translateY(380px)
+      @include mediaPhone
+        height: 320px
+        &::placeholder
+          transform: translateY(260px)
+      @include mediaPhoneSm
+        height: 280px
+        &::placeholder
+          transform: translateY(220px)
+
 
   &__send
     position: absolute
