@@ -40,6 +40,12 @@
     align-items: center
     padding: 20px 15px 0 0
     margin-bottom: 20px
+    @media screen and ( max-width: 1180px )
+      flex-basis: 48%
+    @include mediaTablet
+      flex-basis: 48.6%
+    @include mediaPhone
+      flex-basis: 100%
     &--full
       flex-basis: 100%
 
