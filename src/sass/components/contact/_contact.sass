@@ -1,0 +1,107 @@
+.contact
+  padding-top: 50px
+  padding-bottom: 80px
+
+  // .contact__head
+  &__head
+    color: $blue
+
+  // .contact__container
+  &__container
+
+  // .contact__content
+  &__content
+    margin-top: 80px
+
+  // .contact__data
+  &__data
+    background-color: $white
+    padding: 20px
+    margin-bottom: 40px
+    display: flex
+    align-items: center
+    // justify-content: space-between
+
+
+    &-link
+      color: $blue
+      transition: color 0.3s ease-in
+      &:not(:last-child)
+        margin-right: 100px
+      &:first-child
+        flex-shrink: 0
+      @media (any-hover: hover)
+        &:hover
+          color: $red
+      @include mediaTablet
+        &:not(:last-child)
+          margin-right: 60px
+
+
+    &-adres
+      font-style: normal
+      padding-left: 40px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: -6px
+        left: 0
+        width: 30px
+        height: 30px
+        background-image: url("@img/icons/sprite.svg#map")
+        background-repeat: no-repeat
+        transition: background-image 0.3s ease-in
+      @media (any-hover: hover)
+        &:hover::before
+          background-image: url("@img/icons/sprite.svg#map-red")
+
+  &__social
+    // align-self: flex-end
+    margin-left: auto
+
+  // .contact__form
+  &__form
+    background-color: $white
+    padding: 40px
+    position: relative
+
+    // .contact__form-head
+    &-head
+      font-weight: 700
+      margin-bottom: 48px
+
+  // .contact__message
+  &__message
+    textarea
+      border: 1px solid $blue
+      width: 100%
+      height: 440px
+      resize: none
+      background-color: $white
+      outline: none
+      transition: border 0.3s ease
+      padding: 20px
+      &:focus
+        border: 1px solid $red
+      &::placeholder
+        transition: color 0.3s ease
+        transform: translateY(380px)
+
+  &__send
+    position: absolute
+    bottom: 65px
+    right: 65px
+    // fill: $text
+    background-color: transparent
+    background: url(../images/icons/sprite.svg#send) center no-repeat
+    width: 25px
+    height: 25px
+    transition: fill 0.3s ease
+    cursor: pointer
+    z-index: 1
+    transition: transform 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        transform: scale(1.05)
+

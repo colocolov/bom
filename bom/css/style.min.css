@@ -1517,6 +1517,12 @@ input {
 .page__cart .new-goods {
   background-color: #F7F6F5;
 }
+.page__contact {
+  background-color: #E3E3E3;
+}
+.page__contact .new-goods {
+  background-color: #F7F6F5;
+}
 
 .btn-reset {
   padding: 0;
@@ -3419,6 +3425,112 @@ input {
 }
 .form-checkout__notice p:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.contact {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.contact__head {
+  color: #01304C;
+}
+.contact__content {
+  margin-top: 80px;
+}
+.contact__data {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.contact__data-link {
+  color: #01304C;
+  transition: color 0.3s ease-in;
+}
+.contact__data-link:not(:last-child) {
+  margin-right: 100px;
+}
+.contact__data-link:first-child {
+  flex-shrink: 0;
+}
+@media (any-hover: hover) {
+  .contact__data-link:hover {
+    color: #D35343;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contact__data-link:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+.contact__data-adres {
+  font-style: normal;
+  padding-left: 40px;
+  position: relative;
+}
+.contact__data-adres::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/icons/sprite.svg#map");
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .contact__data-adres:hover::before {
+    background-image: url("../images/icons/sprite.svg#map-red");
+  }
+}
+.contact__social {
+  margin-left: auto;
+}
+.contact__form {
+  background-color: #FFFFFF;
+  padding: 40px;
+  position: relative;
+}
+.contact__form-head {
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+.contact__message textarea {
+  border: 1px solid #01304C;
+  width: 100%;
+  height: 440px;
+  resize: none;
+  background-color: #FFFFFF;
+  outline: none;
+  transition: border 0.3s ease;
+  padding: 20px;
+}
+.contact__message textarea:focus {
+  border: 1px solid #D35343;
+}
+.contact__message textarea::placeholder {
+  transition: color 0.3s ease;
+  transform: translateY(380px);
+}
+.contact__send {
+  position: absolute;
+  bottom: 65px;
+  right: 65px;
+  background-color: transparent;
+  background: url(../images/icons/sprite.svg#send) center no-repeat;
+  width: 25px;
+  height: 25px;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .contact__send:hover {
+    transform: scale(1.05);
+  }
 }
 
 .footer {

@@ -1,0 +1,70 @@
+<!-- https://www.npmjs.com/package/gulp-file-include -->
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', { "title": "Корзина" })
+
+<body class="page__contact">
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <main class="page__contact">
+      <!-- @include('html/components/_breadcrumbs.html') -->
+      <div class="contact">
+        <div class="contact__container">
+          <h1 class="heading heading--full heading--nobg contact__head">Контакты</h1>
+
+          <div class="contact__content">
+
+            <div class="contact__data">
+              <a href="tel:+37378771178" class="contact__data-link">Tel: (+373) 78 77 11 78</a>
+              <a href="https://goo.gl/maps/g3dUo9XaAEkSiEa49" target="_blank" class="contact__data-link">
+                <address class="contact__data-adres">Ек. Теодорою, 33A, Кишинёв, Молдова</address>
+              </a>
+              <ul class="contact__social social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <div class="social__icon">
+                      <svg aria-hidden="true">
+                        <use xlink:href="images/icons/sprite.svg#facebook"></use>
+                      </svg>
+                    </div>
+                    Facebook
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <div class="social__icon">
+                      <svg aria-hidden="true">
+                        <use xlink:href="images/icons/sprite.svg#instagram"></use>
+                      </svg>
+                    </div>
+                    Instagram
+                  </a>
+                </li>
+              </ul><!-- /.socials -->
+            </div>
+            <!-- /.contact__data -->
+
+            <form action="#" class="contact__form">
+              <h3 class="contact__form-head">Написать письмо</h3>
+              <div class="contact__message">
+                <textarea name="message" id="" placeholder="Добрый день..."></textarea>
+              </div>
+              <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit contact__send" value=""></input>
+            </form>
+
+          </div>
+          <!-- /.contact__content -->
+
+        </div><!-- /.contact__container -->
+      </div><!-- /.contact -->
+
+      @include('html/index/_new-goods.html')
+
+    </main>
+
+    @include('html/footer.html')
+  </div><!-- /.wrapper -->
+</body>
+
+</html>

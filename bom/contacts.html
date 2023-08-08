@@ -1,3 +1,4 @@
+<!-- https://www.npmjs.com/package/gulp-file-include -->
 <!DOCTYPE html>
 <html lang="ru" class="page">
 <head>
@@ -15,10 +16,10 @@
   <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <!-- <link rel="manifest" href="manifest.webmanifest" /> -->
-  <title>Каталог</title>
+  <title>Корзина</title>
 </head>
 
-<body class="page__body">
+<body class="page__contact">
   <div class="wrapper">
     <header class="header">
   <div class="header__container">
@@ -71,90 +72,58 @@
   </div><!-- /.container -->
 </header><!-- /.header -->
 
-    <main class="page__catalog">
-      <section class="catalog-hero">
+    <main class="page__contact">
+      
+      <div class="contact">
+        <div class="contact__container">
+          <h1 class="heading heading--full heading--nobg contact__head">Контакты</h1>
 
-  <div class="catalog-hero__wrap">
-    <div class="catalog-hero__img _ibg">
-      <img src="images/bg/hero.jpg" loading="lazy" width="1440" height="600" alt="Image">
-    </div>
-  </div><!-- /.slide -->
+          <div class="contact__content">
 
-  <div class="catalog-hero__container">
-    <h1 class="heading heading--full heading--catalog catalog-hero__head">Каталог</h1>
-  </div>
-
-</section><!-- /.hero -->
-      <div class="breadcrumbs">
-  <div class="breadcrumbs__container">
-
-    <ul class="breadcrumbs__list">
-      <li class="breadcrumbs__item">
-        <a href="/">Главная</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <a href="catalog.html">Каталог</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <span>Библии</span>
-      </li>
-    </ul>
-  </div>
-</div>
-<!-- /.breadcrumbs -->
-      <section class="catalog-data">
-  <div class="catalog-data__container">
-
-    <div class="catalog-data__items">
-
-      <a href="#" class="catalog-data__item">
-        <div class="catalog-data__body">
-          <div class="catalog-data__block">
-            <h2 class="catalog-data__head">библии</h2>
-            <div class="catalog-data__img _ibg">
-              <img src="images/category/01.jpg" loading="lazy" width="245" height="108" alt="Image">
+            <div class="contact__data">
+              <a href="tel:+37378771178" class="contact__data-link">Tel: (+373) 78 77 11 78</a>
+              <a href="https://goo.gl/maps/g3dUo9XaAEkSiEa49" target="_blank" class="contact__data-link">
+                <address class="contact__data-adres">Ек. Теодорою, 33A, Кишинёв, Молдова</address>
+              </a>
+              <ul class="contact__social social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <div class="social__icon">
+                      <svg aria-hidden="true">
+                        <use xlink:href="images/icons/sprite.svg#facebook"></use>
+                      </svg>
+                    </div>
+                    Facebook
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <div class="social__icon">
+                      <svg aria-hidden="true">
+                        <use xlink:href="images/icons/sprite.svg#instagram"></use>
+                      </svg>
+                    </div>
+                    Instagram
+                  </a>
+                </li>
+              </ul><!-- /.socials -->
             </div>
-          </div><!-- /.catalog-data__block -->
-        </div><!-- /.catalog-data__body -->
-      </a><!-- /.catalog-data__item -->
+            <!-- /.contact__data -->
 
-      <a href="#" class="catalog-data__item">
-        <div class="catalog-data__body">
-          <div class="catalog-data__block">
-            <h2 class="catalog-data__head">христианские книги</h2>
-            <div class="catalog-data__img _ibg">
-              <img src="images/category/02.jpg" loading="lazy" width="245" height="108" alt="Image">
-            </div>
-          </div><!-- /.catalog-data__block -->
-        </div><!-- /.catalog-data__body -->
-      </a><!-- /.catalog-data__item -->
+            <form action="#" class="contact__form">
+              <h3 class="contact__form-head">Написать письмо</h3>
+              <div class="contact__message">
+                <textarea name="message" id="" placeholder="Добрый день..."></textarea>
+              </div>
+              <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit contact__send" value=""></input>
+            </form>
 
-      <a href="#" class="catalog-data__item">
-        <div class="catalog-data__body">
-          <div class="catalog-data__block">
-            <h2 class="catalog-data__head">для детей</h2>
-            <div class="catalog-data__img _ibg">
-              <img src="images/category/03.jpg" loading="lazy" width="245" height="108" alt="Image">
-            </div>
-          </div><!-- /.catalog-data__block -->
-        </div><!-- /.catalog-data__body -->
-      </a><!-- /.catalog-data__item -->
+          </div>
+          <!-- /.contact__content -->
 
-      <a href="#" class="catalog-data__item">
-        <div class="catalog-data__body">
-          <div class="catalog-data__block">
-            <h2 class="catalog-data__head">сувениры</h2>
-            <div class="catalog-data__img _ibg">
-              <img src="images/category/04.jpg" loading="lazy" width="245" height="108" alt="Image">
-            </div>
-          </div><!-- /.catalog-data__block -->
-        </div><!-- /.catalog-data__body -->
-      </a><!-- /.catalog-data__item -->
+        </div><!-- /.contact__container -->
+      </div><!-- /.contact -->
 
-    </div><!-- /.catalog-data__items -->
-
-  </div><!-- /.catalog__container -->
-</section><!-- /.catalog -->
       <section class="new-goods">
   <div class="new-goods__container">
     <h2 class="heading heading--full new-goods__head">Последние поступления</h2>
@@ -400,6 +369,7 @@
 
   </div><!-- /.new-goods__container -->
 </section><!-- /.new-goods -->
+
     </main>
 
     <footer class="footer">
