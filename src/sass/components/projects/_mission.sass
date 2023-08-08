@@ -1,0 +1,62 @@
+.project-mission
+  margin-bottom: 20px
+
+  &__container
+    display: flex
+    // align-items: flex-start
+    @include mediaPhone
+      flex-direction: column
+
+  // .project-mission__descr
+  &__descr
+    display: flex
+    flex-direction: column
+    flex: 1 1 50%
+    margin-right: 20px
+    // height: 100%
+    p
+      &:not(:last-child)
+        margin-bottom: 20px
+    @include mediaPhone
+      margin-bottom: 40px
+
+  &__text
+    flex: 1 1 auto
+    align-self: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__slider
+    flex: 1 1 50%
+    width: 100%
+    height: 100%
+
+  &__slide
+    height: 419px
+    // padding-bottom: 40%
+    @include mediaPhoneMid
+      height: 250px
+
+
+  // .project-mission__navigation
+  &__navigation
+    margin-top: 20px
+    margin-bottom: 10px
+    margin-right: 5px
+    justify-content: flex-end
+    column-gap: 70px
+    div
+      width: 30px
+      height: 30px
+      background-color: #D35343
+      border-radius: 50%
+      text-align: center
+      svg
+        width: 18px
+
+  &--prev
+
+  &--next
+
+
