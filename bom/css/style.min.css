@@ -1,5 +1,5 @@
 /**
- * Swiper 9.4.1
+ * Swiper 9.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: June 13, 2023
+ * Released on: May 10, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,14 +177,6 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-  scroll-snap-type: none;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1517,6 +1509,11 @@ input {
   background-color: #E9E9E9;
   margin-bottom: 80px;
 }
+@media screen and (max-width: 768px) {
+  .page__product .breadcrumbs {
+    margin-bottom: 35px;
+  }
+}
 .page__product .new-goods {
   background-color: #F7F6F5;
 }
@@ -1682,6 +1679,11 @@ input {
   flex-wrap: wrap;
   margin: 0 -10px;
   row-gap: 70px;
+}
+@media screen and (max-width: 992px) {
+  .product__items {
+    row-gap: 40px;
+  }
 }
 .product__item {
   padding: 0 10px;
@@ -2020,11 +2022,15 @@ input {
   padding-top: 20px;
   padding-bottom: 12px;
   background-color: #F7F6F5;
+  overflow: auto;
+  height: 50px;
+  margin-right: 30px;
 }
 .breadcrumbs__list {
   display: flex;
   align-items: center;
   position: relative;
+  white-space: nowrap;
 }
 .breadcrumbs__item {
   color: rgba(0, 0, 0, 0.5);
@@ -2492,6 +2498,9 @@ input {
   .projects__container {
     height: auto;
   }
+}
+.projects__head::before {
+  right: 15px;
 }
 @media screen and (max-width: 768px) {
   .projects__head {
@@ -3032,9 +3041,19 @@ input {
 .shop__head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-bottom: 20px;
   margin-bottom: 84px;
+}
+@media screen and (max-width: 992px) {
+  .shop__head {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .shop__head .breadcrumbs {
+    margin-bottom: 30px;
+  }
 }
 
 .filter {
@@ -3047,6 +3066,12 @@ input {
   color: #FFFFFF;
   padding: 5px;
   border-radius: 0;
+  margin-left: auto;
+}
+@media screen and (max-width: 992px) {
+  .filter__select {
+    margin-bottom: 30px;
+  }
 }
 .filter__select option {
   padding: 5px;

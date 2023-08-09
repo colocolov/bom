@@ -16,8 +16,15 @@
   &__head
     display: flex
     align-items: center
-    justify-content: space-between
+    // justify-content: space-between
     padding-bottom: 20px
     margin-bottom: 84px
+    @include mediaTablet
+      flex-wrap: wrap
+      margin-bottom: 40px
+
+    & .breadcrumbs
+      @include mediaTablet
+        margin-bottom: 30px
 
 
