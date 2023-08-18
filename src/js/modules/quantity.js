@@ -5,10 +5,14 @@ if (quantityBtns.length > 0) {
     quantityBtn.addEventListener('click', function (e) {
       let value = parseInt(quantityBtn.closest('.quantity').querySelector('input').value);
       if (quantityBtn.classList.contains('quantity__btn_plus')) {
+        document.querySelector('.quantity__btn_minus').classList.remove('no-active');
         value++;
       } else {
         --value;
-        if (value < 1) { value = 1; }
+        if (value <= 1) {
+          value = 1;
+          document.querySelector('.quantity__btn_minus').classList.add('no-active');
+        }
       }
       quantityBtn.closest('.quantity').querySelector('input').value = value;
     });

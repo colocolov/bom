@@ -1,12 +1,15 @@
 .shop
   grid-column: 3 span
+  @include mediaTablet
+    grid-column: 4 span
+
 
   & .breadcrumbs
     // padding-top: 0
   & .product
     margin-bottom: 73px
 
-  &__container
+  &__content
     display: grid
     grid-template-columns: repeat(4, 1fr)
     column-gap: 20px
@@ -18,10 +21,10 @@
     align-items: center
     // justify-content: space-between
     padding-bottom: 20px
-    margin-bottom: 84px
+    // margin-bottom: 84px
     @include mediaTablet
       flex-wrap: wrap
-      margin-bottom: 40px
+      // margin-bottom: 40px
 
     & .breadcrumbs
       @include mediaTablet

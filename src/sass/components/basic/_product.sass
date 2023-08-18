@@ -241,6 +241,11 @@
       color: $blue
       &:not(:last-child)
         margin-bottom: 10px
+    a
+      transition: color 0.3s ease-in
+      @media (any-hover: hover)
+        &:hover
+          color: $red
 
 
   // .product__cat
@@ -252,7 +257,7 @@
   &__title
     flex: 1 1 54% // 226/414
     font-weight: 700
-
+    color: $blue
 
   // .product__info
   &__info

@@ -3,7 +3,7 @@ import Swiper, { Autoplay, EffectFade, Parallax } from "swiper";
 
 if (_vars.heroSliderEl) {
 
-  Swiper.use([Autoplay, Parallax]);
+  Swiper.use([Autoplay, EffectFade]);
 
   // слайдер на главной
   new Swiper(_vars.heroSliderEl, {
@@ -13,12 +13,12 @@ if (_vars.heroSliderEl) {
     },
     speed: 800,
 
-    parallax: true,
+    // parallax: true,
     //эффект перехода слайда (только если показ по 1-му слайду)
-    // effect: "fade",
-    // fadeEffect: {
-    //   crossFade: true,
-    // },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
     // показ кол-ва слайдов (работает, когда откл effect: "fade")
     // slidesPerView: 3.6,
     // расстояние между слайдами

@@ -81,6 +81,46 @@
       font-weight: 700
       margin-bottom: 48px
 
+  &__top
+    display: flex
+    margin-bottom: 20px
+    @include mediaPhone
+      flex-wrap: wrap
+
+  &__line
+    display: flex
+    flex: 0 1 50%
+    column-gap: 20px
+    // @include adaptiveValue('flex-basis', 48.7, 46)
+    align-items: center
+    padding: 20px 0 0 0
+    margin-bottom: 20px
+    &:not(:last-child)
+      margin-right: 20px
+    @include mediaPhone
+      flex-basis: 100%
+      &:not(:last-child)
+        margin-right: 0
+
+  &__label
+    display: none
+
+  // .form-checkout__input
+  &__input
+    flex: 1 1 auto
+    input
+      background-color: $white
+      padding-left: 2px
+      padding-bottom: 3px
+      width: 100%
+      border-bottom: 1px solid $blue
+      outline: none
+      transition: border 0.3s ease
+      &:focus
+        border-bottom: 1px solid $red
+      &::placeholder
+        color: rgba($black, 0.5)
+
   // .contact__message
   &__message
     textarea

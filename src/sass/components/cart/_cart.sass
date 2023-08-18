@@ -2,6 +2,11 @@
   padding-top: 50px
   padding-bottom: 80px
 
+  &__container
+    @include mediaPhoneSm
+      display: flex
+      flex-direction: column
+
   &__head
     color: $blue
 
@@ -153,7 +158,9 @@
   &__total
     grid-column: span 1
     text-align: center
+    @include mediaTablet
+      font-weight: 700
+
     @include mediaPhone
       grid-column: span 3
-      font-weight: 700
       font-size: 18px

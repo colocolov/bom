@@ -12,8 +12,27 @@
 
       <div class="page__shop">
         <div class="shop__container">
-          @include('html/shop/_filter.html')
-          @include('html/shop/_shop.html')
+
+          <!-- <div class="shop__top"> -->
+          <div class="shop__head">
+            @include('html/components/_breadcrumbs.html')
+            <select class="filter__select" name="Sort">
+              <option value="1">По умолчанию</option>
+              <option value="2">По цене: сначала дешевые</option>
+              <option value="3">По цене: сначала дорогие</option>
+              <option value="3" selected>По дате: сначала новые</option>
+              <option value="3">По дате: сначала последние</option>
+            </select>
+          </div><!-- /.shop__head -->
+          <!-- @include('html/components/pagination.html') -->
+          <!-- </div> -->
+          <!-- /.shop__top -->
+
+          <div class="shop__content">
+
+            @include('html/shop/_filter.html')
+            @include('html/shop/_shop.html')
+          </div>
         </div>
       </div>
 
