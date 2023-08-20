@@ -2,6 +2,9 @@
   background-color: $grey
   padding: 15px 10px
   height: 100%
+  // @include mediaTablet
+  //   display: flex
+  //   flex-direction: column
 
 
   &__select
@@ -9,6 +12,9 @@
     color: $white
     padding: 5px
     border-radius: 0
+    margin-left: auto
+    @include mediaTablet
+      margin-bottom: 30px
 
     & option
       padding: 5px
@@ -24,8 +30,14 @@
     padding: 5px 10px
     color: $white
     margin-bottom: 40px
+    @include mediaTablet
+      margin-bottom: 0
+
+
   // .filter__body
   &__body
+    @include mediaTablet
+      display: none
 
   // .filter__section
   &__section

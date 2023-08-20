@@ -7,6 +7,12 @@
 
   &__side
     grid-column: 1 span
+    @include mediaTablet
+      grid-column: span 2 / 5
+      margin-bottom: 40px
+      // align-self: flex-end
+
+
 
   &__shop
     padding-top: 40px
@@ -16,6 +22,8 @@
     & .breadcrumbs
       background-color: $bgc-dark
       margin-bottom: 80px
+      @include mediaPhone
+        margin-bottom: 35px
     & .new-goods
       background-color: $bgc
 
@@ -23,5 +31,15 @@
     background-color: $grey
     & .new-goods
       background-color: $bgc
+
+  &__contact
+    background-color: $grey
+    & .new-goods
+      background-color: $bgc
+
+  &__project
+    background-color: $grey
+
+
 
 

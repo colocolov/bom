@@ -1,0 +1,45 @@
+.project-hero
+  margin-top: 10px
+  padding-bottom: 40px
+
+  &__container
+
+  &__wrap
+    @include adaptiveValue('padding', 30, 10)
+    background-color: $white
+    margin-bottom: 80px
+
+  &__head
+    padding-left: 0px
+    text-transform: uppercase
+    font-size: 36px
+    // padding-right: 0
+    @include adaptiveValue('margin-bottom', 70, 47)
+    // margin-bottom: 70px
+    @include mediaPhone
+      // padding-right: 15px
+      // padding-left: 15px
+      margin-left: 0
+      margin-right: 0
+
+  // .about-hero__text
+  &__text
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px
+    @include adaptiveValue('margin-bottom', 60, 35)
+    p
+      max-width: 50%
+      padding: 0 10px
+      margin-bottom: 20px
+      @include mediaPhone
+        max-width: 100%
+
+  // .about-hero__img
+  &__img
+    // margin-right: 15px
+    // margin-left: 15px
+    padding-bottom: 22.95082% // 280/1220
+    @include mediaPhoneSm
+      padding-bottom: 35% // 370/1220
+

@@ -1,0 +1,436 @@
+<!-- https://www.npmjs.com/package/gulp-file-include -->
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <!-- подключение стилей -->
+  <!-- <link rel="stylesheet" href="css/adv.css" /> -->
+  <link rel="stylesheet" href="css/style.min.css?v=1.7.0" />
+  <!-- подключение скриптов -->
+  <!-- <script defer src="js/vendor/swiper-bundle.min.js"></script> -->
+  <script defer src="js/main.min.js?v=1.7.0"></script>
+  <!-- подключение favicon -->
+  <link rel="icon" href="images/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <!-- <link rel="manifest" href="manifest.webmanifest" /> -->
+  <title>Контакты</title>
+</head>
+
+<body class="page__contact">
+  <div class="wrapper">
+    <header class="header">
+  <div class="header__container">
+    <div class="header__wrap">
+      <a href="./" class="header__logo">
+        <img src="images/logo.svg" loading="lazy" width="60" height="60" alt="Logo Societatea Biblică din Moldova">
+        <span>Societatea Biblică din Moldova</span>
+      </a>
+      <div class="header__nav">
+        <form data-da=".menu__body,768,2" class="header__search" method="get">
+          <input type="text" class="header__search-input">
+          <button class="header__search-btn"></button>
+        </form><!-- /.header__search -->
+        <a href="cart.html" class="header__cart">
+          <svg class="" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#cart"></use>
+          </svg>
+        </a><!-- /.header__cart -->
+        <ul data-da=".menu__body,768,1" class="header__list menu-languages">
+          <li class="menu-languages__item wpml-ls-current-language">
+            <a href="#">Ru</a>
+          </li>
+          <li class="menu-languages__item">
+            <a href="#">Ro</a>
+          </li>
+          <li class="menu-languages__item">
+            <a href="#">En</a>
+          </li>
+        </ul><!-- /.menu-languages -->
+        <div class="header__menu menu">
+          <nav class="menu__body" title="Main navigation">
+            <ul class="menu__list">
+              <li class="menu__item current-menu-item"><a class="menu__link" href="./">Главная</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+              <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
+              <li class="menu__item"><a class="menu__link" href="last-goods.html">Последние поступления</a></li>
+              <li class="menu__item"><a class="menu__link" href="cart.html">Корзина</a></li>
+              <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+            </ul>
+            <a href="tel:+37378771178" class="menu__phone">+373 78 77 11 78</a><!-- /.menu__phone -->
+          </nav>
+          <button type="button" aria-label="Open Menu" aria-expanded="false" class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div><!-- /.header__menu -->
+      </div><!-- /.header__nav -->
+    </div>
+  </div><!-- /.container -->
+</header><!-- /.header -->
+
+    <main class="page__contact">
+      
+      <div class="contact">
+        <div class="contact__container">
+          <h1 class="heading heading--full heading--nobg contact__head">Контакты</h1>
+
+          <div class="contact__content">
+
+            <div class="contact__data">
+              <a href="tel:+37378771178" class="contact__data-link">Tel: (+373) 78 77 11 78</a>
+              <a href="https://goo.gl/maps/g3dUo9XaAEkSiEa49" target="_blank" class="contact__data-link">
+                <address class="contact__data-adres">Ек. Теодорою, 33A, Кишинёв, Молдова</address>
+              </a>
+              <ul class="contact__social social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <div class="social__icon">
+                      <svg aria-hidden="true">
+                        <use xlink:href="images/icons/sprite.svg#facebook"></use>
+                      </svg>
+                    </div>
+                    Facebook
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <div class="social__icon">
+                      <svg aria-hidden="true">
+                        <use xlink:href="images/icons/sprite.svg#instagram"></use>
+                      </svg>
+                    </div>
+                    Instagram
+                  </a>
+                </li>
+              </ul><!-- /.socials -->
+            </div>
+            <!-- /.contact__data -->
+
+            <form action="#" class="contact__form">
+              <h3 class="contact__form-head">Написать письмо</h3>
+
+              <div class="contact__top">
+
+                <div class="contact__line">
+                  <div class="contact__label">Имя</div>
+                  <div class="contact__input">
+                    <input type="text" name="name" class="input" placeholder="Имя">
+                  </div>
+                </div>
+
+
+                <div class="contact__line">
+                  <div class="contact__label">Email</div>
+                  <div class="contact__input">
+                    <input type="text" name="name" class="input" placeholder="Email">
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+
+              <div class="contact__message">
+                <textarea name="message" id="" placeholder="Добрый день..."></textarea>
+              </div>
+              <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit contact__send" value=""></input>
+            </form>
+
+          </div>
+          <!-- /.contact__content -->
+
+        </div><!-- /.contact__container -->
+      </div><!-- /.contact -->
+
+      <section class="new-goods">
+  <div class="new-goods__container">
+    <h2 class="heading heading--full new-goods__head">Последние поступления</h2>
+
+    <div class="swiper new-goods__product">
+      <div class="swiper-wrapper product__items new-goods__items">
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/02.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Sfanta Evanghelie 043 ort. (Biserica Ortodoxa din Moldova,
+                violet)</a>
+              <div class="product__footer">
+                <span class="product__price">300 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/07.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Толкование книг Нового Завета:
+                Римлянам 9-16 главы<br>
+                Джон Мак-Артур</a>
+              <div class="product__footer">
+                <span class="product__price">300 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/03.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Детская Библия</a>
+              <div class="product__footer">
+                <span class="product__price">60 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/04.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Biblia în 100 de teme</a>
+              <div class="product__footer">
+                <span class="product__price">200 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/05.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Истории Священного Писания</a>
+              <div class="product__footer">
+                <span class="product__price">110 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/06.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Библия в кратких рассказах</a>
+              <div class="product__footer">
+                <span class="product__price">143 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/08.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Arca lui Noe</a>
+              <div class="product__footer">
+                <span class="product__price">209 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/09.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Евангелие от Луки. Главы 9-24</a>
+              <div class="product__footer">
+                <span class="product__price">120 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/10.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Видения Иезекииля</a>
+              <div class="product__footer">
+                <span class="product__price">120 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/11.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Бытие. Комментарий</a>
+              <div class="product__footer">
+                <span class="product__price">171 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+        <div class="swiper-slide product__item new-goods__item">
+          <div class="product__wrap">
+
+            <a href="product.html" class="product__cover _ibg">
+              <span>new</span>
+              <img src="images/product/12.jpg" loading="lazy" width="265" height="194" alt="Book">
+            </a>
+
+            <div class="product__body">
+              <a href="product.html" class="product__head">Библейский культурно-исторический комментарий — часть 1
+                Ветхий Завет</a>
+              <div class="product__footer">
+                <span class="product__price">543 lei</span>
+                <button class="product__cart"></button>
+              </div>
+            </div><!-- /.product__body -->
+
+          </div><!-- /.product__wrap -->
+        </div><!-- /.product .slide -->
+
+
+      </div><!-- /.swiper-wrapper .product__items -->
+
+      <div class="navigation new-goods__navigation">
+        <div class="navigation__btn navigation__btn-prev new-goods--prev">
+          <svg class="navigation__btn-svg" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrcircle"></use>
+          </svg>
+        </div><!-- /.arrow-prev -->
+        <div class="navigation__btn navigation__btn-next new-goods--next">
+          <svg class="navigation__btn-svg" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrcircle"></use>
+          </svg>
+        </div><!-- /.arrow-next -->
+      </div><!-- /.pagination__nav -->
+
+    </div><!-- /.swipper .new-goods__product -->
+
+
+
+
+    <a href="last-goods.html" class="btn-reset btn btn__new-goods">подробнее</a>
+
+  </div><!-- /.new-goods__container -->
+</section><!-- /.new-goods -->
+
+    </main>
+
+    <footer class="footer">
+  <div class="container footer__container">
+    <a href="tel:+37378771178" class="footer__link">Tel: (+373) 78 77 11 78</a>
+    <a href="https://goo.gl/maps/g3dUo9XaAEkSiEa49" target="_blank" class="footer__link">
+      <address class="footer__adres">Ек. Теодорою, 33A, Кишинёв, Молдова</address>
+    </a>
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <div class="social__icon">
+            <svg aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#facebook"></use>
+            </svg>
+          </div>
+          Facebook
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <div class="social__icon">
+            <svg aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#instagram"></use>
+            </svg>
+          </div>
+          Instagram
+        </a>
+      </li>
+    </ul><!-- /.socials -->
+    <a href="#" class="footer__icon">
+      <img src="images/UBS.jpg" loading="lazy" width="120" height="39" alt="">
+    </a>
+
+  </div><!-- /.container -->
+</footer><!-- /.footer -->
+  </div><!-- /.wrapper -->
+</body>
+
+</html>

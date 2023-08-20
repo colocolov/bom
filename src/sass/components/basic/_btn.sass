@@ -75,11 +75,26 @@
   &--continue
     @include mediaPhone
       margin-bottom: 40px
+    @include mediaPhoneSm
+      align-self: center
 
   &--order
     align-self: flex-end
     @include mediaPhoneSm
-      align-self: flex-start
+      align-self: center
+
+  &--update
+    @include mediaPhoneSm
+      margin: 0 auto
+
+  &--submit
+    @include mediaPhone
+      grid-column: span 2
+      width: max-content
+
+  &--project
+    margin-top: 40px
+    align-self: flex-start
 
 // стрелки слайдера
 .navigation

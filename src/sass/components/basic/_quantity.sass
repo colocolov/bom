@@ -19,9 +19,16 @@
           transform: scale(1.05)
     &_minus
       transform: rotate(-180deg)
+      transition: opacity 0.3s ease-in, transform 0.3s ease
       @media (any-hover: hover)
         &:hover
           transform: scale(1.05) rotate(-180deg)
+      &.no-active
+        cursor: auto
+        opacity: 0.2
+        @media (any-hover: hover)
+          &:hover
+            transform: rotate(-180deg)
 
   &__input
     flex: 1 1 auto
