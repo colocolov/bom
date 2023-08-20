@@ -7,18 +7,23 @@
     position: fixed
     top: 0
     right: -100%
-    width: 100%
+    //width: 100% // !!СТАРОЕ ЗНАЧЕНИЕ
+    width: 70%
     height: 100%
-    padding: 110px 30px 50px 70px
+    padding: 130px 30px 50px 70px
     background-color: $grey
     overflow: auto
-    transition: right 0.5s ease 0s
+    transition: right 0.3s ease 0s
     z-index: 5
+    box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.2)
     @include mediaPhone
       display: flex
       flex-direction: column
     @include mediaPhoneMid
       padding-left: 30px
+    // !!СТАРОЕ ЗНАЧЕНИЕ НЕТ
+    @include mediaPhoneSm
+      width: 100%
 
 
     // подложка под верхнее меню, если оно имеет фон
@@ -27,11 +32,15 @@
       position: fixed
       top: 0
       right: -100%
-      width: 100%
-      height: 74px
+      //width: 100% // !!СТАРОЕ ЗНАЧЕНИЕ
+      width: 70%
+      height: 104px
       background-color: $grey
       transition: right 0.5s ease 0s
-      z-index: 2
+      z-index: 5
+      // !!СТАРОЕ ЗНАЧЕНИЕ НЕТ
+      @include mediaPhoneSm
+        width: 100%
     &._active
       // display: block
       right: 0
@@ -40,21 +49,28 @@
   &__list
     display: flex
     flex-direction: column
+    margin-bottom: 40px
+    // !!СТАРОЕ ЗНАЧЕНИЕ НЕТ!!!
+    align-items: flex-end
     // flex-wrap: wrap
+    // !!СТАРОЕ ЗНАЧЕНИЕ НЕТ!!!
+    text-align: right
     @include mediaPhone
       order: 4
     @media (max-width: 768px)
       flex-direction: column
-      align-items: flex-start
+      // align-items: flex-start // !!СТАРОЕ ЗНАЧЕНИЕ
 
   &__item
     position: relative
     @include fx-all
     flex-wrap: wrap
-    @include font(700, 28, 42)
+    @include font(700, 28, 28)
     color: $blue
     text-transform: uppercase
     transition: color 0.3s ease
+    &:not(:last-child)
+      margin-bottom: 30px
 
     &.current-menu-item a
       color: $red
@@ -63,8 +79,6 @@
         a
           color: $red
 
-    &:not(:last-child)
-      margin-bottom: 20px
 
     // нижняя линия при наведении
     &::before
@@ -85,25 +99,25 @@
 
 
     @media (max-width: 768px)
-      margin-bottom: 40px
+      // margin-bottom: 40px
       font-weight: 800
       font-size: 32px
       color: $blue
       &:not(:last-child)
         margin-right: 0
-        margin-bottom: 10px
+        margin-bottom: 30px
 
   &__phone
-    display: none
-    width: 0
-    height: 0
+    display: flex
+    justify-content: flex-end
+    @include font(700, 32, 28)
+    color: $red
+    transition: color 0.3s ease
     @include mediaPhone
-      color: $white
-      width: auto
-      height: auto
-      font-size: 20px
-      margin-right: auto
       order: 5
+    @media (any-hover: hover)
+      &:hover
+        color: $blue
 
   &__icon
     display: block
@@ -128,6 +142,7 @@
       width: 50%
       height: 2px
       background-color: $blue
+      transition: position .5s ease-in
       &:first-child
         width: 100%
         top: 0
@@ -138,11 +153,17 @@
         transition: transform .3s ease-in-out, top .3s ease-in-out, background-color .5s ease-out
         width: 75% // 30/40
     &._active
+      position: absolute
+      right: 30px
+      top: 40px
       background-color: $red
       border-radius: 50%
       width: 50px
       height: 50px
       background-position: 0 10px
+      @include mediaPhone
+        top: 30px
+
       @media (any-hover: hover)
         &:hover
           span

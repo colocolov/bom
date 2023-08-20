@@ -1158,6 +1158,11 @@ input {
     margin-bottom: 40px;
   }
 }
+@media screen and (max-width: 480px) {
+  .header__search {
+    width: 100%;
+  }
+}
 .header__search-btn {
   position: absolute;
   top: 50%;
@@ -1281,13 +1286,14 @@ input {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
+  width: 70%;
   height: 100%;
-  padding: 110px 30px 50px 70px;
+  padding: 130px 30px 50px 70px;
   background-color: #E3E3E3;
   overflow: auto;
-  transition: right 0.5s ease 0s;
+  transition: right 0.3s ease 0s;
   z-index: 5;
+  box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 768px) {
   .menu__body {
@@ -1300,16 +1306,26 @@ input {
     padding-left: 30px;
   }
 }
+@media screen and (max-width: 480px) {
+  .menu__body {
+    width: 100%;
+  }
+}
 .menu__body::before {
   content: "";
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
-  height: 74px;
+  width: 70%;
+  height: 104px;
   background-color: #E3E3E3;
   transition: right 0.5s ease 0s;
-  z-index: 2;
+  z-index: 5;
+}
+@media screen and (max-width: 480px) {
+  .menu__body::before {
+    width: 100%;
+  }
 }
 .menu__body._active {
   right: 0;
@@ -1320,6 +1336,9 @@ input {
 .menu__list {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
+  align-items: flex-end;
+  text-align: right;
 }
 @media screen and (max-width: 768px) {
   .menu__list {
@@ -1329,7 +1348,6 @@ input {
 @media (max-width: 768px) {
   .menu__list {
     flex-direction: column;
-    align-items: flex-start;
   }
 }
 .menu__item {
@@ -1340,10 +1358,13 @@ input {
   flex-wrap: wrap;
   font-weight: 700;
   font-size: 28px;
-  line-height: 1.5;
+  line-height: 1;
   color: #01304C;
   text-transform: uppercase;
   transition: color 0.3s ease;
+}
+.menu__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 .menu__item.current-menu-item a {
   color: #D35343;
@@ -1352,9 +1373,6 @@ input {
   .menu__item:hover a {
     color: #D35343;
   }
-}
-.menu__item:not(:last-child) {
-  margin-bottom: 20px;
 }
 .menu__item::before {
   position: absolute;
@@ -1371,29 +1389,32 @@ input {
 }
 @media (max-width: 768px) {
   .menu__item {
-    margin-bottom: 40px;
     font-weight: 800;
     font-size: 32px;
     color: #01304C;
   }
   .menu__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 .menu__phone {
-  display: none;
-  width: 0;
-  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 0.875;
+  color: #D35343;
+  transition: color 0.3s ease;
 }
 @media screen and (max-width: 768px) {
   .menu__phone {
-    color: #FFFFFF;
-    width: auto;
-    height: auto;
-    font-size: 20px;
-    margin-right: auto;
     order: 5;
+  }
+}
+@media (any-hover: hover) {
+  .menu__phone:hover {
+    color: #01304C;
   }
 }
 .menu__icon {
@@ -1415,6 +1436,7 @@ input {
   width: 50%;
   height: 2px;
   background-color: #01304C;
+  transition: position 0.5s ease-in;
 }
 .menu__icon span:first-child {
   width: 100%;
@@ -1428,11 +1450,19 @@ input {
   width: 75%;
 }
 .menu__icon._active {
+  position: absolute;
+  right: 30px;
+  top: 40px;
   background-color: #D35343;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   background-position: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .menu__icon._active {
+    top: 30px;
+  }
 }
 @media (any-hover: hover) {
   .menu__icon._active:hover span:first-child {
@@ -1877,7 +1907,7 @@ input {
 }
 @media (max-width: 480px) {
   .product__header {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 .product__block {
