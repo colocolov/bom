@@ -1,3 +1,5 @@
+const quantity = document.querySelector(".quantity");
+if (quantity) {
 
 // отключения минуса при значении 1
 const valueDefaul = document.querySelectorAll('.quantity__input');
@@ -9,7 +11,6 @@ const valueDefaul = document.querySelectorAll('.quantity__input');
       }
     });
   }
-
 
 // работа счетчика
 let quantityBtns = document.querySelectorAll('.quantity__btn');
@@ -32,4 +33,7 @@ if (quantityBtns.length > 0) {
     });
 
   }
+  }
+
+// end if .quantity
 }

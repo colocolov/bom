@@ -1,5 +1,5 @@
 /**
- * Swiper 9.4.1
+ * Swiper 9.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: June 13, 2023
+ * Released on: May 10, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,14 +177,6 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
-  scroll-snap-type: none;
-}
-
-.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
-  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1336,7 +1328,7 @@ input {
 .menu__list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   align-items: flex-end;
   text-align: right;
 }
@@ -1361,18 +1353,20 @@ input {
   line-height: 1;
   color: #01304C;
   text-transform: uppercase;
+}
+.menu__item a {
   transition: color 0.3s ease;
 }
 .menu__item:not(:last-child) {
   margin-bottom: 30px;
 }
-.menu__item.current-menu-item a {
-  color: #D35343;
-}
 @media (any-hover: hover) {
   .menu__item:hover a {
     color: #D35343;
   }
+}
+.menu__item.current-menu-item a {
+  color: #D35343;
 }
 .menu__item::before {
   position: absolute;
@@ -1401,9 +1395,9 @@ input {
 .menu__phone {
   display: flex;
   justify-content: flex-end;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 0.875;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 0.9333333333;
   color: #D35343;
   transition: color 0.3s ease;
 }
@@ -3746,6 +3740,118 @@ input {
   .contact__send:hover {
     transform: scale(1.05);
   }
+}
+
+.project-intro__wrap {
+  background-color: #FFFFFF;
+  margin-bottom: 80px;
+}
+@media (min-width: 81.875em) {
+  .project-intro__wrap {
+    padding: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 81.875em) {
+  .project-intro__wrap {
+    padding: calc(0.625rem + 1.25 * (((100vw - 20rem)) / ((61.875))));
+  }
+}
+@media (max-width: 20em) {
+  .project-intro__wrap {
+    padding: 0.625rem;
+  }
+}
+.project-intro__head {
+  padding-left: 0px;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+@media (min-width: 81.875em) {
+  .project-intro__head {
+    margin-bottom: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 81.875em) {
+  .project-intro__head {
+    margin-bottom: calc(2.9375rem + 2.6875 * (((100vw - 20rem)) / ((61.875))));
+  }
+}
+@media (max-width: 20em) {
+  .project-intro__head {
+    margin-bottom: 2.9375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .project-intro__head {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.project-intro__text {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  margin-bottom: 70px;
+}
+@media (min-width: 81.875em) {
+  .project-intro__text {
+    margin-bottom: 3.75rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 81.875em) {
+  .project-intro__text {
+    margin-bottom: calc(2.1875rem + 1.5625 * (((100vw - 20rem)) / ((61.875))));
+  }
+}
+@media (max-width: 20em) {
+  .project-intro__text {
+    margin-bottom: 2.1875rem;
+  }
+}
+.project-intro__text p {
+  max-width: 50%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .project-intro__text p {
+    max-width: 100%;
+  }
+}
+.project-intro__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 35px;
+  margin: 0 -17px;
+}
+.project-intro__item {
+  flex: 1 1 33%;
+  padding: 0 17px;
+  min-width: 316px;
+}
+.project-intro__content {
+  position: relative;
+}
+@media (any-hover: hover) {
+  .project-intro__content:hover img {
+    transform: scale(1.01);
+    transition: transform 0.5s ease-in-out;
+  }
+  .project-intro__content:hover .project-intro__title {
+    color: #D35343;
+  }
+}
+.project-intro__img {
+  overflow: hidden;
+  padding-bottom: 73%;
+}
+.project-intro__title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #FFFFFF;
+  font-size: 18px;
+  transition: color 0.3s ease-in;
 }
 
 .project-hero {
