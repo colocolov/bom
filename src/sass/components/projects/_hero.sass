@@ -31,9 +31,22 @@
     p
       max-width: 50%
       padding: 0 10px
-      margin-bottom: 20px
+      &:not(:last-child)
+        margin-bottom: 20px
       @include mediaPhone
         max-width: 100%
+    &--full
+      align-items: center
+      margin-bottom: 0
+      flex: 1 1 49%
+      p
+        max-width: 100%
+    &--center
+      justify-content: center
+      p
+        max-width: 52%
+        @include mediaPhone
+          max-width: 100%
 
   // .about-hero__img
   &__img
@@ -42,4 +55,23 @@
     padding-bottom: 22.95082% // 280/1220
     @include mediaPhoneSm
       padding-bottom: 35% // 370/1220
+
+  &__content
+    display: flex
+    margin-bottom: 40px
+    gap: 50px
+    @include mediaPhone
+      flex-wrap: wrap
+      gap: 30px
+
+
+  &__video
+    flex: 1 1 49%
+    height: min-content
+    iframe
+      width: 100%
+      height: 100%
+      @include adaptiveValue('height', 315, 150)
+      @include mediaPhone
+        @include adaptiveValue('height', 300, 200)
 
