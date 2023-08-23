@@ -1,5 +1,6 @@
 .product
-  // ПОСЛЕДНИЕ ПОСТУПЛЕНИЯ
+
+  // ------------- ПОСЛЕДНИЕ ПОСТУПЛЕНИЯ -------------
   &__items
     display: flex
     flex-wrap: wrap
@@ -17,13 +18,17 @@
     flex: 1 1 33%
     // max-width: 305px //!!!!!
     max-width: 325px
-    height: 355px
-    @include mediaTablet
+    // height: 500px
+    // @media (max-width: 1180px)
+    //   height: 450px
+    @include mediaPhone
       max-width: none
+      flex-basis: 50%
+
+    @include mediaPhoneMid
       // height: 57.894737% // 550/950
       height: auto
-      flex-basis: 47%
-    @include mediaPhone
+      // flex-basis: 47%
       flex-basis: 100%
 
 
@@ -46,7 +51,7 @@
     // margin-top: 20px
     // padding: 0 20px
     margin-bottom: 7px
-    padding-bottom: 59%
+    padding-bottom: 109.5%
     width: 100%
     span
       width: 50px
@@ -80,11 +85,12 @@
     transition: color 0.3s ease-in
     padding-right: 10px
     flex: 1 1 auto
-    &--small
-      font-size: 16px
+    &--cart
+      // font-size: 36px
       margin-bottom: 15px
-      min-height: auto
+      // min-height: auto
       text-align: left
+      text-transform: none
 
   &__footer
     display: flex
@@ -105,9 +111,7 @@
         transform: scale(1.02)
 
 
-  // КАРТОЧКА ТОВАРА
-
-
+  // --------------- КАРТОЧКА ТОВАРА ---------------------
 
   // .product__container
   &__container
@@ -146,10 +150,8 @@
     display: flex
     flex-direction: column
     align-items: start
-    padding: 65px 151px 20px 138px
+    padding: 30px
     // flex: 1 1 auto
-    @media ( max-width: 1200px )
-      padding: 50px 61px 30px
     @include mediaTablet
       grid-column: span 2
     @media ( max-width: 480px )
@@ -157,10 +159,14 @@
 
   // .product__exist
   &__exist
-    align-self: flex-end
-    margin-bottom: 20px
+    // align-self: flex-end
+    // margin-bottom: 20px
+    margin-top: 7px
     padding-right: 33px
     position: relative
+    flex-shrink: 0
+    @include mediaPhoneMid
+      margin-left: auto
     &::after
       position: absolute
       content: ''
@@ -174,6 +180,16 @@
       &::after
         background: $red url("../images/icons/sprite.svg#close") center / 17px no-repeat
 
+
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 40px
+    gap: 20px
+    @include mediaPhoneMid
+      flex-direction: column-reverse
+
   // .product__header
   &__header
     margin-bottom: 20px
@@ -181,31 +197,57 @@
     // font-size: 36px
     min-height: auto
     padding-right: 10px
-    @media ( max-width: 480px )
-      font-size: 28px
+    font-size: 20px
+    line-height: 1.15
+    text-transform: none
+    // @media ( max-width: 480px )
+      // font-size: 28px
 
-  // .product__block
-  &__block
-    display: grid
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr)
+  // .product__form
+  &__form
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: flex-end
+    // grid-template: repeat(2, 1fr) / repeat(2, 1fr)
     gap: 20px
     width: 100%
-    @include mediaPhoneMid
-      grid-template: repeat(4, max-content) / 1fr
-      row-gap: 30px
+    margin-bottom: 40px
+    @include mediaPhoneSm
+      flex-direction: column
+      align-items: center
+      // grid-template: repeat(4, max-content) / 1fr
+      // row-gap: 30px
 
   // .product__cost
   &__cost
-    border: 2px solid $blue
-    padding: 20px 40px
+    // border: 2px solid $blue
+    // padding: 20px 40px
     display: flex
+
     align-items: center
     justify-content: center
+    flex-direction: column
+    margin-right: auto
     color: $blue
     font-weight: 700
     font-size: 36px
-    @include mediaPhoneMid
-      grid-row: 1
+    span
+      position: relative
+      display: inline-block
+      color: $red
+      font-size: 20px
+      line-height: 1.15
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: -10%
+        width: 120%
+        height: 1px
+        background-color: $red
+    @include mediaPhoneSm
+      margin-left: auto
 
   // .product__quant
   &__quant
@@ -218,11 +260,24 @@
 
   &__btn-cart
     height: 50px
+    a
+      padding: 0 100px
 
   // .product__atr
   &__atr
-    border: 2px solid $blue
-    padding: 40px 20px
+    margin-bottom: 40px
+    // border: 2px solid $blue
+    // padding: 40px 20px
+
+  &__author
+    display: flex
+    width: 100%
+    gap: 10px
+    a
+      transition: color 0.3s ease-in
+      @media (any-hover: hover)
+        &:hover
+          color: $red
 
 
   // .product__itm
@@ -236,7 +291,7 @@
     align-items: flex-start
     column-gap: 20px
     &:not(:last-child)
-      margin-bottom: 30px
+      margin-bottom: 10px
     &--atr
       color: $blue
       &:not(:last-child)
@@ -250,7 +305,7 @@
 
   // .product__cat
   &__cat
-    flex: 1 1 34.507246% // 147/414
+    // flex: 1 1 34.507246% // 147/414
 
 
   // .product__title
@@ -262,10 +317,11 @@
   // .product__info
   &__info
     background-color: $white
-    padding: 20px
+    margin-bottom: 40px
+    // padding: 20px
     // width: 413px
     @include mediaTablet
-      padding-bottom: 50px
+      // padding-bottom: 50px
       // width: auto
       // flex: 1 1 30%
 
@@ -274,14 +330,17 @@
   // .product__descr
   &__descr
     background-color: $white
-    grid-column: span 2
-    padding: 20px
+    p
+      &:not(:last-child)
+        margin-bottom: 7px
+    // grid-column: span 2
+    // padding: 20px
     // flex: 1 1 55%
     // max-width: 847px
     // width: 100%
-    padding-bottom: 80px
+    // padding-bottom: 80px
     @include mediaTablet
-      padding-bottom: 50px
+      // padding-bottom: 50px
       // width: auto
       // flex: 1 1 60%
 
@@ -294,6 +353,9 @@
 .image-product
   min-width: 0
   overflow: hidden
+  height: min-content
+  padding-bottom: 20px
+
   // .image-product__mainslider
   &__mainslider
     // width: 373px
@@ -307,7 +369,7 @@
 
   // .image-product__mainslide
   &__mainslide
-    height: 290px
+    // height: 290px
     // margin: 20px
     // padding: 20px
     // display: flex
@@ -344,11 +406,19 @@
 
   // .image-product__image
   &__image
-    padding-bottom: 65.375303% // 270/413
+    padding-bottom: 130.8% // 270/413
     // height: 300px
     margin: 20px
     @include mediaTablet
+      padding-bottom: 70%
       margin-bottom: 0
+    @include mediaPhone
+      padding-bottom: 80%
+    @include mediaPhoneMid
+      padding-bottom: 90%
+    @include mediaPhoneSm
+      padding-bottom: 100%
+
 
   // .image-product__subslider
   &__subslider
