@@ -1,6 +1,5 @@
 .project-intro
 
-
   &__wrap
     @include adaptiveValue('padding', 30, 10)
     background-color: $white
@@ -42,9 +41,11 @@
 
   // .project-intro__item
   &__item
-    flex: 1 1 33%
+    flex: 0 1 33%
     padding: 0 17px
     min-width: 316px
+    @include mediaTablet
+      flex-grow: 1
 
   // .project-intro__content
   &__content
