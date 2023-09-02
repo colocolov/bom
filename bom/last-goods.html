@@ -25,7 +25,7 @@
   <div class="header__container">
     <div class="header__wrap">
       <a href="./" class="header__logo">
-        <img src="images/logo.svg" loading="lazy" width="60" height="60" alt="Logo Societatea Biblică din Moldova">
+        <img src="images/logo.svg" width="60" height="60" alt="Logo Societatea Biblică din Moldova">
         <span>Societatea Biblică din Moldova</span>
       </a>
       <div class="header__nav">
@@ -54,7 +54,17 @@
             <ul class="menu__list">
               <li class="menu__item current-menu-item"><a class="menu__link" href="./">Главная</a></li>
               <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
-              <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
+              <li class="menu__item">
+                <a class="menu__link" href="catalog.html">Каталог</a>
+                <span class="menu__arrow"></span>
+                <ul class="menu__sub-list">
+                  <li class="menu__sub-item"><a href="#" class="menu__sub-link">Библии</a></li>
+                  <li class="menu__sub-item"><a href="#" class="menu__sub-link">Христианские книги</a></li>
+                  <li class="menu__sub-item"><a href="#" class="menu__sub-link">Для детей</a></li>
+                  <li class="menu__sub-item"><a href="#" class="menu__sub-link">Сувениры</a></li>
+                </ul>
+
+              </li>
               <li class="menu__item"><a class="menu__link" href="last-goods.html">Последние поступления</a></li>
               <li class="menu__item"><a class="menu__link" href="cart.html">Корзина</a></li>
               <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
@@ -360,7 +370,7 @@
     </a>
     <ul class="footer__social social">
       <li class="social__item">
-        <a class="social__link" href="#">
+        <a class="social__link" href="#" target="_blank">
           <div class="social__icon">
             <svg aria-hidden="true">
               <use xlink:href="images/icons/sprite.svg#facebook"></use>
@@ -370,7 +380,7 @@
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="#">
+        <a class="social__link" href="#" target="_blank">
           <div class="social__icon">
             <svg aria-hidden="true">
               <use xlink:href="images/icons/sprite.svg#instagram"></use>
@@ -380,9 +390,11 @@
         </a>
       </li>
     </ul><!-- /.socials -->
-    <a href="#" class="footer__icon">
-      <img src="images/UBS.jpg" loading="lazy" width="120" height="39" alt="">
-    </a>
+    <div class="footer__partners">
+      <a href="#" target="_blank" class="footer__icon">
+        <img src="images/UBS.jpg" loading="lazy" width="120" height="39" title="UBS" alt="UBS">
+      </a>
+    </div>
 
   </div><!-- /.container -->
 </footer><!-- /.footer -->

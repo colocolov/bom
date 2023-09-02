@@ -16,10 +16,17 @@
           <div class="contact__content">
 
             <div class="contact__data">
-              <a href="tel:+37378771178" class="contact__data-link">Tel: (+373) 78 77 11 78</a>
-              <a href="https://goo.gl/maps/g3dUo9XaAEkSiEa49" target="_blank" class="contact__data-link">
-                <address class="contact__data-adres">Ек. Теодорою, 33A, Кишинёв, Молдова</address>
-              </a>
+              <div class="contact__data-phone">
+                <a href="mailto:info@biblia.md" class="contact__data-link">info@biblia.md</a>
+                <a href="tel:+37322460816" class="contact__data-link">Tel: (+373) 22 460 816</a>
+                <a href="tel:+37378771178" class="contact__data-link">Tel: (+373) 78 77 11 78</a>
+              </div>
+              <div class="contact__data-address">
+                <a href="https://goo.gl/maps/g3dUo9XaAEkSiEa49" target="_blank" class="contact__data-link">
+                  Адрес:
+                  <address class="contact__data-adres">Ec. Teodoroiu, 33A, <br>Chișinău, Moldova</address>
+                </a>
+              </div>
               <ul class="contact__social social">
                 <li class="social__item">
                   <a class="social__link" href="#">
@@ -42,6 +49,10 @@
                   </a>
                 </li>
               </ul><!-- /.socials -->
+              <div class="contact__data-time">
+                График работы:
+                <span>Пн-Пт 9:00 – 17:30</span>
+              </div>
             </div>
             <!-- /.contact__data -->
 
@@ -49,27 +60,19 @@
               <h3 class="contact__form-head">Написать письмо</h3>
 
               <div class="contact__top">
-
                 <div class="contact__line">
                   <div class="contact__label">Имя</div>
                   <div class="contact__input">
                     <input type="text" name="name" class="input" placeholder="Имя">
                   </div>
                 </div>
-
-
                 <div class="contact__line">
                   <div class="contact__label">Email</div>
                   <div class="contact__input">
                     <input type="email" name="name" class="input" placeholder="Email">
                   </div>
                 </div>
-
-
-              </div>
-
-
-
+              </div><!-- /.contact__top -->
 
               <div class="contact__message">
                 <textarea name="message" id="" placeholder="Добрый день..."></textarea>
@@ -82,6 +85,16 @@
 
         </div><!-- /.contact__container -->
       </div><!-- /.contact -->
+
+      <div class="contact__map">
+        <div class="contact__container">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2718.324656003823!2d28.84004147670927!3d47.05348142600881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d05e30699c1%3A0x1768d5c6d0bab40!2sSocietatea%20Biblic%C4%83%20din%20Moldova!5e0!3m2!1sru!2s!4v1693564496202!5m2!1sru!2s"
+                  width="" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+      </div>
 
       @include('html/index/_new-goods.html')
 

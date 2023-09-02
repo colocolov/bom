@@ -903,6 +903,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.125;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .heading {
@@ -1484,6 +1486,15 @@ input {
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
 }
+.menu__sub-list {
+  display: none;
+}
+.menu__sub-list a {
+  font-size: 16px;
+  line-height: 112.5%;
+  font-weight: 400;
+  text-transform: none;
+}
 
 .social {
   display: flex;
@@ -1737,13 +1748,14 @@ input {
 }
 @media screen and (max-width: 768px) {
   .product__item {
-    max-width: none;
+    max-width: 50%;
     flex-basis: 50%;
   }
 }
 @media screen and (max-width: 576px) {
   .product__item {
     height: auto;
+    max-width: none;
     flex-basis: 100%;
   }
 }
@@ -2542,6 +2554,7 @@ input {
 .new-goods__item {
   padding: 0;
   flex: 0 0 auto;
+  height: auto;
 }
 .new-goods__navigation {
   margin-top: 65px;
@@ -3614,20 +3627,37 @@ input {
   padding: 20px;
   margin-bottom: 40px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 30px;
 }
 @media screen and (max-width: 768px) {
   .contact__data {
     flex-wrap: wrap;
-    justify-content: flex-start;
   }
+  .contact__data > div {
+    width: 46%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact__data > div {
+    width: 96%;
+  }
+  .contact__data > ul {
+    margin-bottom: 30px;
+  }
+}
+.contact__data-phone {
+  display: flex;
+  flex-direction: column;
+}
+.contact__data-phone a:not(:last-child) {
+  margin-bottom: 10px;
 }
 .contact__data-link {
   color: #01304C;
   transition: color 0.3s ease-in;
-}
-.contact__data-link:not(:last-child) {
-  margin-right: 100px;
 }
 .contact__data-link:first-child {
   flex-shrink: 0;
@@ -3637,47 +3667,28 @@ input {
     color: #D35343;
   }
 }
-@media screen and (max-width: 992px) {
-  .contact__data-link:not(:last-child) {
-    margin-right: 40px;
-  }
-}
 @media screen and (max-width: 768px) {
   .contact__data-link:not(:last-child) {
-    margin-right: 30px;
     margin-bottom: 20px;
   }
 }
 .contact__data-adres {
   font-style: normal;
-  padding-left: 40px;
-  position: relative;
 }
-.contact__data-adres::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  transform: translateY(-50%);
-  background-image: url("../images/icons/sprite.svg#map");
-  background-repeat: no-repeat;
-  transition: background-image 0.3s ease-in;
-}
-@media (any-hover: hover) {
-  .contact__data-adres:hover::before {
-    background-image: url("../images/icons/sprite.svg#map-red");
-  }
+.contact__data-time span {
+  display: block;
 }
 .contact__social {
-  margin-left: auto;
+  flex-direction: column;
 }
 @media screen and (max-width: 768px) {
   .contact__social {
     margin-right: auto;
     margin-left: 0;
   }
+}
+.contact__social .social__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 .contact__form {
   background-color: #FFFFFF;
@@ -3788,6 +3799,13 @@ input {
     transform: scale(1.05);
   }
 }
+.contact__map {
+  padding: 40px 0;
+  background-color: #F7F6F5;
+}
+.contact__map iframe {
+  width: 100%;
+}
 
 .project-intro__wrap {
   background-color: #FFFFFF;
@@ -3872,9 +3890,14 @@ input {
   margin: 0 -17px;
 }
 .project-intro__item {
-  flex: 1 1 33%;
+  flex: 0 1 33%;
   padding: 0 17px;
   min-width: 316px;
+}
+@media screen and (max-width: 992px) {
+  .project-intro__item {
+    flex-grow: 1;
+  }
 }
 .project-intro__content {
   position: relative;
@@ -4125,14 +4148,40 @@ input {
   margin: 0 -20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  row-gap: 20px;
 }
 .project-video__item {
-  flex: 1 1 380px;
+  flex: 1 1 50%;
+  max-width: 50%;
   padding: 0 20px;
 }
 .project-video__item iframe {
   width: 100%;
+}
+@media (min-width: 81.875em) {
+  .project-video__item iframe {
+    height: 19.6875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 81.875em) {
+  .project-video__item iframe {
+    height: calc(15.625rem + 4.0625 * (((100vw - 20rem)) / ((61.875))));
+  }
+}
+@media (max-width: 20em) {
+  .project-video__item iframe {
+    height: 15.625rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .project-video__item {
+    max-width: none;
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+.project-video__title {
+  margin-bottom: 10px;
 }
 
 .footer {
@@ -4193,4 +4242,11 @@ input {
 }
 .footer__icon {
   width: 120px;
+}
+.footer__icon:not(:last-child) {
+  margin-bottom: 7px;
+}
+.footer__partners {
+  display: flex;
+  flex-direction: column;
 }

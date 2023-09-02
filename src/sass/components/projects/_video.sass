@@ -6,12 +6,21 @@
     margin: 0 -20px
     display: flex
     flex-wrap: wrap
-    gap: 20px
+    row-gap: 20px
     @include mediaTablet
       // gap: 30px
 
   &__item
-    flex: 1 1 380px
+    flex: 1 1 50%
+    max-width: 50%
     padding: 0 20px
     iframe
       width: 100%
+      @include adaptiveValue('height', 315, 250)
+    @include mediaPhoneMid
+      max-width: none
+      width: 100%
+      flex-basis: 100%
+
+  &__title
+    margin-bottom: 10px

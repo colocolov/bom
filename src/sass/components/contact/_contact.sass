@@ -19,17 +19,33 @@
     padding: 20px
     margin-bottom: 40px
     display: flex
-    align-items: center
+    align-items: flex-start
+    justify-content: space-between
+    column-gap: 30px
     @include mediaPhone
       flex-wrap: wrap
-      justify-content: flex-start
+      & > div
+        width: 46%
+        margin-bottom: 30px
+    @include mediaPhoneSm
+      & > div
+        width: 96%
+      & > ul
+        margin-bottom: 30px
+
+    &-phone
+      display: flex
+      flex-direction: column
+      a
+        &:not(:last-child)
+          margin-bottom: 10px
 
 
     &-link
       color: $blue
       transition: color 0.3s ease-in
-      &:not(:last-child)
-        margin-right: 100px
+      // &:not(:last-child)
+      //   margin-right: 100px
       &:first-child
         flex-shrink: 0
       @media (any-hover: hover)
@@ -37,38 +53,46 @@
           color: $red
       @include mediaTablet
         &:not(:last-child)
-          margin-right: 40px
+          // margin-right: 40px
       @include mediaPhone
         &:not(:last-child)
-          margin-right: 30px
+          // margin-right: 30px
           margin-bottom: 20px
 
 
     &-adres
       font-style: normal
-      padding-left: 40px
-      position: relative
-      &::before
-        content: ''
-        position: absolute
-        top: 50%
-        left: 0
-        width: 30px
-        height: 30px
-        transform: translateY(-50%)
-        background-image: url("@img/icons/sprite.svg#map")
-        background-repeat: no-repeat
-        transition: background-image 0.3s ease-in
-      @media (any-hover: hover)
-        &:hover::before
-          background-image: url("@img/icons/sprite.svg#map-red")
+      // padding-left: 40px
+      // position: relative
+      // &::before
+      //   content: ''
+      //   position: absolute
+      //   top: 50%
+      //   left: 0
+      //   width: 30px
+      //   height: 30px
+      //   transform: translateY(-50%)
+      //   background-image: url("@img/icons/sprite.svg#map")
+      //   background-repeat: no-repeat
+      //   transition: background-image 0.3s ease-in
+      // @media (any-hover: hover)
+      //   &:hover::before
+      //     background-image: url("@img/icons/sprite.svg#map-red")
+
+    &-time
+      span
+        display: block
 
   &__social
+    flex-direction: column
     // align-self: flex-end
-    margin-left: auto
+    // margin-left: auto
     @include mediaPhone
       margin-right: auto
       margin-left: 0
+    & .social__item
+      &:not(:last-child)
+        margin-bottom: 10px
 
   // .contact__form
   &__form
@@ -163,4 +187,11 @@
     @media (any-hover: hover)
       &:hover
         transform: scale(1.05)
+
+
+  &__map
+    padding: 40px 0
+    background-color: $bgc
+    iframe
+      width: 100%
 
