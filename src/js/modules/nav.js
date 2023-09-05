@@ -1,75 +1,53 @@
 // мобильное меню
 
-//выпадающее меню для мобильных устройств
-document.addEventListener("click", documentActions);
-
-function documentActions(e) {
-  const targetElement = e.target;
-  if (window.innerWidth > 900) {
-    if (targetElement.classList.contains("menu__arrow")) {
-      targetElement.closest(".menu__item").classList.toggle("_hover");
-    }
-    if (
-      !targetElement.closest(".menu__item") &&
-      document.querySelectorAll(".menu__item._hover").length > 0
-    ) {
-      // console.log("ehhh");
-      // _removeClasses(document.querySelectorAll(".menu__item._hover"), "_hover");
-    }
-  }
-}
-
-// проверка, является ли уствройство мобильным
-const isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
-
-if (isMobile.any()) {
-  // document.querySelector('html').classList.add('_touch');
-  document.body.classList.add("_touch");
-}
-
 // меню бургер
 const body = document.querySelector("body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
+const menuSub = document.querySelector(".menu__submenu");
+const menuArrow = document.querySelector(".menu__arrow");
+
+
 if (iconMenu) {
   iconMenu.addEventListener("click", (e) => {
+    menuSub.classList.remove("_active");
+    menuArrow.classList.remove("_active");
     // console.log(iconMenu);
     body.classList.toggle("_lock");
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
   });
 }
+
+
+// клик по доп меню
+document.addEventListener("click", documentActions);
+function documentActions(el) {
+  const targetElement = el.target;
+  if (targetElement.parentNode.classList.contains("menu__submenu")) {
+    el.preventDefault();
+    // console.log(targetElement);
+    targetElement.classList.toggle("_active");
+    targetElement.closest(".menu__item").classList.toggle("_active");
+    menuArrow.classList.toggle('_active');
+  } 
+}
+
+
 // закрытие при клике
 if (menuLink.length) {
   menuLink.forEach((item) => {
-    item.addEventListener("click", () => {
-      removeActiveClass();
+    item.addEventListener("click", (e) => {
+      if (!e.target.parentNode.classList.contains("menu__submenu")) {
+        // console.log(e.target.parentNode.classList);
+        removeActiveClass();
+      }
+      // else if (targetElement.classList.contains('menu_sub-link')) {
+      //   //removeActiveClass();
+      //   console.log(targetElement);
+        
+      // }
     });
   });
 }
@@ -78,4 +56,17 @@ function removeActiveClass() {
   body.classList.remove("_lock");
   iconMenu.classList.remove("_active");
   menuBody.classList.remove("_active");
+  menuSub.classList.remove("_active");
+  menuArrow.classList.remove("_active");
 }
+
+// const subIcon = document.querySelector('.menu__arrow');
+// if (subIcon) {
+//   subIcon.addEventListener("click", (e) => { 
+//     subIcon.preventDefault;
+//     console.log('yes');
+//   })
+// }
+
+
+

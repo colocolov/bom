@@ -1344,6 +1344,12 @@ input {
     flex-direction: column;
   }
 }
+.menu__list > li._active .menu__sub-list {
+  opacity: 1;
+  margin-top: 20px;
+  height: auto;
+  transition: all 0.3s ease;
+}
 .menu__item {
   position: relative;
   display: flex;
@@ -1355,6 +1361,7 @@ input {
   line-height: 1;
   color: #01304C;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 .menu__item a {
   transition: color 0.3s ease;
@@ -1363,7 +1370,7 @@ input {
   margin-bottom: 30px;
 }
 @media (any-hover: hover) {
-  .menu__item:hover a {
+  .menu__item:hover > a {
     color: #D35343;
   }
 }
@@ -1486,14 +1493,83 @@ input {
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
 }
+.menu__arrow {
+  position: relative;
+  width: 20px;
+  padding-right: 60px;
+}
+.menu__arrow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  transition: transform 0.3s ease-in;
+  background-color: #D35343;
+}
+.menu__arrow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  transition: transform 0.3s ease-in;
+  background-color: #D35343;
+  transform: rotate(90deg);
+}
+.menu__arrow._active::before {
+  transform: rotate(45deg);
+}
+.menu__arrow._active::after {
+  transform: rotate(-45deg);
+}
+.menu__submenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 .menu__sub-list {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  height: 0;
+  opacity: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .menu__sub-list {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
 }
 .menu__sub-list a {
   font-size: 16px;
   line-height: 112.5%;
   font-weight: 400;
   text-transform: none;
+}
+@media screen and (max-width: 768px) {
+  .menu__sub-list a {
+    font-size: 18px;
+  }
+}
+.menu__sub-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.menu__sub-item:not(:first-child) {
+  margin-left: 40px;
+}
+@media (any-hover: hover) {
+  .menu__sub-item:hover > a {
+    color: #D35343;
+  }
 }
 
 .social {
@@ -1785,7 +1861,7 @@ input {
   background-color: #D35343;
   color: #FFFFFF;
   display: block;
-  z-index: 5;
+  z-index: 4;
   position: relative;
   text-transform: uppercase;
   display: flex;
