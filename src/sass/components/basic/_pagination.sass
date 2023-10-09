@@ -9,6 +9,7 @@
   align-items: center
 
 .page-numbers
+  color: $black
   transition: color 0.3s ease-in
   &:not(:last-child)
     margin-right: 20px
@@ -19,7 +20,8 @@
 .current
   color: $red
 
-.next
+.next,
+.prev
   position: relative
   background-color: $red
   border-radius: 50%
@@ -33,10 +35,17 @@
   &::before
     content: ''
     position: absolute
-    background: url("@img/icons/sprite.svg#arrcircle") center / 17px no-repeat
     top: 50%
     left: 50%
-    transform: translate(-50%, -50%)
     width: 18px
     height: 18px
+
+.next
+  &::before
+    background: url("@img/icons/sprite.svg#arrcircle") center / 17px no-repeat
+    transform: translate(-50%, -50%)
+.prev
+  &::before
+    background: url("@img/icons/sprite.svg#arrcircle") center / 17px no-repeat
+    transform: translate(-50%, -50%) rotate(-180deg)
 

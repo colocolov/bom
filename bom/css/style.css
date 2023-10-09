@@ -1,5 +1,5 @@
 /**
- * Swiper 9.3.1
+ * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 10, 2023
+ * Released on: June 13, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,6 +177,14 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1876,18 +1884,16 @@ input {
   width: 100%;
 }
 .product__cover span {
-  width: 50px;
-  height: 50px;
-  background-color: #D35343;
-  color: #FFFFFF;
-  display: block;
-  z-index: 4;
   position: relative;
-  text-transform: uppercase;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 14px 20px;
+  background-color: #D35343;
+  color: #FFFFFF;
   font-weight: 700;
+  text-transform: uppercase;
+  z-index: 4;
 }
 .product__body {
   flex: 1 1 auto;
@@ -1927,11 +1933,12 @@ input {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in;
 }
 @media (any-hover: hover) {
   .product__cart:hover {
     transform: scale(1.02);
+    transition: transform 0.3s ease-in;
   }
 }
 .product__container {
@@ -2005,6 +2012,7 @@ input {
   align-items: flex-start;
   margin-bottom: 40px;
   gap: 20px;
+  width: 100%;
 }
 @media screen and (max-width: 576px) {
   .product__top {
@@ -2045,14 +2053,14 @@ input {
   font-weight: 700;
   font-size: 36px;
 }
-.product__cost span {
+.product__cost del {
   position: relative;
   display: inline-block;
   color: #D35343;
   font-size: 20px;
   line-height: 1.15;
 }
-.product__cost span::before {
+.product__cost del::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2060,6 +2068,9 @@ input {
   width: 120%;
   height: 1px;
   background-color: #D35343;
+}
+.product__cost ins {
+  text-decoration: none;
 }
 @media screen and (max-width: 480px) {
   .product__cost {
@@ -2226,12 +2237,14 @@ input {
 }
 
 .breadcrumbs {
-  padding-top: 20px;
-  padding-bottom: 12px;
   background-color: #F7F6F5;
   overflow: auto;
   height: 50px;
-  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs__container {
+  width: 100%;
 }
 .breadcrumbs__list {
   display: flex;
@@ -2240,11 +2253,11 @@ input {
   white-space: nowrap;
 }
 .breadcrumbs__item {
-  color: rgba(0, 0, 0, 0.5);
+  color: #000000;
 }
 .breadcrumbs__item a {
   position: relative;
-  color: inherit;
+  color: rgba(0, 0, 0, 0.5);
   transition: color 0.3s ease-in;
 }
 .breadcrumbs__item a::before {
@@ -2278,6 +2291,7 @@ input {
 }
 
 .page-numbers {
+  color: #000000;
   transition: color 0.3s ease-in;
 }
 .page-numbers:not(:last-child) {
@@ -2293,7 +2307,8 @@ input {
   color: #D35343;
 }
 
-.next {
+.next,
+.prev {
   position: relative;
   background-color: #D35343;
   border-radius: 50%;
@@ -2303,19 +2318,29 @@ input {
   cursor: pointer;
 }
 @media (any-hover: hover) {
-  .next:hover {
+  .next:hover,
+  .prev:hover {
     transform: scale(1.1);
   }
 }
-.next::before {
+.next::before,
+.prev::before {
   content: "";
   position: absolute;
-  background: url("../images/icons/sprite.svg#arrcircle") center/17px no-repeat;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 18px;
   height: 18px;
+}
+
+.next::before {
+  background: url("../images/icons/sprite.svg#arrcircle") center/17px no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+.prev::before {
+  background: url("../images/icons/sprite.svg#arrcircle") center/17px no-repeat;
+  transform: translate(-50%, -50%) rotate(-180deg);
 }
 
 .hero {
