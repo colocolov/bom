@@ -56,17 +56,18 @@
       margin-left: 0
 
   &--cart
-    background: $red url("../images/icons/sprite.svg#cart-white") center / 30px no-repeat
     width: 100%
     height: 100%
+    background: $red url("../images/icons/sprite.svg#cart-white") center / 30px no-repeat
     @media (any-hover: hover)
       &:hover
         background: $white url("../images/icons/sprite.svg#cart") center / 30px no-repeat
 
   &--delete
-    background: url("../images/icons/sprite.svg#delete") center / 23px no-repeat
+    display: inline-block
     width: 23px
     height: 23px
+    background: url("../images/icons/sprite.svg#delete") center / 23px no-repeat
     transition: background 0.5s ease-in-out
     @media (any-hover: hover)
       &:hover
@@ -74,6 +75,7 @@
 
   &--continue
     @include mediaPhone
+      margin-top: 40px
       margin-bottom: 40px
     @include mediaPhoneSm
       align-self: center
@@ -84,6 +86,12 @@
       align-self: center
 
   &--update
+    &:disabled
+      background-color: lighten($red, 20)
+      &:hover
+        background-color: lighten($red, 20)
+        color: $white
+        border: 2px solid lighten($red, 20)
     @include mediaPhoneSm
       margin: 0 auto
 

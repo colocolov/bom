@@ -1,4 +1,6 @@
 const quantity = document.querySelector(".quantity");
+const btnUpdate = document.querySelector('.btn--update');
+
 if (quantity) {
 
 // отключения минуса при значении 1
@@ -30,6 +32,9 @@ if (quantityBtns.length > 0) {
         }
       }
       quantityBtn.closest('.quantity').querySelector('input').value = value;
+      if ( btnUpdate ) {
+        btnUpdate.disabled = false;
+      }
     });
 
   }

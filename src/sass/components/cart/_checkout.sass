@@ -84,11 +84,15 @@
         transform: translateY(160px)
 
   &__right
+    grid-column: 3/4
+    grid-row: 1/4
     @include mediaTablet
       grid-column: span 3
       display: grid
       grid-template-columns: repeat(3, 1fr)
       column-gap: 20px
+      grid-column: 1/4
+      grid-row: auto
 
 
   &__order

@@ -1,5 +1,5 @@
 .cart
-  padding-top: 50px
+  padding-top: 20px
   padding-bottom: 80px
 
   &__container
@@ -9,12 +9,13 @@
 
   &__head
     color: $blue
+    margin-top: 20px
 
   // .cart__content
   &__content
     background-color: $white
     padding: 20px
-    margin-top: 71px
+    margin-top: 20px
     margin-bottom: 40px
 
   // .cart__items
@@ -57,12 +58,20 @@
 
   // .cart__sum-text
   &__sum-text
+    font-weight: 400
+    font-size: 36px
+    font-family: "Helvetica", sans-serif
+    text-transform: uppercase
     @include mediaPhoneSm
       margin-right: 10px
 
 
   // .cart__sum
   &__sum
+    span
+      font-weight: 400
+      font-size: 36px
+      font-family: "Helvetica", sans-serif
 
 
 
@@ -84,6 +93,7 @@
       grid-template: repeat(2, max-content) / repeat(3, 1fr)
     @include mediaPhone
       grid-template-rows: repeat(3, max-content)
+      width: 100%
     &--bgc
       width: 100%
       @include mediaPhone
@@ -133,6 +143,10 @@
     @media (any-hover: hover)
       &:hover
         color: $red
+
+  &__remove
+    width: 23px
+    height: 23px
 
   // .item-order__price
   &__price

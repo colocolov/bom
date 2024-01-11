@@ -34,6 +34,7 @@
 
 
   &__wrap
+    position: relative
     display: flex
     flex-direction: column
     align-items: center
@@ -48,16 +49,31 @@
       &:hover
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2)
 
+    & .ajax-loader
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba(255, 255, 255, .5)
+      z-index: 2
+      display: none
+    & .ajax-loader img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
   &__cover
     // margin-top: 20px
     // padding: 0 20px
     margin-bottom: 7px
-    padding-bottom: 109.5%
+    padding-bottom: 127%
     width: 100%
     span
       // width: 50px
       // height: 50px
-      position: relative
+      position: absolute
       display: inline-flex
       align-items: center
       justify-content: center
@@ -67,6 +83,12 @@
       font-weight: 700
       text-transform: uppercase
       z-index: 4
+      &.featured
+        background-color: #01304C
+      &.new
+        background-color: #FFFFFF
+        color: #D35343
+
 
   &__body
     flex: 1 1 auto
@@ -78,6 +100,19 @@
       @media (any-hover: hover)
         &:hover
           color: $red
+
+    & .price
+      display: flex
+      justify-content: center
+      & del
+        color: #D35343
+        margin-right: 7px
+      & ins
+        text-decoration: none
+
+
+
+
 
   &__head
     margin-bottom: 15px
@@ -111,6 +146,8 @@
       &:hover
         transform: scale(1.02)
         transition: transform 0.3s ease-in
+    &.added
+      background: url("../images/icons/sprite.svg#cart-add") center no-repeat
 
 
   // --------------- КАРТОЧКА ТОВАРА ---------------------
@@ -285,18 +322,30 @@
           color: $red
 
 
-  // .product__itm
-  &__itm
-
-  // .product__elem
-
+  // атрибуты товара
+  &__chars
+    max-width: 400px
+    display: flex
+    flex-direction: column
+    gap: 10px
+  &__term
+    position: relative
+    overflow: hidden
+    flex-grow: 1
+    font-weight: bold
+    &::after
+      content: ' .........................................................................................'
+      position: absolute
+  &__val
+    max-width: 200px
   // .product__element
   &__element
     display: flex
-    align-items: flex-start
-    column-gap: 20px
-    &:not(:last-child)
-      margin-bottom: 10px
+    justify-content: space-between
+    // align-items: flex-start
+    // column-gap: 20px
+    // &:not(:last-child)
+    //   margin-bottom: 10px
     &--atr
       color: $blue
       &:not(:last-child)
@@ -307,11 +356,12 @@
         &:hover
           color: $red
 
-
   // .product__cat
   &__cat
+    & a
+      font-weight: 700
+      color: #D35343
     // flex: 1 1 34.507246% // 147/414
-
 
   // .product__title
   &__title
@@ -321,16 +371,15 @@
 
   // .product__info
   &__info
-    background-color: $white
+    // background-color: $white
     margin-bottom: 40px
+    width: 100%
     // padding: 20px
     // width: 413px
     @include mediaTablet
       // padding-bottom: 50px
       // width: auto
       // flex: 1 1 30%
-
-
 
   // .product__descr
   &__descr

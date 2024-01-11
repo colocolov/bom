@@ -4,7 +4,7 @@ import vars from "./_vars.js";
 // мои модули
 import "./modules/dinam-adap.js";
 import "./modules/nav.js";
-import "./modules/search.js";
+//import "./modules/search.js";
 import "./modules/new-goods.js";
 
 // главная

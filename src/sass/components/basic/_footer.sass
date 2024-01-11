@@ -45,7 +45,13 @@
         background-image: url("@img/icons/sprite.svg#map-red")
 
 
-  // .footer__social
+  &__phones
+    display: flex
+    flex-direction: column
+    & a:not(:last-child)
+      margin-bottom: 7px
+
+    // .footer__social
   &__social
     // width: 163px
     // justify-content: space-between
