@@ -23,6 +23,10 @@
     // height: 500px
     // @media (max-width: 1180px)
     //   height: 450px
+    &.outofstock .product__cart
+      cursor: not-allowed
+      background: url(../images/icons/sprite.svg#cart-no) center no-repeat
+
     @include mediaPhone
       max-width: 50%
       flex-basis: 50%

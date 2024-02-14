@@ -1,5 +1,5 @@
 /**
- * Swiper 9.3.1
+ * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 10, 2023
+ * Released on: June 13, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,6 +177,14 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -1256,13 +1264,15 @@ input {
 }
 .header__list li {
   position: relative;
+  display: flex;
 }
 .header__list li:not(:last-child) {
-  margin-right: 6px;
+  margin-right: 7px;
 }
 .header__list li:not(:last-child)::after {
   content: "/";
-  right: 0;
+  position: relative;
+  right: -3px;
   top: 0;
   font-weight: 400;
   color: #01304C;
@@ -1286,6 +1296,7 @@ input {
     order: 1;
     margin-right: 0;
     margin-bottom: 40px;
+    font-size: 22px;
   }
 }
 .menu-languages__item {
@@ -1871,6 +1882,10 @@ input {
   padding: 0 10px;
   flex: 1 1 33%;
   max-width: 325px;
+}
+.product__item.outofstock .product__cart {
+  cursor: not-allowed;
+  background: url(../images/icons/sprite.svg#cart-no) center no-repeat;
 }
 @media screen and (max-width: 768px) {
   .product__item {
@@ -2600,7 +2615,7 @@ input {
   height: 2px;
   background-color: #000000;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .timeline::before {
     width: 2px;
     height: 100%;
@@ -2617,7 +2632,7 @@ input {
   height: 15px;
   background: url(../images/icons/sprite.svg#arrow-time) center no-repeat;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .timeline::after {
     transform: rotate(90deg);
     top: auto;
@@ -2625,7 +2640,7 @@ input {
     left: 35px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .timeline {
     padding-top: 40px;
   }
@@ -2642,7 +2657,7 @@ input {
     padding-left: 10px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .timeline__list {
     flex-direction: column;
     align-items: start;
@@ -2658,7 +2673,14 @@ input {
 }
 @media screen and (max-width: 992px) {
   .timeline__item {
-    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .timeline__item {
+    margin-bottom: 50px;
   }
 }
 .timeline__item:hover {
@@ -2672,7 +2694,7 @@ input {
 }
 @media screen and (max-width: 992px) {
   .timeline__item:nth-child(odd) span {
-    top: -31px;
+    top: auto;
   }
 }
 .timeline__item:nth-child(odd) p {
@@ -2680,8 +2702,17 @@ input {
 }
 @media screen and (max-width: 992px) {
   .timeline__item:nth-child(odd) p {
-    top: 31px;
-    left: 70px;
+    top: auto;
+    bottom: -50%;
+    transform: translateY(60%);
+    left: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .timeline__item:nth-child(odd) p {
+    bottom: 0;
+    transform: translateY(0);
+    left: 80px;
   }
 }
 @media (any-hover: hover) {
@@ -2697,7 +2728,7 @@ input {
 }
 @media screen and (max-width: 992px) {
   .timeline__item:nth-child(even) span {
-    top: -31px;
+    bottom: auto;
   }
 }
 .timeline__item:nth-child(even) p {
@@ -2705,8 +2736,17 @@ input {
 }
 @media screen and (max-width: 992px) {
   .timeline__item:nth-child(even) p {
-    top: 31px;
-    left: 70px;
+    top: auto;
+    bottom: -50%;
+    transform: translateY(60%);
+    left: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .timeline__item:nth-child(even) p {
+    bottom: 0;
+    transform: translateY(0);
+    left: 80px;
   }
 }
 @media (any-hover: hover) {
@@ -2721,11 +2761,19 @@ input {
   left: 60px;
   transition: color 0.3s ease-in;
 }
+@media screen and (max-width: 992px) {
+  .timeline__item span {
+    position: relative;
+    font-size: 20px;
+    color: #FFFFFF;
+    left: auto;
+  }
+}
 .timeline__item p {
   visibility: hidden;
   position: absolute;
   left: 0;
-  width: 275px;
+  width: 250px;
   color: #FFFFFF;
   transition: color 0.3s ease-in;
 }
@@ -2734,12 +2782,7 @@ input {
     width: 218px;
   }
 }
-@media screen and (max-width: 992px) {
-  .timeline__item p {
-    width: 350px;
-  }
-}
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
   .timeline__item p {
     width: 185px;
   }
