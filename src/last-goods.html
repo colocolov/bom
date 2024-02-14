@@ -16,13 +16,15 @@
           <!-- <div class="shop__top"> -->
           <div class="shop__head">
             @include('html/components/_breadcrumbs.html')
-            <select class="filter__select" name="Sort">
-              <option value="1">По умолчанию</option>
-              <option value="2">По цене: сначала дешевые</option>
-              <option value="3">По цене: сначала дорогие</option>
-              <option value="3" selected>По дате: сначала новые</option>
-              <option value="3">По дате: сначала последние</option>
-            </select>
+            <div class="select__wrapper filter__select">
+              <select class="select" name="Sort">
+                <option value="1">По умолчанию</option>
+                <option value="2">По цене: сначала дешевые</option>
+                <option value="3">По цене: сначала дорогие</option>
+                <option value="3" selected>По дате: сначала новые</option>
+                <option value="3">По дате: сначала последние</option>
+              </select>
+            </div>
           </div><!-- /.shop__head -->
           <!-- @include('html/components/pagination.html') -->
           <!-- </div> -->
