@@ -3421,13 +3421,6 @@ input {
   padding: 15px 10px;
   height: 100%;
 }
-.filter__select {
-  background-color: #01304C;
-  color: #FFFFFF;
-  padding: 5px;
-  border-radius: 0;
-  margin-left: auto;
-}
 @media screen and (max-width: 992px) {
   .filter__select {
     margin-bottom: 30px;
@@ -3478,6 +3471,44 @@ input {
 }
 .section-filter__checkbox:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.select {
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #F7F6F5;
+  border-radius: 0px;
+  background-color: #01304C;
+  padding: 10px 35px 10px 15px;
+  color: #FFFFFF;
+  outline: none;
+  cursor: pointer;
+}
+.select::-ms-expand {
+  display: none;
+}
+.select:focus {
+  outline: none;
+}
+.select__wrapper {
+  position: relative;
+  margin-left: auto;
+}
+.select__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10.4px 6px 0 6px;
+  border-color: #FFFFFF transparent transparent transparent;
+  pointer-events: none;
 }
 
 .cart {
