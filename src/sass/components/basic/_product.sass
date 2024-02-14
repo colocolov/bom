@@ -8,6 +8,8 @@
     row-gap: 70px /// !!!!
     @include mediaTablet
       row-gap: 40px
+    @include mediaPhoneSm
+      row-gap: 20px
 
     // width: 100%
     // transition-timing-function: linear
@@ -25,13 +27,16 @@
       max-width: 50%
       flex-basis: 50%
 
-    @include mediaPhoneMid
+    @include mediaPhoneSm
       // height: 57.894737% // 550/950
-      height: auto
-      max-width: none
       // flex-basis: 47%
+      padding: 0 7px
+      height: auto
+      // max-width: none
+      // flex-basis: 100%
+    @media screen and (max-width: 360px)
+      max-width: none
       flex-basis: 100%
-
 
   &__wrap
     position: relative
@@ -45,6 +50,8 @@
     padding: 20px
     transition: box-shadow 0.5s ease-in
     box-sizing: border-box
+    @include mediaPhoneSm
+      padding: 8px
     @media (any-hover: hover)
       &:hover
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2)
@@ -95,6 +102,9 @@
     display: flex
     flex-direction: column
     padding: 0 8px
+    @include mediaPhoneSm
+      padding: 0
+      width: 100%
     & a
       color: inherit
       @media (any-hover: hover)
@@ -104,9 +114,12 @@
     & .price
       display: flex
       justify-content: center
+      flex-direction: column
+      // @include mediaPhoneSm
       & del
         color: #D35343
         margin-right: 7px
+        font-size: 14px
       & ins
         text-decoration: none
 
@@ -121,6 +134,8 @@
     transition: color 0.3s ease-in
     padding-right: 10px
     flex: 1 1 auto
+    @include mediaPhoneSm
+      padding: 0 11px
     &--cart
       // font-size: 36px
       margin-bottom: 15px
@@ -133,6 +148,8 @@
     align-items: center
     justify-content: center
     column-gap: 30px
+    @include mediaPhoneSm
+      justify-content: space-between
 
   // &__price
 
