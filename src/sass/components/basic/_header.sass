@@ -155,11 +155,13 @@
     color: $blue
     li
       position: relative
+      display: flex
       &:not(:last-child)
-        margin-right: 6px
+        margin-right: 7px
         &::after
           content: "/"
-          right: 0
+          position: relative
+          right: -3px
           top: 0
           font-weight: 400
           color: $blue
@@ -178,6 +180,7 @@
     order: 1
     margin-right: 0
     margin-bottom: 40px
+    font-size: 22px
   &__item
     color: $blue
     @include mediaPhone

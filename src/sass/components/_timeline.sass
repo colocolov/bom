@@ -9,8 +9,9 @@
     width: 100%
     height: 2px
     background-color: $black
-    @include mediaTablet
-      // transform: rotate(90deg)
+    // @include mediaTablet
+    @include mediaPhoneMid
+      // // transform: rotate(90deg)
       width: 2px
       height: 100%
       left: 40px
@@ -23,12 +24,14 @@
     width: 12px
     height: 15px
     background: url(../images/icons/sprite.svg#arrow-time) center no-repeat
-    @include mediaTablet
+    // @include mediaTablet
+    @include mediaPhoneMid
       transform: rotate(90deg)
       top: auto
       bottom: -8px
       left: 35px
-  @include mediaTablet
+  // @include mediaTablet
+  @include mediaPhoneMid
     padding-top: 40px
 
   &__list
@@ -39,7 +42,8 @@
     padding-left: 81px
     @include mediaDesk
       padding-left: 10px
-    @include mediaTablet
+    // @include mediaTablet
+    @include mediaPhoneMid
       flex-direction: column
       align-items: start
 
@@ -51,7 +55,12 @@
     cursor: pointer
     transition: box-shadow 0.3s ease-in
     @include mediaTablet
-      margin-bottom: 100px
+      // margin-bottom: 100px
+      display: flex
+      align-items: center
+      justify-content: center
+    @include mediaPhoneMid
+      margin-bottom: 50px
     &:hover
       // background: $red
       box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2)
@@ -60,12 +69,20 @@
       span
         top: -41px
         @include mediaTablet
-          top: -31px
+          // top: -31px
+          top: auto
       p
         top: 70px
         @include mediaTablet
-          top: 31px
-          left: 70px
+          top: auto
+          bottom: -50%
+          transform: translateY(60%)
+          left: 0
+        @include mediaPhoneMid
+          bottom: 0
+          transform: translateY(0)
+          // right: 0
+          left: 80px
 
       @media (any-hover: hover)
         &:hover
@@ -76,12 +93,20 @@
       span
         bottom: -41px
         @include mediaTablet
-          top: -31px
+          // top: -31px
+          bottom: auto
       p
         bottom: 70px
         @include mediaTablet
-          top: 31px
-          left: 70px
+          top: auto
+          bottom: -50%
+          transform: translateY(60%)
+          left: 0
+        @include mediaPhoneMid
+          bottom: 0
+          transform: translateY(0)
+          // right: 0
+          left: 80px
       @media (any-hover: hover)
         &:hover
           color: $red
@@ -91,20 +116,25 @@
       font-weight: 700
       left: 60px
       transition: color 0.3s ease-in
+      @include mediaTablet
+        position: relative
+        font-size: 20px
+        color: $white
+        left: auto
     p
       // overflow: hidden
       visibility: hidden
       position: absolute
       left: 0
-      width: 275px
+      width: 250px
       color: $white
       // font-size: 0
       transition: color 0.3s ease-in
       @include mediaDesk
         width: 218px
       @include mediaTablet
-        width: 350px
-      @include mediaPhoneMid
+        // width: 250px
+      @include mediaPhoneSm
         width: 185px
     &._active
       p
