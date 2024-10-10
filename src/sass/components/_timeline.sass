@@ -46,26 +46,34 @@
     @include mediaPhoneMid
       flex-direction: column
       align-items: start
+    @include mediaPhoneMid
+      padding-right: 10px
 
   &__item
     position: relative
-    width: 60px
-    height: 60px
-    border-radius: 50%
+    // width: 100%
+    // width: 60px // откл
+    // height: 60px // откл
+    // border-radius: 50% // откл
     cursor: pointer
     transition: box-shadow 0.3s ease-in
     @include mediaTablet
       // margin-bottom: 100px
       display: flex
       align-items: center
-      justify-content: center
+      // justify-content: center // откл
     @include mediaPhoneMid
       margin-bottom: 50px
+      width: 100%
+
+
     &:hover
       // background: $red
-      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2)
+      & .timeline__year
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2)
     &:nth-child(odd)
-      background: $grad-red
+      & .timeline__year
+        background: $grad-red // перенес
       span
         top: -41px
         @include mediaTablet
@@ -89,7 +97,8 @@
           color: $red
 
     &:nth-child(even)
-      background: $grad-blue
+      & .timeline__year
+        background: $grad-blue // перенес
       span
         bottom: -41px
         @include mediaTablet
@@ -110,6 +119,15 @@
       @media (any-hover: hover)
         &:hover
           color: $red
+    & .timeline__year
+      // новый код
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      // конец
     span
       position: absolute
       font-size: 36px
@@ -134,8 +152,10 @@
         width: 218px
       @include mediaTablet
         // width: 250px
+      @include mediaPhoneMid
+        width: calc(100% - 80px) // добавил
       @include mediaPhoneSm
-        width: 185px
+        // width: 185px // откл 
     &._active
       p
         // overflow: visible

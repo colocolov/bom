@@ -16,7 +16,7 @@ import "./modules/rootImg.js";
 import "./modules/about-info.js";
 
 // ТОВАР
-import "./modules/quantity.js";
+// import "./modules/quantity.js";
 import "./modules/produsctSlider.js";
 
 // ПРОЕКТЫ

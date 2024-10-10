@@ -1,5 +1,5 @@
 /**
- * Swiper 9.3.1
+ * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 10, 2023
+ * Released on: June 13, 2023
  */
 /* FONT_START */
 @font-face {
@@ -177,6 +177,14 @@ swiper-slide {
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -2655,11 +2663,13 @@ input {
     align-items: start;
   }
 }
+@media screen and (max-width: 576px) {
+  .timeline__list {
+    padding-right: 10px;
+  }
+}
 .timeline__item {
   position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in;
 }
@@ -2667,18 +2677,18 @@ input {
   .timeline__item {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 }
 @media screen and (max-width: 576px) {
   .timeline__item {
     margin-bottom: 50px;
+    width: 100%;
   }
 }
-.timeline__item:hover {
+.timeline__item:hover .timeline__year {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
-.timeline__item:nth-child(odd) {
+.timeline__item:nth-child(odd) .timeline__year {
   background: linear-gradient(180deg, #D35343 0%, #D86F62 100%);
 }
 .timeline__item:nth-child(odd) span {
@@ -2712,7 +2722,7 @@ input {
     color: #D35343;
   }
 }
-.timeline__item:nth-child(even) {
+.timeline__item:nth-child(even) .timeline__year {
   background: linear-gradient(180deg, #0c4c73 0%, #8abbd7 100%);
 }
 .timeline__item:nth-child(even) span {
@@ -2746,6 +2756,14 @@ input {
     color: #D35343;
   }
 }
+.timeline__item .timeline__year {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .timeline__item span {
   position: absolute;
   font-size: 36px;
@@ -2774,9 +2792,9 @@ input {
     width: 218px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .timeline__item p {
-    width: 185px;
+    width: calc(100% - 80px);
   }
 }
 .timeline__item._active p {
@@ -3574,6 +3592,11 @@ input {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 576px) {
+  .cart__btns {
+    flex-direction: column-reverse;
+  }
+}
 .cart__total {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -3636,6 +3659,7 @@ input {
   align-items: center;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 20px;
+  width: 100%;
 }
 @media screen and (max-width: 992px) {
   .item-order__content {
@@ -3645,7 +3669,6 @@ input {
 @media screen and (max-width: 768px) {
   .item-order__content {
     grid-template-rows: repeat(3, max-content);
-    width: 100%;
   }
 }
 .item-order__content--bgc {

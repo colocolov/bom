@@ -29,6 +29,8 @@
     display: flex
     align-items: center
     justify-content: space-between
+    @include mediaPhoneMid
+      flex-direction: column-reverse
 
   &__total
     display: grid
@@ -89,11 +91,12 @@
     align-items: center
     grid-template-columns: repeat(6, 1fr)
     column-gap: 20px
+    width: 100%
     @include mediaTablet
       grid-template: repeat(2, max-content) / repeat(3, 1fr)
     @include mediaPhone
       grid-template-rows: repeat(3, max-content)
-      width: 100%
+      // width: 100%
     &--bgc
       width: 100%
       @include mediaPhone
